@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Enhanced Industry Ecosystems</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'JetBrains Mono', monospace; background: #020617; min-height: 100vh; padding: 2rem; color: white; }
+    .container { max-width: 1300px; margin: 0 auto; }
+    .section-divider { border: none; border-top: 2px solid #1e293b; margin: 2.5rem 0 1.5rem 0; }
+    .section-title { font-size: 1.4rem; font-weight: 700; color: #f8fafc; display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.2rem; }
+    .section-num { background: #1e293b; color: #94a3b8; font-size: 0.8rem; padding: 0.2rem 0.6rem; border-radius: 0.4rem; }
+    .section-sub { color: #64748b; font-size: 0.78rem; margin-bottom: 1rem; }
+    .diagram-container { background: rgba(15,23,42,0.5); border-radius: 1rem; border: 1px solid #1e293b; padding: 1rem; overflow-x: auto; margin-bottom: 0.5rem; }
+    svg { width: 100%; min-width: 950px; display: block; }
+    .flywheel-box { background: rgba(34,211,238,0.06); border: 1px solid rgba(34,211,238,0.2); border-radius: 0.75rem; padding: 0.85rem; margin-top: 0.5rem; }
+    .flywheel-box h3 { font-size: 0.78rem; font-weight: 600; color: #22d3ee; margin-bottom: 0.4rem; }
+    .flywheel-box p { color: #94a3b8; font-size: 0.72rem; line-height: 1.55; }
+    .flywheel-box p span { color: #f8fafc; font-weight: 600; }
+    .pulse-dot { width: 8px; height: 8px; background: #22d3ee; border-radius: 50%; animation: pulse 2s infinite; display: inline-block; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    .toc { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .toc a { color: #94a3b8; text-decoration: none; font-size: 0.7rem; padding: 0.25rem 0.5rem; border: 1px solid #1e293b; border-radius: 0.35rem; transition: all 0.2s; }
+    .toc a:hover { color: #22d3ee; border-color: #22d3ee; }
+    .nav-back { margin-bottom: 0.75rem; }
+    .nav-back a { color: #64748b; text-decoration: none; font-size: 0.7rem; }
+    .nav-back a:hover { color: #22d3ee; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="nav-back"><a href=".">← Back to PE Ecosystems</a>  ·  <a href="ai-immune.html">AI-Immune →</a></div>
+  <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.4rem;">
+    <span class="pulse-dot"></span>
+    <h1 style="font-size:1.4rem;font-weight:700;">AI-Enhanced Industry Ecosystems</h1>
+  </div>
+  <p style="color:#64748b;font-size:0.78rem;margin-bottom:1.2rem;">10 business circles where AI is a force multiplier — not replacing humans, but giving them superpowers. AI handles the grunt work. Humans do the high-value thinking.</p>
+  <div class="toc">
+    <a href="#a1">01 · Legal</a><a href="#a2">02 · Accounting</a><a href="#a3">03 · Insurance</a><a href="#a4">04 · Real Estate</a><a href="#a5">05 · Marketing</a>
+    <a href="#a6">06 · Healthcare Admin</a><a href="#a7">07 · Supply Chain</a><a href="#a8">08 · Education</a><a href="#a9">09 · Recruiting</a><a href="#a10">10 · Customer Service</a>
+  </div>
+
+  <hr class="section-divider" id="a1">
+  <div class="section-title"><span class="section-num">⚖️ 01</span> Legal Services Ecosystem</div>
+  <p class="section-sub">AI handles 80% of document review, research, and drafting. Lawyers do strategy, negotiation, and courtroom advocacy.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="aa1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="ab1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="ac1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <marker id="ad1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <pattern id="ga1" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#ga1)"/>
+
+      <!-- AI PLATFORM (top center) -->
+      <rect x="380" y="20" width="440" height="60" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#22d3ee" font-size="13" font-weight="700" text-anchor="middle">AI Legal Platform</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Document review · Contract analysis · E-discovery · Legal research · Drafting</text>
+
+      <!-- TRADITIONAL SERVICE (left) -->
+      <rect x="40" y="140" width="210" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="145" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Law Firm / Legal Practice</text>
+      <text x="145" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Strategy · Negotiation · Depositions · Trials · Client counsel — AI-augmented</text>
+      <text x="145" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI-augmented human experts</text>
+
+      <!-- DATA / ANALYTICS (right) -->
+      <rect x="710" y="140" width="220" height="80" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="820" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Case Data & Precedent Engine</text>
+      <text x="820" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Trained on millions of cases · Jurisdiction-specific · Outcome prediction</text>
+      <text x="820" y="200" fill="#fbbf24" font-size="7" text-anchor="middle">Data flywheel feeds back into AI</text>
+
+      <!-- NEW CAPABILITY (bottom) -->
+      <rect x="350" y="290" width="350" height="75" rx="8" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="525" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Fixed-Fee Legal Services</text>
+      <text x="525" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Flat-rate contracts, incorporations, immigration — AI makes volume profitable</text>
+      <text x="525" y="350" fill="#a78bfa" font-size="7" text-anchor="middle">Impossible without AI — this is the moat</text>
+
+      <!-- AI → Service (powers the humans) -->
+      <line x1="450" y1="80" x2="200" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa1)"/>
+      <text x="280" y="115" fill="#22d3ee" font-size="7">powers</text>
+      <!-- AI → Data (training loop) -->
+      <line x1="750" y1="80" x2="780" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa1)"/>
+      <text x="780" y="115" fill="#22d3ee" font-size="7">trains on</text>
+
+      <!-- Data → AI (feedback loop) -->
+      <path d="M 900 180 Q 980 180 980 100 Q 980 50 820 50" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ac1)"/>
+      <text x="980" y="135" fill="#fbbf24" font-size="7" text-anchor="middle">data flywheel</text>
+
+      <!-- Service → New Capability (human expertise unlocks new thing) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#34d399" stroke-width="2" marker-end="url(#ab1)"/>
+      <text x="300" y="278" fill="#34d399" font-size="7">enables →</text>
+
+      <!-- AI → New Capability (AI makes new thing possible) -->
+      <line x1="600" y1="80" x2="550" y2="288" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ad1)"/>
+      <text x="555" y="200" fill="#a78bfa" font-size="7">unlocks</text>
+
+      <!-- BEFORE/AFTER annotation -->
+      <rect x="980" y="140" width="190" height="130" rx="8" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1075" y="163" fill="#22d3ee" font-size="10" font-weight="600" text-anchor="middle">AI IMPACT</text>
+      <line x1="995" y1="174" x2="1155" y2="174" stroke="#1e293b" stroke-width="1"/>
+      <text x="1075" y="195" fill="#94a3b8" font-size="8" text-anchor="middle">Before: 10-20 hrs</text>
+      <text x="1075" y="213" fill="#34d399" font-size="8" font-weight="600" text-anchor="middle">After: 30-90 min</text>
+      <text x="1075" y="235" fill="#94a3b8" font-size="8" text-anchor="middle">Cost: 60-80% ↓</text>
+      <text x="1075" y="253" fill="#94a3b8" font-size="8" text-anchor="middle">Quality: errors ↓ 90%</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">AI / Tech Layer</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Human Expertise</text>
+      <rect x="180" y="400" width="10" height="7" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="194" y="407" fill="#94a3b8" font-size="6.5">Data / Analytics</text>
+      <rect x="180" y="412" width="10" height="7" rx="2" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1"/><text x="194" y="419" fill="#94a3b8" font-size="6.5">New Capability / Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>How AI Powers This</h3><p><span>AI Legal Platform</span> reviews 500,000 documents overnight (was: 20 associates, 2 weeks, $200K) → human <span>Law Firm</span> lawyers focus on strategy and oral argument → <span>Case Data Engine</span> predicts judge behavior and settlement ranges with 85% accuracy → firm offers <span>Fixed-Fee Services</span> for commoditized work at 70% lower cost, capturing volume that BigLaw ignores. Revenue per lawyer doubles while client costs halve.</p></div>
+
+  <hr class="section-divider" id="a2">
+  <div class="section-title"><span class="section-num">📊 02</span> Accounting & Tax Ecosystem</div>
+  <p class="section-sub">AI reconciles, categorizes, and prepares returns. CPAs shift from compliance to strategic advisory.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="aa2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="ab2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="ac2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <marker id="ad2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <pattern id="ga2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#ga2)"/>
+
+      <!-- AI PLATFORM (top center) -->
+      <rect x="380" y="20" width="440" height="60" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#22d3ee" font-size="13" font-weight="700" text-anchor="middle">AI Accounting Platform</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Auto-reconciliation · Tax prep · Anomaly detection · Forecasting · R&D credit ID</text>
+
+      <!-- TRADITIONAL SERVICE (left) -->
+      <rect x="40" y="140" width="210" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="145" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">CPA Firm / Tax Advisory</text>
+      <text x="145" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Strategy · Entity structure · M&A tax · Audit opinions — AI handles the data</text>
+      <text x="145" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI-augmented human experts</text>
+
+      <!-- DATA / ANALYTICS (right) -->
+      <rect x="710" y="140" width="220" height="80" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="820" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Client Financial Data Lake</text>
+      <text x="820" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Multi-year trends · Industry benchmarks · Predictive cash flow</text>
+      <text x="820" y="200" fill="#fbbf24" font-size="7" text-anchor="middle">Data flywheel feeds back into AI</text>
+
+      <!-- NEW CAPABILITY (bottom) -->
+      <rect x="350" y="290" width="350" height="75" rx="8" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="525" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Virtual CFO / Strategic Advisory</text>
+      <text x="525" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Real-time dashboards · Scenario planning · Month-end in hours not weeks</text>
+      <text x="525" y="350" fill="#a78bfa" font-size="7" text-anchor="middle">Impossible without AI — this is the moat</text>
+
+      <!-- AI → Service (powers the humans) -->
+      <line x1="450" y1="80" x2="200" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa2)"/>
+      <text x="280" y="115" fill="#22d3ee" font-size="7">powers</text>
+      <!-- AI → Data (training loop) -->
+      <line x1="750" y1="80" x2="780" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa2)"/>
+      <text x="780" y="115" fill="#22d3ee" font-size="7">trains on</text>
+
+      <!-- Data → AI (feedback loop) -->
+      <path d="M 900 180 Q 980 180 980 100 Q 980 50 820 50" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ac2)"/>
+      <text x="980" y="135" fill="#fbbf24" font-size="7" text-anchor="middle">data flywheel</text>
+
+      <!-- Service → New Capability (human expertise unlocks new thing) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#34d399" stroke-width="2" marker-end="url(#ab2)"/>
+      <text x="300" y="278" fill="#34d399" font-size="7">enables →</text>
+
+      <!-- AI → New Capability (AI makes new thing possible) -->
+      <line x1="600" y1="80" x2="550" y2="288" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ad2)"/>
+      <text x="555" y="200" fill="#a78bfa" font-size="7">unlocks</text>
+
+      <!-- BEFORE/AFTER annotation -->
+      <rect x="980" y="140" width="190" height="130" rx="8" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1075" y="163" fill="#22d3ee" font-size="10" font-weight="600" text-anchor="middle">AI IMPACT</text>
+      <line x1="995" y1="174" x2="1155" y2="174" stroke="#1e293b" stroke-width="1"/>
+      <text x="1075" y="195" fill="#94a3b8" font-size="8" text-anchor="middle">Before: 10-20 hrs</text>
+      <text x="1075" y="213" fill="#34d399" font-size="8" font-weight="600" text-anchor="middle">After: 30-90 min</text>
+      <text x="1075" y="235" fill="#94a3b8" font-size="8" text-anchor="middle">Cost: 60-80% ↓</text>
+      <text x="1075" y="253" fill="#94a3b8" font-size="8" text-anchor="middle">Quality: errors ↓ 90%</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">AI / Tech Layer</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Human Expertise</text>
+      <rect x="180" y="400" width="10" height="7" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="194" y="407" fill="#94a3b8" font-size="6.5">Data / Analytics</text>
+      <rect x="180" y="412" width="10" height="7" rx="2" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1"/><text x="194" y="419" fill="#94a3b8" font-size="6.5">New Capability / Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>How AI Powers This</h3><p><span>AI Platform</span> reconciles 50,000 transactions in minutes, flags 12 anomalies → <span>CPA Firm</span> reviews flags, spends time on tax strategy instead of data entry → <span>Data Lake</span> shows client their burn rate vs industry peers → <span>Virtual CFO</span> delivers real-time board-ready financials for $2K/mo instead of $15K. A CPA who used to handle 40 clients now handles 200 with AI — same or better quality.</p></div>
+
+  <hr class="section-divider" id="a3">
+  <div class="section-title"><span class="section-num">🛡️ 03</span> Insurance Ecosystem</div>
+  <p class="section-sub">AI underwrites in seconds, processes claims in hours, and detects fraud patterns humans miss.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="aa3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="ab3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="ac3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <marker id="ad3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <pattern id="ga3" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#ga3)"/>
+
+      <!-- AI PLATFORM (top center) -->
+      <rect x="380" y="20" width="440" height="60" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#22d3ee" font-size="13" font-weight="700" text-anchor="middle">AI Underwriting & Claims Engine</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Instant risk pricing · Photo-based damage estimates · Fraud detection · Churn prediction</text>
+
+      <!-- TRADITIONAL SERVICE (left) -->
+      <rect x="40" y="140" width="210" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="145" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Insurance Agency / Brokerage</text>
+      <text x="145" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Complex commercial · High-net-worth · Benefits consulting — AI handles standard lines</text>
+      <text x="145" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI-augmented human experts</text>
+
+      <!-- DATA / ANALYTICS (right) -->
+      <rect x="710" y="140" width="220" height="80" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="820" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Risk & Actuarial Data Science</text>
+      <text x="820" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Telematics · IoT sensors · Weather models · Health wearables · Behavioral data</text>
+      <text x="820" y="200" fill="#fbbf24" font-size="7" text-anchor="middle">Data flywheel feeds back into AI</text>
+
+      <!-- NEW CAPABILITY (bottom) -->
+      <rect x="350" y="290" width="350" height="75" rx="8" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="525" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Parametric / Embedded Insurance</text>
+      <text x="525" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Auto-trigger payouts (flight delay, crop freeze) · API-embedded coverage at point of sale</text>
+      <text x="525" y="350" fill="#a78bfa" font-size="7" text-anchor="middle">Impossible without AI — this is the moat</text>
+
+      <!-- AI → Service (powers the humans) -->
+      <line x1="450" y1="80" x2="200" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa3)"/>
+      <text x="280" y="115" fill="#22d3ee" font-size="7">powers</text>
+      <!-- AI → Data (training loop) -->
+      <line x1="750" y1="80" x2="780" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa3)"/>
+      <text x="780" y="115" fill="#22d3ee" font-size="7">trains on</text>
+
+      <!-- Data → AI (feedback loop) -->
+      <path d="M 900 180 Q 980 180 980 100 Q 980 50 820 50" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ac3)"/>
+      <text x="980" y="135" fill="#fbbf24" font-size="7" text-anchor="middle">data flywheel</text>
+
+      <!-- Service → New Capability (human expertise unlocks new thing) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#34d399" stroke-width="2" marker-end="url(#ab3)"/>
+      <text x="300" y="278" fill="#34d399" font-size="7">enables →</text>
+
+      <!-- AI → New Capability (AI makes new thing possible) -->
+      <line x1="600" y1="80" x2="550" y2="288" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ad3)"/>
+      <text x="555" y="200" fill="#a78bfa" font-size="7">unlocks</text>
+
+      <!-- BEFORE/AFTER annotation -->
+      <rect x="980" y="140" width="190" height="130" rx="8" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1075" y="163" fill="#22d3ee" font-size="10" font-weight="600" text-anchor="middle">AI IMPACT</text>
+      <line x1="995" y1="174" x2="1155" y2="174" stroke="#1e293b" stroke-width="1"/>
+      <text x="1075" y="195" fill="#94a3b8" font-size="8" text-anchor="middle">Before: 10-20 hrs</text>
+      <text x="1075" y="213" fill="#34d399" font-size="8" font-weight="600" text-anchor="middle">After: 30-90 min</text>
+      <text x="1075" y="235" fill="#94a3b8" font-size="8" text-anchor="middle">Cost: 60-80% ↓</text>
+      <text x="1075" y="253" fill="#94a3b8" font-size="8" text-anchor="middle">Quality: errors ↓ 90%</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">AI / Tech Layer</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Human Expertise</text>
+      <rect x="180" y="400" width="10" height="7" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="194" y="407" fill="#94a3b8" font-size="6.5">Data / Analytics</text>
+      <rect x="180" y="412" width="10" height="7" rx="2" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1"/><text x="194" y="419" fill="#94a3b8" font-size="6.5">New Capability / Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>How AI Powers This</h3><p><span>AI Underwriting Engine</span> prices a commercial policy in 90 seconds (was: 3 weeks, 4 underwriters) → <span>Insurance Agency</span> focuses on complex risks and client relationships → <span>Risk Data Science</span> feeds real-time telematics and IoT data back into pricing models → <span>Parametric Insurance</span> opens entirely new markets: auto-payouts for weather events, flight delays, supply chain disruptions. Loss ratios improve 8-12 points.</p></div>
+
+  <hr class="section-divider" id="a4">
+  <div class="section-title"><span class="section-num">🏠 04</span> Real Estate Tech Ecosystem</div>
+  <p class="section-sub">AI values properties, predicts markets, automates showings. Agents focus on negotiation and relationships.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="aa4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="ab4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="ac4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <marker id="ad4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <pattern id="ga4" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#ga4)"/>
+
+      <!-- AI PLATFORM (top center) -->
+      <rect x="380" y="20" width="440" height="60" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#22d3ee" font-size="13" font-weight="700" text-anchor="middle">AI Property Intelligence Platform</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Automated valuation · Market forecasting · Lead scoring · Document extraction · Virtual staging</text>
+
+      <!-- TRADITIONAL SERVICE (left) -->
+      <rect x="40" y="140" width="210" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="145" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Real Estate Brokerage</text>
+      <text x="145" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Negotiation · Local expertise · Client relationships · Off-market deals — AI-powered</text>
+      <text x="145" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI-augmented human experts</text>
+
+      <!-- DATA / ANALYTICS (right) -->
+      <rect x="710" y="140" width="220" height="80" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="820" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Market & Demographic Data Engine</text>
+      <text x="820" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Migration patterns · School ratings · Development pipeline · Crime stats · Transit scores</text>
+      <text x="820" y="200" fill="#fbbf24" font-size="7" text-anchor="middle">Data flywheel feeds back into AI</text>
+
+      <!-- NEW CAPABILITY (bottom) -->
+      <rect x="350" y="290" width="350" height="75" rx="8" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="525" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">iBuying / Instant Offer Platform</text>
+      <text x="525" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Algorithmic cash offers · 24-hour close · AI-predicted renovation ROI</text>
+      <text x="525" y="350" fill="#a78bfa" font-size="7" text-anchor="middle">Impossible without AI — this is the moat</text>
+
+      <!-- AI → Service (powers the humans) -->
+      <line x1="450" y1="80" x2="200" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa4)"/>
+      <text x="280" y="115" fill="#22d3ee" font-size="7">powers</text>
+      <!-- AI → Data (training loop) -->
+      <line x1="750" y1="80" x2="780" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa4)"/>
+      <text x="780" y="115" fill="#22d3ee" font-size="7">trains on</text>
+
+      <!-- Data → AI (feedback loop) -->
+      <path d="M 900 180 Q 980 180 980 100 Q 980 50 820 50" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ac4)"/>
+      <text x="980" y="135" fill="#fbbf24" font-size="7" text-anchor="middle">data flywheel</text>
+
+      <!-- Service → New Capability (human expertise unlocks new thing) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#34d399" stroke-width="2" marker-end="url(#ab4)"/>
+      <text x="300" y="278" fill="#34d399" font-size="7">enables →</text>
+
+      <!-- AI → New Capability (AI makes new thing possible) -->
+      <line x1="600" y1="80" x2="550" y2="288" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ad4)"/>
+      <text x="555" y="200" fill="#a78bfa" font-size="7">unlocks</text>
+
+      <!-- BEFORE/AFTER annotation -->
+      <rect x="980" y="140" width="190" height="130" rx="8" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1075" y="163" fill="#22d3ee" font-size="10" font-weight="600" text-anchor="middle">AI IMPACT</text>
+      <line x1="995" y1="174" x2="1155" y2="174" stroke="#1e293b" stroke-width="1"/>
+      <text x="1075" y="195" fill="#94a3b8" font-size="8" text-anchor="middle">Before: 10-20 hrs</text>
+      <text x="1075" y="213" fill="#34d399" font-size="8" font-weight="600" text-anchor="middle">After: 30-90 min</text>
+      <text x="1075" y="235" fill="#94a3b8" font-size="8" text-anchor="middle">Cost: 60-80% ↓</text>
+      <text x="1075" y="253" fill="#94a3b8" font-size="8" text-anchor="middle">Quality: errors ↓ 90%</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">AI / Tech Layer</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Human Expertise</text>
+      <rect x="180" y="400" width="10" height="7" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="194" y="407" fill="#94a3b8" font-size="6.5">Data / Analytics</text>
+      <rect x="180" y="412" width="10" height="7" rx="2" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1"/><text x="194" y="419" fill="#94a3b8" font-size="6.5">New Capability / Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>How AI Powers This</h3><p><span>AI Platform</span> generates a CMA in 30 seconds with 95% accuracy (was: 4 hours of comps hunting) → <span>Brokerage</span> agents close 3x more deals because AI pre-qualifies leads → <span>Data Engine</span> predicts which neighborhoods will appreciate 12 months before Zillow → <span>iBuying Platform</span> makes algorithmically-priced offers with AI-predicted renovation costs, capturing spread on the buy-renovate-sell cycle.</p></div>
+
+  <hr class="section-divider" id="a5">
+  <div class="section-title"><span class="section-num">📢 05</span> Marketing & Ad Tech Ecosystem</div>
+  <p class="section-sub">AI generates creative, optimizes bidding, personalizes content. Humans define strategy and brand voice.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="aa5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="ab5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="ac5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <marker id="ad5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <pattern id="ga5" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#ga5)"/>
+
+      <!-- AI PLATFORM (top center) -->
+      <rect x="380" y="20" width="440" height="60" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#22d3ee" font-size="13" font-weight="700" text-anchor="middle">AI Marketing Platform</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Content generation · Media buying · A/B testing · Customer segmentation · Attribution</text>
+
+      <!-- TRADITIONAL SERVICE (left) -->
+      <rect x="40" y="140" width="210" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="145" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Creative Agency / Brand Studio</text>
+      <text x="145" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Brand strategy · Creative direction · High-concept campaigns — AI produces the variants</text>
+      <text x="145" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI-augmented human experts</text>
+
+      <!-- DATA / ANALYTICS (right) -->
+      <rect x="710" y="140" width="220" height="80" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="820" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Customer Data & Analytics</text>
+      <text x="820" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Cross-channel attribution · LTV prediction · Churn signals · Cohort analysis</text>
+      <text x="820" y="200" fill="#fbbf24" font-size="7" text-anchor="middle">Data flywheel feeds back into AI</text>
+
+      <!-- NEW CAPABILITY (bottom) -->
+      <rect x="350" y="290" width="350" height="75" rx="8" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="525" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Hyper-Personalization at Scale</text>
+      <text x="525" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">1:1 content for millions · Dynamic pricing · Predictive next-best-action</text>
+      <text x="525" y="350" fill="#a78bfa" font-size="7" text-anchor="middle">Impossible without AI — this is the moat</text>
+
+      <!-- AI → Service (powers the humans) -->
+      <line x1="450" y1="80" x2="200" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa5)"/>
+      <text x="280" y="115" fill="#22d3ee" font-size="7">powers</text>
+      <!-- AI → Data (training loop) -->
+      <line x1="750" y1="80" x2="780" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa5)"/>
+      <text x="780" y="115" fill="#22d3ee" font-size="7">trains on</text>
+
+      <!-- Data → AI (feedback loop) -->
+      <path d="M 900 180 Q 980 180 980 100 Q 980 50 820 50" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ac5)"/>
+      <text x="980" y="135" fill="#fbbf24" font-size="7" text-anchor="middle">data flywheel</text>
+
+      <!-- Service → New Capability (human expertise unlocks new thing) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#34d399" stroke-width="2" marker-end="url(#ab5)"/>
+      <text x="300" y="278" fill="#34d399" font-size="7">enables →</text>
+
+      <!-- AI → New Capability (AI makes new thing possible) -->
+      <line x1="600" y1="80" x2="550" y2="288" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ad5)"/>
+      <text x="555" y="200" fill="#a78bfa" font-size="7">unlocks</text>
+
+      <!-- BEFORE/AFTER annotation -->
+      <rect x="980" y="140" width="190" height="130" rx="8" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1075" y="163" fill="#22d3ee" font-size="10" font-weight="600" text-anchor="middle">AI IMPACT</text>
+      <line x1="995" y1="174" x2="1155" y2="174" stroke="#1e293b" stroke-width="1"/>
+      <text x="1075" y="195" fill="#94a3b8" font-size="8" text-anchor="middle">Before: 10-20 hrs</text>
+      <text x="1075" y="213" fill="#34d399" font-size="8" font-weight="600" text-anchor="middle">After: 30-90 min</text>
+      <text x="1075" y="235" fill="#94a3b8" font-size="8" text-anchor="middle">Cost: 60-80% ↓</text>
+      <text x="1075" y="253" fill="#94a3b8" font-size="8" text-anchor="middle">Quality: errors ↓ 90%</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">AI / Tech Layer</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Human Expertise</text>
+      <rect x="180" y="400" width="10" height="7" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="194" y="407" fill="#94a3b8" font-size="6.5">Data / Analytics</text>
+      <rect x="180" y="412" width="10" height="7" rx="2" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1"/><text x="194" y="419" fill="#94a3b8" font-size="6.5">New Capability / Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>How AI Powers This</h3><p><span>AI Platform</span> generates 500 ad variants and tests them simultaneously → <span>Creative Agency</span> defines the brand voice and big ideas, AI produces every format → <span>Analytics Engine</span> tracks which version converts 4 specific customer cohorts → <span>Hyper-Personalization</span> delivers a unique landing page to every visitor based on their behavior. Campaign performance doubles while creative cost drops 70%.</p></div>
+
+  <hr class="section-divider" id="a6">
+  <div class="section-title"><span class="section-num">🩺 06</span> Healthcare Admin & Diagnostics</div>
+  <p class="section-sub">AI reads scans, codes encounters, automates prior auth. Clinicians do what only humans can: care.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="aa6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="ab6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="ac6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <marker id="ad6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <pattern id="ga6" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#ga6)"/>
+
+      <!-- AI PLATFORM (top center) -->
+      <rect x="380" y="20" width="440" height="60" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#22d3ee" font-size="13" font-weight="700" text-anchor="middle">AI Clinical Platform</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Medical imaging analysis · Auto-coding · Prior auth automation · Clinical documentation · Triage</text>
+
+      <!-- TRADITIONAL SERVICE (left) -->
+      <rect x="40" y="140" width="210" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="145" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Physician Practices / Clinics</text>
+      <text x="145" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Diagnosis · Treatment plans · Bedside care — AI handles the paperwork burden</text>
+      <text x="145" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI-augmented human experts</text>
+
+      <!-- DATA / ANALYTICS (right) -->
+      <rect x="710" y="140" width="220" height="80" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="820" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Patient Data & Outcomes Engine</text>
+      <text x="820" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">EMR mining · Population health · Drug interaction · Readmission prediction</text>
+      <text x="820" y="200" fill="#fbbf24" font-size="7" text-anchor="middle">Data flywheel feeds back into AI</text>
+
+      <!-- NEW CAPABILITY (bottom) -->
+      <rect x="350" y="290" width="350" height="75" rx="8" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="525" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">AI-First Diagnostic Services</text>
+      <text x="525" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Radiology reads in 30 sec · Dermatology image screening · Retina scan analysis</text>
+      <text x="525" y="350" fill="#a78bfa" font-size="7" text-anchor="middle">Impossible without AI — this is the moat</text>
+
+      <!-- AI → Service (powers the humans) -->
+      <line x1="450" y1="80" x2="200" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa6)"/>
+      <text x="280" y="115" fill="#22d3ee" font-size="7">powers</text>
+      <!-- AI → Data (training loop) -->
+      <line x1="750" y1="80" x2="780" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa6)"/>
+      <text x="780" y="115" fill="#22d3ee" font-size="7">trains on</text>
+
+      <!-- Data → AI (feedback loop) -->
+      <path d="M 900 180 Q 980 180 980 100 Q 980 50 820 50" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ac6)"/>
+      <text x="980" y="135" fill="#fbbf24" font-size="7" text-anchor="middle">data flywheel</text>
+
+      <!-- Service → New Capability (human expertise unlocks new thing) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#34d399" stroke-width="2" marker-end="url(#ab6)"/>
+      <text x="300" y="278" fill="#34d399" font-size="7">enables →</text>
+
+      <!-- AI → New Capability (AI makes new thing possible) -->
+      <line x1="600" y1="80" x2="550" y2="288" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ad6)"/>
+      <text x="555" y="200" fill="#a78bfa" font-size="7">unlocks</text>
+
+      <!-- BEFORE/AFTER annotation -->
+      <rect x="980" y="140" width="190" height="130" rx="8" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1075" y="163" fill="#22d3ee" font-size="10" font-weight="600" text-anchor="middle">AI IMPACT</text>
+      <line x1="995" y1="174" x2="1155" y2="174" stroke="#1e293b" stroke-width="1"/>
+      <text x="1075" y="195" fill="#94a3b8" font-size="8" text-anchor="middle">Before: 10-20 hrs</text>
+      <text x="1075" y="213" fill="#34d399" font-size="8" font-weight="600" text-anchor="middle">After: 30-90 min</text>
+      <text x="1075" y="235" fill="#94a3b8" font-size="8" text-anchor="middle">Cost: 60-80% ↓</text>
+      <text x="1075" y="253" fill="#94a3b8" font-size="8" text-anchor="middle">Quality: errors ↓ 90%</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">AI / Tech Layer</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Human Expertise</text>
+      <rect x="180" y="400" width="10" height="7" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="194" y="407" fill="#94a3b8" font-size="6.5">Data / Analytics</text>
+      <rect x="180" y="412" width="10" height="7" rx="2" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1"/><text x="194" y="419" fill="#94a3b8" font-size="6.5">New Capability / Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>How AI Powers This</h3><p><span>AI Clinical Platform</span> reads 200 chest X-rays in 3 minutes, flags 14 for review → <span>Physician Practices</span> spend 50% less time on documentation, see 40% more patients → <span>Outcomes Engine</span> predicts which discharged patients will be readmitted within 30 days → <span>AI Diagnostics</span> catches early-stage cancers and diabetic retinopathy that human readers miss. A radiologist who read 60 scans/day now confirms 300 with AI — higher accuracy, less burnout.</p></div>
+
+  <hr class="section-divider" id="a7">
+  <div class="section-title"><span class="section-num">📦 07</span> Supply Chain & Procurement</div>
+  <p class="section-sub">AI predicts demand, routes trucks, manages inventory. Humans negotiate deals and handle exceptions.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="aa7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="ab7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="ac7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <marker id="ad7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <pattern id="ga7" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#ga7)"/>
+
+      <!-- AI PLATFORM (top center) -->
+      <rect x="380" y="20" width="440" height="60" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#22d3ee" font-size="13" font-weight="700" text-anchor="middle">AI Supply Chain Platform</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Demand forecasting · Route optimization · Inventory mgmt · Supplier risk · Automated procurement</text>
+
+      <!-- TRADITIONAL SERVICE (left) -->
+      <rect x="40" y="140" width="210" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="145" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Logistics & Procurement Services</text>
+      <text x="145" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Supplier negotiation · Relationship mgmt · Exception handling — AI runs the routine</text>
+      <text x="145" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI-augmented human experts</text>
+
+      <!-- DATA / ANALYTICS (right) -->
+      <rect x="710" y="140" width="220" height="80" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="820" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">IoT & Real-Time Visibility Data</text>
+      <text x="820" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">GPS tracking · Warehouse sensors · Port/weather feeds · Supplier performance scores</text>
+      <text x="820" y="200" fill="#fbbf24" font-size="7" text-anchor="middle">Data flywheel feeds back into AI</text>
+
+      <!-- NEW CAPABILITY (bottom) -->
+      <rect x="350" y="290" width="350" height="75" rx="8" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="525" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Autonomous / Lights-Out Warehouse</text>
+      <text x="525" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Robot picking · Drone inventory · Self-optimizing slotting · Predictive maintenance</text>
+      <text x="525" y="350" fill="#a78bfa" font-size="7" text-anchor="middle">Impossible without AI — this is the moat</text>
+
+      <!-- AI → Service (powers the humans) -->
+      <line x1="450" y1="80" x2="200" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa7)"/>
+      <text x="280" y="115" fill="#22d3ee" font-size="7">powers</text>
+      <!-- AI → Data (training loop) -->
+      <line x1="750" y1="80" x2="780" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa7)"/>
+      <text x="780" y="115" fill="#22d3ee" font-size="7">trains on</text>
+
+      <!-- Data → AI (feedback loop) -->
+      <path d="M 900 180 Q 980 180 980 100 Q 980 50 820 50" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ac7)"/>
+      <text x="980" y="135" fill="#fbbf24" font-size="7" text-anchor="middle">data flywheel</text>
+
+      <!-- Service → New Capability (human expertise unlocks new thing) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#34d399" stroke-width="2" marker-end="url(#ab7)"/>
+      <text x="300" y="278" fill="#34d399" font-size="7">enables →</text>
+
+      <!-- AI → New Capability (AI makes new thing possible) -->
+      <line x1="600" y1="80" x2="550" y2="288" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ad7)"/>
+      <text x="555" y="200" fill="#a78bfa" font-size="7">unlocks</text>
+
+      <!-- BEFORE/AFTER annotation -->
+      <rect x="980" y="140" width="190" height="130" rx="8" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1075" y="163" fill="#22d3ee" font-size="10" font-weight="600" text-anchor="middle">AI IMPACT</text>
+      <line x1="995" y1="174" x2="1155" y2="174" stroke="#1e293b" stroke-width="1"/>
+      <text x="1075" y="195" fill="#94a3b8" font-size="8" text-anchor="middle">Before: 10-20 hrs</text>
+      <text x="1075" y="213" fill="#34d399" font-size="8" font-weight="600" text-anchor="middle">After: 30-90 min</text>
+      <text x="1075" y="235" fill="#94a3b8" font-size="8" text-anchor="middle">Cost: 60-80% ↓</text>
+      <text x="1075" y="253" fill="#94a3b8" font-size="8" text-anchor="middle">Quality: errors ↓ 90%</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">AI / Tech Layer</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Human Expertise</text>
+      <rect x="180" y="400" width="10" height="7" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="194" y="407" fill="#94a3b8" font-size="6.5">Data / Analytics</text>
+      <rect x="180" y="412" width="10" height="7" rx="2" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1"/><text x="194" y="419" fill="#94a3b8" font-size="6.5">New Capability / Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>How AI Powers This</h3><p><span>AI Platform</span> forecasts demand with 92% accuracy, auto-orders 80% of SKUs → <span>Logistics Services</span> focus on high-value negotiations and exception handling → <span>IoT Data</span> tracks every shipment in real-time, reroutes around weather → <span>Autonomous Warehouse</span> picks and packs 24/7 with 99.8% accuracy. A supply chain manager who managed 500 SKUs now manages 5,000 — inventory carrying costs drop 25-35%.</p></div>
+
+  <hr class="section-divider" id="a8">
+  <div class="section-title"><span class="section-num">🎓 08</span> Education & EdTech Ecosystem</div>
+  <p class="section-sub">AI tutors every student 1:1, grades instantly, personalizes curriculum. Teachers coach and inspire.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="aa8" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="ab8" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="ac8" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <marker id="ad8" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <pattern id="ga8" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#ga8)"/>
+
+      <!-- AI PLATFORM (top center) -->
+      <rect x="380" y="20" width="440" height="60" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#22d3ee" font-size="13" font-weight="700" text-anchor="middle">AI Learning Platform</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Personalized tutoring · Auto-grading · Curriculum generation · Learning gap detection · Engagement tracking</text>
+
+      <!-- TRADITIONAL SERVICE (left) -->
+      <rect x="40" y="140" width="210" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="145" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Schools / Training Providers</text>
+      <text x="145" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Instruction · Mentorship · Social-emotional learning · Classroom culture — AI handles drills</text>
+      <text x="145" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI-augmented human experts</text>
+
+      <!-- DATA / ANALYTICS (right) -->
+      <rect x="710" y="140" width="220" height="80" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="820" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Student Performance Data Engine</text>
+      <text x="820" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Skill mastery maps · Learning velocity · Intervention triggers · Career pathway prediction</text>
+      <text x="820" y="200" fill="#fbbf24" font-size="7" text-anchor="middle">Data flywheel feeds back into AI</text>
+
+      <!-- NEW CAPABILITY (bottom) -->
+      <rect x="350" y="290" width="350" height="75" rx="8" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="525" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Competency-Based Credentialing</text>
+      <text x="525" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Skills verified by AI · Employer-matched certifications · Continuous micro-credentials</text>
+      <text x="525" y="350" fill="#a78bfa" font-size="7" text-anchor="middle">Impossible without AI — this is the moat</text>
+
+      <!-- AI → Service (powers the humans) -->
+      <line x1="450" y1="80" x2="200" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa8)"/>
+      <text x="280" y="115" fill="#22d3ee" font-size="7">powers</text>
+      <!-- AI → Data (training loop) -->
+      <line x1="750" y1="80" x2="780" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa8)"/>
+      <text x="780" y="115" fill="#22d3ee" font-size="7">trains on</text>
+
+      <!-- Data → AI (feedback loop) -->
+      <path d="M 900 180 Q 980 180 980 100 Q 980 50 820 50" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ac8)"/>
+      <text x="980" y="135" fill="#fbbf24" font-size="7" text-anchor="middle">data flywheel</text>
+
+      <!-- Service → New Capability (human expertise unlocks new thing) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#34d399" stroke-width="2" marker-end="url(#ab8)"/>
+      <text x="300" y="278" fill="#34d399" font-size="7">enables →</text>
+
+      <!-- AI → New Capability (AI makes new thing possible) -->
+      <line x1="600" y1="80" x2="550" y2="288" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ad8)"/>
+      <text x="555" y="200" fill="#a78bfa" font-size="7">unlocks</text>
+
+      <!-- BEFORE/AFTER annotation -->
+      <rect x="980" y="140" width="190" height="130" rx="8" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1075" y="163" fill="#22d3ee" font-size="10" font-weight="600" text-anchor="middle">AI IMPACT</text>
+      <line x1="995" y1="174" x2="1155" y2="174" stroke="#1e293b" stroke-width="1"/>
+      <text x="1075" y="195" fill="#94a3b8" font-size="8" text-anchor="middle">Before: 10-20 hrs</text>
+      <text x="1075" y="213" fill="#34d399" font-size="8" font-weight="600" text-anchor="middle">After: 30-90 min</text>
+      <text x="1075" y="235" fill="#94a3b8" font-size="8" text-anchor="middle">Cost: 60-80% ↓</text>
+      <text x="1075" y="253" fill="#94a3b8" font-size="8" text-anchor="middle">Quality: errors ↓ 90%</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">AI / Tech Layer</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Human Expertise</text>
+      <rect x="180" y="400" width="10" height="7" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="194" y="407" fill="#94a3b8" font-size="6.5">Data / Analytics</text>
+      <rect x="180" y="412" width="10" height="7" rx="2" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1"/><text x="194" y="419" fill="#94a3b8" font-size="6.5">New Capability / Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>How AI Powers This</h3><p><span>AI Platform</span> tutors each student at their exact level in math (was: 1 teacher for 30 students at different levels) → <span>Schools</span> transform teachers into coaches who inspire and mentor → <span>Performance Data</span> identifies exactly which skill a student is stuck on and deploys targeted intervention → <span>Competency Credentials</span> replace seat-time degrees with verified skills that employers can search. Students learn 2x faster, teachers spend 60% less time on grading.</p></div>
+
+  <hr class="section-divider" id="a9">
+  <div class="section-title"><span class="section-num">👥 09</span> Recruiting & HR Tech Ecosystem</div>
+  <p class="section-sub">AI screens, assesses, and matches candidates. Recruiters build relationships and close.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="aa9" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="ab9" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="ac9" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <marker id="ad9" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <pattern id="ga9" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#ga9)"/>
+
+      <!-- AI PLATFORM (top center) -->
+      <rect x="380" y="20" width="440" height="60" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#22d3ee" font-size="13" font-weight="700" text-anchor="middle">AI Recruiting Platform</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Resume parsing · Skills assessment · Culture-fit modeling · Interview scheduling · Onboarding automation</text>
+
+      <!-- TRADITIONAL SERVICE (left) -->
+      <rect x="40" y="140" width="210" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="145" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Staffing & Executive Search</text>
+      <text x="145" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Relationship building · Offer negotiation · Culture sell · Reference calls — AI pre-qualifies</text>
+      <text x="145" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI-augmented human experts</text>
+
+      <!-- DATA / ANALYTICS (right) -->
+      <rect x="710" y="140" width="220" height="80" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="820" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Talent Market Intelligence</text>
+      <text x="820" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Comp benchmarks · Skill supply/demand · Attrition prediction · Competitor talent mapping</text>
+      <text x="820" y="200" fill="#fbbf24" font-size="7" text-anchor="middle">Data flywheel feeds back into AI</text>
+
+      <!-- NEW CAPABILITY (bottom) -->
+      <rect x="350" y="290" width="350" height="75" rx="8" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="525" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Skills-Based Hiring Marketplace</text>
+      <text x="525" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Blind matching by verified skills · Bias-reduced · Continuous candidate rediscovery</text>
+      <text x="525" y="350" fill="#a78bfa" font-size="7" text-anchor="middle">Impossible without AI — this is the moat</text>
+
+      <!-- AI → Service (powers the humans) -->
+      <line x1="450" y1="80" x2="200" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa9)"/>
+      <text x="280" y="115" fill="#22d3ee" font-size="7">powers</text>
+      <!-- AI → Data (training loop) -->
+      <line x1="750" y1="80" x2="780" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa9)"/>
+      <text x="780" y="115" fill="#22d3ee" font-size="7">trains on</text>
+
+      <!-- Data → AI (feedback loop) -->
+      <path d="M 900 180 Q 980 180 980 100 Q 980 50 820 50" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ac9)"/>
+      <text x="980" y="135" fill="#fbbf24" font-size="7" text-anchor="middle">data flywheel</text>
+
+      <!-- Service → New Capability (human expertise unlocks new thing) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#34d399" stroke-width="2" marker-end="url(#ab9)"/>
+      <text x="300" y="278" fill="#34d399" font-size="7">enables →</text>
+
+      <!-- AI → New Capability (AI makes new thing possible) -->
+      <line x1="600" y1="80" x2="550" y2="288" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ad9)"/>
+      <text x="555" y="200" fill="#a78bfa" font-size="7">unlocks</text>
+
+      <!-- BEFORE/AFTER annotation -->
+      <rect x="980" y="140" width="190" height="130" rx="8" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1075" y="163" fill="#22d3ee" font-size="10" font-weight="600" text-anchor="middle">AI IMPACT</text>
+      <line x1="995" y1="174" x2="1155" y2="174" stroke="#1e293b" stroke-width="1"/>
+      <text x="1075" y="195" fill="#94a3b8" font-size="8" text-anchor="middle">Before: 10-20 hrs</text>
+      <text x="1075" y="213" fill="#34d399" font-size="8" font-weight="600" text-anchor="middle">After: 30-90 min</text>
+      <text x="1075" y="235" fill="#94a3b8" font-size="8" text-anchor="middle">Cost: 60-80% ↓</text>
+      <text x="1075" y="253" fill="#94a3b8" font-size="8" text-anchor="middle">Quality: errors ↓ 90%</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">AI / Tech Layer</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Human Expertise</text>
+      <rect x="180" y="400" width="10" height="7" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="194" y="407" fill="#94a3b8" font-size="6.5">Data / Analytics</text>
+      <rect x="180" y="412" width="10" height="7" rx="2" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1"/><text x="194" y="419" fill="#94a3b8" font-size="6.5">New Capability / Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>How AI Powers This</h3><p><span>AI Platform</span> screens 10,000 applicants, ranks top 50 by verified skills match → <span>Staffing Agency</span> recruiters spend 100% of time on relationship-building and closing, not sourcing → <span>Talent Intel</span> tells you exactly what to offer to win the candidate vs market → <span>Skills-Based Marketplace</span> matches people to roles based on what they can do, not where they worked. Time-to-fill drops 60%, quality-of-hire scores rise 35%.</p></div>
+
+  <hr class="section-divider" id="a10">
+  <div class="section-title"><span class="section-num">💬 10</span> Customer Service Ecosystem</div>
+  <p class="section-sub">AI handles 80% of inquiries instantly. Humans handle the 20% that require empathy and complex problem-solving.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="aa10" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="ab10" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="ac10" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <marker id="ad10" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <pattern id="ga10" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#ga10)"/>
+
+      <!-- AI PLATFORM (top center) -->
+      <rect x="380" y="20" width="440" height="60" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#22d3ee" font-size="13" font-weight="700" text-anchor="middle">AI Support Platform</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Conversational AI · Ticket routing · Knowledge base · Sentiment analysis · Voice AI · Auto-resolution</text>
+
+      <!-- TRADITIONAL SERVICE (left) -->
+      <rect x="40" y="140" width="210" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="145" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Contact Center / Support Teams</text>
+      <text x="145" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Complex cases · Escalations · High-value accounts · Empathy-driven interactions</text>
+      <text x="145" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI-augmented human experts</text>
+
+      <!-- DATA / ANALYTICS (right) -->
+      <rect x="710" y="140" width="220" height="80" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="820" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Interaction & Feedback Analytics</text>
+      <text x="820" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Resolution paths · CSAT drivers · Churn signals · Agent performance · Product feedback</text>
+      <text x="820" y="200" fill="#fbbf24" font-size="7" text-anchor="middle">Data flywheel feeds back into AI</text>
+
+      <!-- NEW CAPABILITY (bottom) -->
+      <rect x="350" y="290" width="350" height="75" rx="8" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="525" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Proactive / Predictive Support</text>
+      <text x="525" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Issue detected before customer notices · Auto-fix deployed · Personalized outreach</text>
+      <text x="525" y="350" fill="#a78bfa" font-size="7" text-anchor="middle">Impossible without AI — this is the moat</text>
+
+      <!-- AI → Service (powers the humans) -->
+      <line x1="450" y1="80" x2="200" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa10)"/>
+      <text x="280" y="115" fill="#22d3ee" font-size="7">powers</text>
+      <!-- AI → Data (training loop) -->
+      <line x1="750" y1="80" x2="780" y2="138" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#aa10)"/>
+      <text x="780" y="115" fill="#22d3ee" font-size="7">trains on</text>
+
+      <!-- Data → AI (feedback loop) -->
+      <path d="M 900 180 Q 980 180 980 100 Q 980 50 820 50" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ac10)"/>
+      <text x="980" y="135" fill="#fbbf24" font-size="7" text-anchor="middle">data flywheel</text>
+
+      <!-- Service → New Capability (human expertise unlocks new thing) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#34d399" stroke-width="2" marker-end="url(#ab10)"/>
+      <text x="300" y="278" fill="#34d399" font-size="7">enables →</text>
+
+      <!-- AI → New Capability (AI makes new thing possible) -->
+      <line x1="600" y1="80" x2="550" y2="288" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ad10)"/>
+      <text x="555" y="200" fill="#a78bfa" font-size="7">unlocks</text>
+
+      <!-- BEFORE/AFTER annotation -->
+      <rect x="980" y="140" width="190" height="130" rx="8" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1075" y="163" fill="#22d3ee" font-size="10" font-weight="600" text-anchor="middle">AI IMPACT</text>
+      <line x1="995" y1="174" x2="1155" y2="174" stroke="#1e293b" stroke-width="1"/>
+      <text x="1075" y="195" fill="#94a3b8" font-size="8" text-anchor="middle">Before: 10-20 hrs</text>
+      <text x="1075" y="213" fill="#34d399" font-size="8" font-weight="600" text-anchor="middle">After: 30-90 min</text>
+      <text x="1075" y="235" fill="#94a3b8" font-size="8" text-anchor="middle">Cost: 60-80% ↓</text>
+      <text x="1075" y="253" fill="#94a3b8" font-size="8" text-anchor="middle">Quality: errors ↓ 90%</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">AI / Tech Layer</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Human Expertise</text>
+      <rect x="180" y="400" width="10" height="7" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="194" y="407" fill="#94a3b8" font-size="6.5">Data / Analytics</text>
+      <rect x="180" y="412" width="10" height="7" rx="2" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="1"/><text x="194" y="419" fill="#94a3b8" font-size="6.5">New Capability / Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>How AI Powers This</h3><p><span>AI Platform</span> resolves 80% of inquiries in under 30 seconds (password resets, order status, returns) → <span>Support Team</span> handles complex, emotional, or high-value cases with full context from AI → <span>Analytics</span> identifies that 23% of calls are about a specific product defect — product team fixes it → <span>Predictive Support</span> detects an outage and proactively notifies affected customers before they call. CSAT scores rise 15 points, cost per ticket drops 70%.</p></div>
+</div></body></html>
