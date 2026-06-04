@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Immune Industry Ecosystems</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'JetBrains Mono', monospace; background: #020617; min-height: 100vh; padding: 2rem; color: white; }
+    .container { max-width: 1300px; margin: 0 auto; }
+    .section-divider { border: none; border-top: 2px solid #1e293b; margin: 2.5rem 0 1.5rem 0; }
+    .section-title { font-size: 1.4rem; font-weight: 700; color: #f8fafc; display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.2rem; }
+    .section-num { background: #1e293b; color: #94a3b8; font-size: 0.8rem; padding: 0.2rem 0.6rem; border-radius: 0.4rem; }
+    .section-sub { color: #64748b; font-size: 0.78rem; margin-bottom: 1rem; }
+    .diagram-container { background: rgba(15,23,42,0.5); border-radius: 1rem; border: 1px solid #1e293b; padding: 1rem; overflow-x: auto; margin-bottom: 0.5rem; }
+    svg { width: 100%; min-width: 950px; display: block; }
+    .flywheel-box { background: rgba(251,113,133,0.06); border: 1px solid rgba(251,113,133,0.2); border-radius: 0.75rem; padding: 0.85rem; margin-top: 0.5rem; }
+    .flywheel-box h3 { font-size: 0.78rem; font-weight: 600; color: #fb7185; margin-bottom: 0.4rem; }
+    .flywheel-box p { color: #94a3b8; font-size: 0.72rem; line-height: 1.55; }
+    .flywheel-box p span { color: #f8fafc; font-weight: 600; }
+    .pulse-dot { width: 8px; height: 8px; background: #fb7185; border-radius: 50%; animation: pulse 2s infinite; display: inline-block; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    .toc { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .toc a { color: #94a3b8; text-decoration: none; font-size: 0.7rem; padding: 0.25rem 0.5rem; border: 1px solid #1e293b; border-radius: 0.35rem; transition: all 0.2s; }
+    .toc a:hover { color: #fb7185; border-color: #fb7185; }
+    .nav-back { margin-bottom: 0.75rem; }
+    .nav-back a { color: #64748b; text-decoration: none; font-size: 0.7rem; }
+    .nav-back a:hover { color: #fb7185; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="nav-back"><a href=".">← Back to PE Ecosystems</a>  ·  <a href="ai-enhanced.html">AI-Enhanced →</a></div>
+  <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.4rem;">
+    <span class="pulse-dot"></span>
+    <h1 style="font-size:1.4rem;font-weight:700;">AI-Immune Industry Ecosystems</h1>
+  </div>
+  <p style="color:#64748b;font-size:0.78rem;margin-bottom:1.2rem;">10 business circles where AI can assist around the edges — but the core value is irreducibly human. Physical presence, emotional trust, tactile skill, live performance.</p>
+  <div class="toc">
+    <a href="#i1">01 · Funeral Care</a><a href="#i2">02 · Mental Health</a><a href="#i3">03 · Childcare</a><a href="#i4">04 · Senior Care</a><a href="#i5">05 · Emergency Services</a>
+    <a href="#i6">06 · Skilled Trades</a><a href="#i7">07 · Security</a><a href="#i8">08 · Hospitality</a><a href="#i9">09 · Fitness</a><a href="#i10">10 · Live Entertainment</a>
+  </div>
+
+  <hr class="section-divider" id="i1">
+  <div class="section-title"><span class="section-num">⚰️ 01</span> Funeral & Death Care Ecosystem</div>
+  <p class="section-sub">You can't AI grief. The entire product is human presence at the worst moment of someone's life.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="ia1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb7185"/></marker>
+        <marker id="ib1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="ic1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="id1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gi1" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gi1)"/>
+
+      <!-- CORE HUMAN SERVICE (center) -->
+      <rect x="400" y="20" width="400" height="65" rx="8" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#fb7185" font-size="13" font-weight="700" text-anchor="middle">Funeral Home / Mortuary</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Body preparation · Services · Family counsel · Grief support — human presence</text>
+      <text x="600" y="78" fill="#fb7185" font-size="7" text-anchor="middle">IRREDUCIBLY HUMAN — AI can assist around the edges, never the core</text>
+
+      <!-- PHYSICAL INFRASTRUCTURE (left) -->
+      <rect x="30" y="140" width="220" height="80" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="140" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Cemetery / Crematory / Mausoleum</text>
+      <text x="140" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Physical grounds · Interment · Maintenance · Perpetual care</text>
+      <text x="140" y="200" fill="#fb923c" font-size="7" text-anchor="middle">Physical presence required</text>
+
+      <!-- SUPPORT SERVICES (right) -->
+      <rect x="700" y="140" width="230" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="815" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Estate & Legal Services</text>
+      <text x="815" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Probate · Wills · Life insurance claims · Obituary — AI manages paperwork</text>
+      <text x="815" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI handles scheduling/payments here</text>
+
+      <!-- TRUST / RELATIONSHIP (bottom) -->
+      <rect x="350" y="290" width="360" height="75" rx="8" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="530" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Grief Counseling & Aftercare</text>
+      <text x="530" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Bereavement groups · 1:1 therapy · Memorial planning — trust built over months</text>
+      <text x="530" y="350" fill="#fbbf24" font-size="7" text-anchor="middle">This is the moat — AI can't replicate it</text>
+
+      <!-- Core → Infra (needs physical) -->
+      <line x1="450" y1="85" x2="200" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia1)"/>
+      <text x="300" y="118" fill="#fb7185" font-size="7">requires</text>
+      <!-- Core → Support (feeds) -->
+      <line x1="750" y1="85" x2="780" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia1)"/>
+      <text x="780" y="118" fill="#fb7185" font-size="7">feeds</text>
+
+      <!-- Infra → Trust (enables consistency) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#fb923c" stroke-width="2" marker-end="url(#ib1)"/>
+      <text x="290" y="275" fill="#fb923c" font-size="7">enables →</text>
+      <!-- Support → Trust (feeds) -->
+      <line x1="800" y1="220" x2="650" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#ic1)"/>
+      <text x="700" y="275" fill="#34d399" font-size="7">supports</text>
+
+      <!-- Trust → Core (reinforcement loop) -->
+      <path d="M 530 290 Q 530 250 600 200 Q 650 180 650 120 Q 650 85 750 85" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#id1)"/>
+      <text x="680" y="200" fill="#fbbf24" font-size="7">trust reinforces</text>
+
+      <!-- WHY AI-IMMUNE annotation -->
+      <rect x="960" y="140" width="210" height="135" rx="8" fill="rgba(251,113,133,0.06)" stroke="#fb7185" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1065" y="165" fill="#fb7185" font-size="10" font-weight="600" text-anchor="middle">WHY AI-IMMUNE</text>
+      <line x1="975" y1="176" x2="1155" y2="176" stroke="#1e293b" stroke-width="1"/>
+      <text x="1065" y="197" fill="#94a3b8" font-size="8.5" text-anchor="middle">Grief requires a human witness. You cannot AI a funeral director holding a widow's hand.</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">Core Human Service</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Physical Infrastructure</text>
+      <rect x="200" y="400" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="214" y="407" fill="#94a3b8" font-size="6.5">Support / Tech (AI here)</text>
+      <rect x="200" y="412" width="10" height="7" rx="2" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1"/><text x="214" y="419" fill="#94a3b8" font-size="6.5">Trust / Relationship Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>Why This Is AI-Immune</h3><p><span>Funeral Home</span> provides human presence during the most vulnerable moment → <span>Cemetery/Crematory</span> maintains physical grounds in perpetuity → <span>Estate Services</span> handles probate and insurance (AI does the forms, humans deliver the check) → <span>Grief Counseling</span> builds multi-month relationships that cannot be automated. A funeral home that owns its cemetery, crematory, and aftercare captures <span>$12-15K per family</span> across 5+ touchpoints over 2 years. AI can schedule. It can't grieve.</p></div>
+
+  <hr class="section-divider" id="i2">
+  <div class="section-title"><span class="section-num">🧠 02</span> Mental Health & Therapy Ecosystem</div>
+  <p class="section-sub">The therapeutic alliance — trust between two humans — is the active ingredient. AI can triage but can't heal.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="ia2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb7185"/></marker>
+        <marker id="ib2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="ic2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="id2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gi2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gi2)"/>
+
+      <!-- CORE HUMAN SERVICE (center) -->
+      <rect x="400" y="20" width="400" height="65" rx="8" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#fb7185" font-size="13" font-weight="700" text-anchor="middle">Therapy & Psychiatry Practices</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Individual · Couples · Group · EMDR · CBT · Psychiatry — human connection is the medicine</text>
+      <text x="600" y="78" fill="#fb7185" font-size="7" text-anchor="middle">IRREDUCIBLY HUMAN — AI can assist around the edges, never the core</text>
+
+      <!-- PHYSICAL INFRASTRUCTURE (left) -->
+      <rect x="30" y="140" width="220" height="80" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="140" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Treatment Centers / Facilities</text>
+      <text x="140" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Inpatient · PHP/IOP · Detox · Residential — physical environment of safety</text>
+      <text x="140" y="200" fill="#fb923c" font-size="7" text-anchor="middle">Physical presence required</text>
+
+      <!-- SUPPORT SERVICES (right) -->
+      <rect x="700" y="140" width="230" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="815" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Insurance & Billing Services</text>
+      <text x="815" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Credentialing · Claims · Prior auth (AI handles) · Reimbursement optimization</text>
+      <text x="815" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI handles scheduling/payments here</text>
+
+      <!-- TRUST / RELATIONSHIP (bottom) -->
+      <rect x="350" y="290" width="360" height="75" rx="8" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="530" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Peer Support & Recovery Networks</text>
+      <text x="530" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Lived-experience mentors · 12-step · Alumni programs · Authenticity is non-negotiable</text>
+      <text x="530" y="350" fill="#fbbf24" font-size="7" text-anchor="middle">This is the moat — AI can't replicate it</text>
+
+      <!-- Core → Infra (needs physical) -->
+      <line x1="450" y1="85" x2="200" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia2)"/>
+      <text x="300" y="118" fill="#fb7185" font-size="7">requires</text>
+      <!-- Core → Support (feeds) -->
+      <line x1="750" y1="85" x2="780" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia2)"/>
+      <text x="780" y="118" fill="#fb7185" font-size="7">feeds</text>
+
+      <!-- Infra → Trust (enables consistency) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#fb923c" stroke-width="2" marker-end="url(#ib2)"/>
+      <text x="290" y="275" fill="#fb923c" font-size="7">enables →</text>
+      <!-- Support → Trust (feeds) -->
+      <line x1="800" y1="220" x2="650" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#ic2)"/>
+      <text x="700" y="275" fill="#34d399" font-size="7">supports</text>
+
+      <!-- Trust → Core (reinforcement loop) -->
+      <path d="M 530 290 Q 530 250 600 200 Q 650 180 650 120 Q 650 85 750 85" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#id2)"/>
+      <text x="680" y="200" fill="#fbbf24" font-size="7">trust reinforces</text>
+
+      <!-- WHY AI-IMMUNE annotation -->
+      <rect x="960" y="140" width="210" height="135" rx="8" fill="rgba(251,113,133,0.06)" stroke="#fb7185" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1065" y="165" fill="#fb7185" font-size="10" font-weight="600" text-anchor="middle">WHY AI-IMMUNE</text>
+      <line x1="975" y1="176" x2="1155" y2="176" stroke="#1e293b" stroke-width="1"/>
+      <text x="1065" y="197" fill="#94a3b8" font-size="8.5" text-anchor="middle">Therapy works because of the relationship. A human who has been through it carries weight an AI never will.</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">Core Human Service</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Physical Infrastructure</text>
+      <rect x="200" y="400" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="214" y="407" fill="#94a3b8" font-size="6.5">Support / Tech (AI here)</text>
+      <rect x="200" y="412" width="10" height="7" rx="2" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1"/><text x="214" y="419" fill="#94a3b8" font-size="6.5">Trust / Relationship Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>Why This Is AI-Immune</h3><p><span>Therapy Practice</span> builds a trusting relationship over weeks/months → <span>Treatment Centers</span> provide the physical safe environment for acute care → <span>Billing Services</span> handles the insurance maze (AI automates credentialing and claims) → <span>Peer Support</span> leverages lived experience that AI cannot fake. A therapy group that owns its facilities, billing, and peer network captures <span>$20-50K per patient</span> across the care continuum. AI can write progress notes. It can't build rapport.</p></div>
+
+  <hr class="section-divider" id="i3">
+  <div class="section-title"><span class="section-num">🧸 03</span> Childcare & Early Education Ecosystem</div>
+  <p class="section-sub">You can't AI a hug, a skinned knee being kissed, or a child learning trust from a human face.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="ia3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb7185"/></marker>
+        <marker id="ib3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="ic3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="id3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gi3" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gi3)"/>
+
+      <!-- CORE HUMAN SERVICE (center) -->
+      <rect x="400" y="20" width="400" height="65" rx="8" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#fb7185" font-size="13" font-weight="700" text-anchor="middle">Daycare & Preschool Centers</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Infant through Pre-K · Licensed caregivers · Physical environment · Human connection</text>
+      <text x="600" y="78" fill="#fb7185" font-size="7" text-anchor="middle">IRREDUCIBLY HUMAN — AI can assist around the edges, never the core</text>
+
+      <!-- PHYSICAL INFRASTRUCTURE (left) -->
+      <rect x="30" y="140" width="220" height="80" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="140" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Physical Facilities & Playgrounds</text>
+      <text x="140" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Classrooms · Outdoor spaces · Security systems · Kitchen — physical infrastructure</text>
+      <text x="140" y="200" fill="#fb923c" font-size="7" text-anchor="middle">Physical presence required</text>
+
+      <!-- SUPPORT SERVICES (right) -->
+      <rect x="700" y="140" width="230" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="815" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Parent Communication & Admin</text>
+      <text x="815" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Daily reports · Billing · Enrollment · Waitlist — AI handles the logistics</text>
+      <text x="815" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI handles scheduling/payments here</text>
+
+      <!-- TRUST / RELATIONSHIP (bottom) -->
+      <rect x="350" y="290" width="360" height="75" rx="8" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="530" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Special Needs & Early Intervention</text>
+      <text x="530" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">OT · Speech · PT · Developmental therapy — hands-on, 1:1, irreducibly human</text>
+      <text x="530" y="350" fill="#fbbf24" font-size="7" text-anchor="middle">This is the moat — AI can't replicate it</text>
+
+      <!-- Core → Infra (needs physical) -->
+      <line x1="450" y1="85" x2="200" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia3)"/>
+      <text x="300" y="118" fill="#fb7185" font-size="7">requires</text>
+      <!-- Core → Support (feeds) -->
+      <line x1="750" y1="85" x2="780" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia3)"/>
+      <text x="780" y="118" fill="#fb7185" font-size="7">feeds</text>
+
+      <!-- Infra → Trust (enables consistency) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#fb923c" stroke-width="2" marker-end="url(#ib3)"/>
+      <text x="290" y="275" fill="#fb923c" font-size="7">enables →</text>
+      <!-- Support → Trust (feeds) -->
+      <line x1="800" y1="220" x2="650" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#ic3)"/>
+      <text x="700" y="275" fill="#34d399" font-size="7">supports</text>
+
+      <!-- Trust → Core (reinforcement loop) -->
+      <path d="M 530 290 Q 530 250 600 200 Q 650 180 650 120 Q 650 85 750 85" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#id3)"/>
+      <text x="680" y="200" fill="#fbbf24" font-size="7">trust reinforces</text>
+
+      <!-- WHY AI-IMMUNE annotation -->
+      <rect x="960" y="140" width="210" height="135" rx="8" fill="rgba(251,113,133,0.06)" stroke="#fb7185" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1065" y="165" fill="#fb7185" font-size="10" font-weight="600" text-anchor="middle">WHY AI-IMMUNE</text>
+      <line x1="975" y1="176" x2="1155" y2="176" stroke="#1e293b" stroke-width="1"/>
+      <text x="1065" y="197" fill="#94a3b8" font-size="8.5" text-anchor="middle">A child's brain develops through human interaction. No screen or AI replaces eye contact and physical comfort.</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">Core Human Service</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Physical Infrastructure</text>
+      <rect x="200" y="400" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="214" y="407" fill="#94a3b8" font-size="6.5">Support / Tech (AI here)</text>
+      <rect x="200" y="412" width="10" height="7" rx="2" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1"/><text x="214" y="419" fill="#94a3b8" font-size="6.5">Trust / Relationship Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>Why This Is AI-Immune</h3><p><span>Daycare Centers</span> provide physical care and human connection for 8-10 hours/day → <span>Physical Facilities</span> require playgrounds, classrooms, security — capital-intensive moat → <span>Parent Apps</span> handle daily reports, billing, photos (AI does the logistics) → <span>Early Intervention</span> provides hands-on OT/speech/PT that requires human touch. A childcare group with 5 centers, owned real estate, and integrated special needs services generates <span>$3-5M EBITDA</span> with 30%+ margins. Parents pay for trust, not technology.</p></div>
+
+  <hr class="section-divider" id="i4">
+  <div class="section-title"><span class="section-num">👴 04</span> Senior Care & Aging-in-Place Ecosystem</div>
+  <p class="section-sub">10,000 Americans turn 65 daily. They need hands to help them bathe, eat, and move — not chatbots.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="ia4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb7185"/></marker>
+        <marker id="ib4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="ic4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="id4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gi4" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gi4)"/>
+
+      <!-- CORE HUMAN SERVICE (center) -->
+      <rect x="400" y="20" width="400" height="65" rx="8" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#fb7185" font-size="13" font-weight="700" text-anchor="middle">Home Care & Assisted Living</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">ADL assistance · Medication mgmt · Companionship — physical human presence</text>
+      <text x="600" y="78" fill="#fb7185" font-size="7" text-anchor="middle">IRREDUCIBLY HUMAN — AI can assist around the edges, never the core</text>
+
+      <!-- PHYSICAL INFRASTRUCTURE (left) -->
+      <rect x="30" y="140" width="220" height="80" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="140" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Senior Housing & Facilities</text>
+      <text x="140" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Independent · Assisted · Memory care · Skilled nursing — real estate + operations</text>
+      <text x="140" y="200" fill="#fb923c" font-size="7" text-anchor="middle">Physical presence required</text>
+
+      <!-- SUPPORT SERVICES (right) -->
+      <rect x="700" y="140" width="230" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="815" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Medical Transport & Mobility</text>
+      <text x="815" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Wheelchair vans · Appointment escort · Physical assistance — door-through-door</text>
+      <text x="815" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI handles scheduling/payments here</text>
+
+      <!-- TRUST / RELATIONSHIP (bottom) -->
+      <rect x="350" y="290" width="360" height="75" rx="8" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="530" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Home Modification & Safety</text>
+      <text x="530" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Grab bars · Ramps · Stairlifts · Fall prevention — physical installation</text>
+      <text x="530" y="350" fill="#fbbf24" font-size="7" text-anchor="middle">This is the moat — AI can't replicate it</text>
+
+      <!-- Core → Infra (needs physical) -->
+      <line x1="450" y1="85" x2="200" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia4)"/>
+      <text x="300" y="118" fill="#fb7185" font-size="7">requires</text>
+      <!-- Core → Support (feeds) -->
+      <line x1="750" y1="85" x2="780" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia4)"/>
+      <text x="780" y="118" fill="#fb7185" font-size="7">feeds</text>
+
+      <!-- Infra → Trust (enables consistency) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#fb923c" stroke-width="2" marker-end="url(#ib4)"/>
+      <text x="290" y="275" fill="#fb923c" font-size="7">enables →</text>
+      <!-- Support → Trust (feeds) -->
+      <line x1="800" y1="220" x2="650" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#ic4)"/>
+      <text x="700" y="275" fill="#34d399" font-size="7">supports</text>
+
+      <!-- Trust → Core (reinforcement loop) -->
+      <path d="M 530 290 Q 530 250 600 200 Q 650 180 650 120 Q 650 85 750 85" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#id4)"/>
+      <text x="680" y="200" fill="#fbbf24" font-size="7">trust reinforces</text>
+
+      <!-- WHY AI-IMMUNE annotation -->
+      <rect x="960" y="140" width="210" height="135" rx="8" fill="rgba(251,113,133,0.06)" stroke="#fb7185" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1065" y="165" fill="#fb7185" font-size="10" font-weight="600" text-anchor="middle">WHY AI-IMMUNE</text>
+      <line x1="975" y1="176" x2="1155" y2="176" stroke="#1e293b" stroke-width="1"/>
+      <text x="1065" y="197" fill="#94a3b8" font-size="8.5" text-anchor="middle">Aging is physical. Someone has to be in the room. AI can monitor — it can't transfer a patient from bed to wheelchair.</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">Core Human Service</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Physical Infrastructure</text>
+      <rect x="200" y="400" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="214" y="407" fill="#94a3b8" font-size="6.5">Support / Tech (AI here)</text>
+      <rect x="200" y="412" width="10" height="7" rx="2" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1"/><text x="214" y="419" fill="#94a3b8" font-size="6.5">Trust / Relationship Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>Why This Is AI-Immune</h3><p><span>Home Care Agency</span> provides caregivers who physically assist with bathing, dressing, meals → <span>Senior Housing</span> operates facilities with 24/7 staff — real estate + services moat → <span>Medical Transport</span> physically moves patients door-through-door to appointments → <span>Home Modification</span> installs physical safety equipment. A senior care ecosystem that owns the agency, the transport, and the modification company captures <span>$50-80K per senior per year</span>. AI monitors for falls. A human catches them.</p></div>
+
+  <hr class="section-divider" id="i5">
+  <div class="section-title"><span class="section-num">🚨 05</span> Emergency Services & Disaster Response</div>
+  <p class="section-sub">When the house is on fire, the pipe bursts, or the hurricane hits — you need boots on the ground, not an algorithm.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="ia5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb7185"/></marker>
+        <marker id="ib5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="ic5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="id5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gi5" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gi5)"/>
+
+      <!-- CORE HUMAN SERVICE (center) -->
+      <rect x="400" y="20" width="400" height="65" rx="8" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#fb7185" font-size="13" font-weight="700" text-anchor="middle">Fire / EMS / Paramedic Services</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">First response · Medical transport · Rescue — human decisions under extreme pressure</text>
+      <text x="600" y="78" fill="#fb7185" font-size="7" text-anchor="middle">IRREDUCIBLY HUMAN — AI can assist around the edges, never the core</text>
+
+      <!-- PHYSICAL INFRASTRUCTURE (left) -->
+      <rect x="30" y="140" width="220" height="80" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="140" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Water/Fire/Mold Restoration</text>
+      <text x="140" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Emergency extraction · Structural drying · Mold remediation — physical labor</text>
+      <text x="140" y="200" fill="#fb923c" font-size="7" text-anchor="middle">Physical presence required</text>
+
+      <!-- SUPPORT SERVICES (right) -->
+      <rect x="700" y="140" width="230" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="815" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Emergency Power & Utilities</text>
+      <text x="815" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Generator deployment · Temporary power · Infrastructure repair — hands-on</text>
+      <text x="815" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI handles scheduling/payments here</text>
+
+      <!-- TRUST / RELATIONSHIP (bottom) -->
+      <rect x="350" y="290" width="360" height="75" rx="8" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="530" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Disaster Prep & Training</text>
+      <text x="530" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">First aid · CPR · Evacuation planning · CERT teams — human skill transfer</text>
+      <text x="530" y="350" fill="#fbbf24" font-size="7" text-anchor="middle">This is the moat — AI can't replicate it</text>
+
+      <!-- Core → Infra (needs physical) -->
+      <line x1="450" y1="85" x2="200" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia5)"/>
+      <text x="300" y="118" fill="#fb7185" font-size="7">requires</text>
+      <!-- Core → Support (feeds) -->
+      <line x1="750" y1="85" x2="780" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia5)"/>
+      <text x="780" y="118" fill="#fb7185" font-size="7">feeds</text>
+
+      <!-- Infra → Trust (enables consistency) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#fb923c" stroke-width="2" marker-end="url(#ib5)"/>
+      <text x="290" y="275" fill="#fb923c" font-size="7">enables →</text>
+      <!-- Support → Trust (feeds) -->
+      <line x1="800" y1="220" x2="650" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#ic5)"/>
+      <text x="700" y="275" fill="#34d399" font-size="7">supports</text>
+
+      <!-- Trust → Core (reinforcement loop) -->
+      <path d="M 530 290 Q 530 250 600 200 Q 650 180 650 120 Q 650 85 750 85" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#id5)"/>
+      <text x="680" y="200" fill="#fbbf24" font-size="7">trust reinforces</text>
+
+      <!-- WHY AI-IMMUNE annotation -->
+      <rect x="960" y="140" width="210" height="135" rx="8" fill="rgba(251,113,133,0.06)" stroke="#fb7185" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1065" y="165" fill="#fb7185" font-size="10" font-weight="600" text-anchor="middle">WHY AI-IMMUNE</text>
+      <line x1="975" y1="176" x2="1155" y2="176" stroke="#1e293b" stroke-width="1"/>
+      <text x="1065" y="197" fill="#94a3b8" font-size="8.5" text-anchor="middle">AI can route the 911 call. It can't kick down a door, carry someone down a ladder, or pump out a flooded basement.</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">Core Human Service</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Physical Infrastructure</text>
+      <rect x="200" y="400" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="214" y="407" fill="#94a3b8" font-size="6.5">Support / Tech (AI here)</text>
+      <rect x="200" y="412" width="10" height="7" rx="2" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1"/><text x="214" y="419" fill="#94a3b8" font-size="6.5">Trust / Relationship Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>Why This Is AI-Immune</h3><p><span>Fire/EMS</span> responds within minutes — split-second human decisions in chaos → <span>Restoration Services</span> physically extracts water, dries structures, remediates mold → <span>Emergency Power</span> deploys generators and repairs lines with human crews → <span>Training Services</span> teaches CPR and disaster response — skill transfer between humans. A restoration company that owns its equipment fleet, training program, and emergency power division captures <span>$15-30K per disaster job</span>. AI can dispatch. Humans mop.</p></div>
+
+  <hr class="section-divider" id="i6">
+  <div class="section-title"><span class="section-num">🔧 06</span> Skilled Trades / Emergency Repair</div>
+  <p class="section-sub">A burst pipe at 2am doesn't care about your chatbot. Someone has to physically fix it.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="ia6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb7185"/></marker>
+        <marker id="ib6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="ic6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="id6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gi6" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gi6)"/>
+
+      <!-- CORE HUMAN SERVICE (center) -->
+      <rect x="400" y="20" width="400" height="65" rx="8" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#fb7185" font-size="13" font-weight="700" text-anchor="middle">Emergency Repair Services</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Plumbing · HVAC · Electrical · Appliance · Locksmith — someone has to show up</text>
+      <text x="600" y="78" fill="#fb7185" font-size="7" text-anchor="middle">IRREDUCIBLY HUMAN — AI can assist around the edges, never the core</text>
+
+      <!-- PHYSICAL INFRASTRUCTURE (left) -->
+      <rect x="30" y="140" width="220" height="80" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="140" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Parts & Equipment Supply</text>
+      <text x="140" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Physical inventory · Warehouse · Delivery trucks · Stock for every possible failure</text>
+      <text x="140" y="200" fill="#fb923c" font-size="7" text-anchor="middle">Physical presence required</text>
+
+      <!-- SUPPORT SERVICES (right) -->
+      <rect x="700" y="140" width="230" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="815" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Dispatch & Scheduling Platform</text>
+      <text x="815" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Route optimization · Tech matching · Customer comms — AI handles the logistics perfectly</text>
+      <text x="815" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI handles scheduling/payments here</text>
+
+      <!-- TRUST / RELATIONSHIP (bottom) -->
+      <rect x="350" y="290" width="360" height="75" rx="8" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="530" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Maintenance Contract Portfolio</text>
+      <text x="530" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Annual HVAC tune-ups · Plumbing inspections · Electrical safety — recurring human visits</text>
+      <text x="530" y="350" fill="#fbbf24" font-size="7" text-anchor="middle">This is the moat — AI can't replicate it</text>
+
+      <!-- Core → Infra (needs physical) -->
+      <line x1="450" y1="85" x2="200" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia6)"/>
+      <text x="300" y="118" fill="#fb7185" font-size="7">requires</text>
+      <!-- Core → Support (feeds) -->
+      <line x1="750" y1="85" x2="780" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia6)"/>
+      <text x="780" y="118" fill="#fb7185" font-size="7">feeds</text>
+
+      <!-- Infra → Trust (enables consistency) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#fb923c" stroke-width="2" marker-end="url(#ib6)"/>
+      <text x="290" y="275" fill="#fb923c" font-size="7">enables →</text>
+      <!-- Support → Trust (feeds) -->
+      <line x1="800" y1="220" x2="650" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#ic6)"/>
+      <text x="700" y="275" fill="#34d399" font-size="7">supports</text>
+
+      <!-- Trust → Core (reinforcement loop) -->
+      <path d="M 530 290 Q 530 250 600 200 Q 650 180 650 120 Q 650 85 750 85" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#id6)"/>
+      <text x="680" y="200" fill="#fbbf24" font-size="7">trust reinforces</text>
+
+      <!-- WHY AI-IMMUNE annotation -->
+      <rect x="960" y="140" width="210" height="135" rx="8" fill="rgba(251,113,133,0.06)" stroke="#fb7185" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1065" y="165" fill="#fb7185" font-size="10" font-weight="600" text-anchor="middle">WHY AI-IMMUNE</text>
+      <line x1="975" y1="176" x2="1155" y2="176" stroke="#1e293b" stroke-width="1"/>
+      <text x="1065" y="197" fill="#94a3b8" font-size="8.5" text-anchor="middle">AI can schedule the technician. The technician still has to get in the van, drive there, and fix the physical thing.</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">Core Human Service</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Physical Infrastructure</text>
+      <rect x="200" y="400" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="214" y="407" fill="#94a3b8" font-size="6.5">Support / Tech (AI here)</text>
+      <rect x="200" y="412" width="10" height="7" rx="2" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1"/><text x="214" y="419" fill="#94a3b8" font-size="6.5">Trust / Relationship Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>Why This Is AI-Immune</h3><p><span>Emergency Repair</span> dispatches a human to physically diagnose and fix — a pipe, a furnace, a short circuit → <span>Parts Supply</span> stocks 10,000+ SKUs in a physical warehouse with delivery trucks → <span>Dispatch Platform</span> uses AI to route the nearest tech with the right parts (this is where AI actually shines) → <span>Maintenance Contracts</span> generate recurring revenue from annual human visits. A trades group with captive supply and 50 techs generates <span>$8-15M revenue with 25-35% EBITDA</span>. AI optimizes the route. The human turns the wrench.</p></div>
+
+  <hr class="section-divider" id="i7">
+  <div class="section-title"><span class="section-num">🛡️ 07</span> Security & Physical Protection</div>
+  <p class="section-sub">AI can watch cameras. Humans stop threats, detain intruders, and make judgment calls under pressure.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="ia7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb7185"/></marker>
+        <marker id="ib7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="ic7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="id7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gi7" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gi7)"/>
+
+      <!-- CORE HUMAN SERVICE (center) -->
+      <rect x="400" y="20" width="400" height="65" rx="8" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#fb7185" font-size="13" font-weight="700" text-anchor="middle">Armed & Unarmed Guard Services</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Executive protection · Event security · Facility guards — physical deterrent</text>
+      <text x="600" y="78" fill="#fb7185" font-size="7" text-anchor="middle">IRREDUCIBLY HUMAN — AI can assist around the edges, never the core</text>
+
+      <!-- PHYSICAL INFRASTRUCTURE (left) -->
+      <rect x="30" y="140" width="220" height="80" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="140" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Alarm Monitoring & Response</text>
+      <text x="140" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">24/7 monitoring center · Verified response · Police dispatch — human verification</text>
+      <text x="140" y="200" fill="#fb923c" font-size="7" text-anchor="middle">Physical presence required</text>
+
+      <!-- SUPPORT SERVICES (right) -->
+      <rect x="700" y="140" width="230" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="815" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Armored Transport & Logistics</text>
+      <text x="815" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Cash-in-transit · Valuables · High-security courier — armed humans in vehicles</text>
+      <text x="815" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI handles scheduling/payments here</text>
+
+      <!-- TRUST / RELATIONSHIP (bottom) -->
+      <rect x="350" y="290" width="360" height="75" rx="8" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="530" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Security Consulting & Risk Assessment</text>
+      <text x="530" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Threat modeling · Penetration testing · Executive travel — human judgment</text>
+      <text x="530" y="350" fill="#fbbf24" font-size="7" text-anchor="middle">This is the moat — AI can't replicate it</text>
+
+      <!-- Core → Infra (needs physical) -->
+      <line x1="450" y1="85" x2="200" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia7)"/>
+      <text x="300" y="118" fill="#fb7185" font-size="7">requires</text>
+      <!-- Core → Support (feeds) -->
+      <line x1="750" y1="85" x2="780" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia7)"/>
+      <text x="780" y="118" fill="#fb7185" font-size="7">feeds</text>
+
+      <!-- Infra → Trust (enables consistency) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#fb923c" stroke-width="2" marker-end="url(#ib7)"/>
+      <text x="290" y="275" fill="#fb923c" font-size="7">enables →</text>
+      <!-- Support → Trust (feeds) -->
+      <line x1="800" y1="220" x2="650" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#ic7)"/>
+      <text x="700" y="275" fill="#34d399" font-size="7">supports</text>
+
+      <!-- Trust → Core (reinforcement loop) -->
+      <path d="M 530 290 Q 530 250 600 200 Q 650 180 650 120 Q 650 85 750 85" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#id7)"/>
+      <text x="680" y="200" fill="#fbbf24" font-size="7">trust reinforces</text>
+
+      <!-- WHY AI-IMMUNE annotation -->
+      <rect x="960" y="140" width="210" height="135" rx="8" fill="rgba(251,113,133,0.06)" stroke="#fb7185" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1065" y="165" fill="#fb7185" font-size="10" font-weight="600" text-anchor="middle">WHY AI-IMMUNE</text>
+      <line x1="975" y1="176" x2="1155" y2="176" stroke="#1e293b" stroke-width="1"/>
+      <text x="1065" y="197" fill="#94a3b8" font-size="8.5" text-anchor="middle">Cameras and AI detect. A human with training and judgment responds. That gap is not closing anytime soon.</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">Core Human Service</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Physical Infrastructure</text>
+      <rect x="200" y="400" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="214" y="407" fill="#94a3b8" font-size="6.5">Support / Tech (AI here)</text>
+      <rect x="200" y="412" width="10" height="7" rx="2" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1"/><text x="214" y="419" fill="#94a3b8" font-size="6.5">Trust / Relationship Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>Why This Is AI-Immune</h3><p><span>Guard Services</span> places trained humans at physical locations — presence is the deterrent → <span>Alarm Monitoring</span> uses AI to filter false alarms but a human verifies and dispatches → <span>Armored Transport</span> moves cash and valuables with armed guards — irreducibly physical → <span>Security Consulting</span> requires human judgment about threat actors and vulnerabilities. A security group with guards, monitoring, and transport captures <span>$500-2,000/day per guard plus monitoring RMR</span>. AI watches the feed. Humans respond.</p></div>
+
+  <hr class="section-divider" id="i8">
+  <div class="section-title"><span class="section-num">🍽️ 08</span> High-Touch Hospitality Ecosystem</div>
+  <p class="section-sub">At the high end, the human interaction IS the luxury. AI can take a reservation. It can't create a memory.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="ia8" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb7185"/></marker>
+        <marker id="ib8" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="ic8" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="id8" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gi8" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gi8)"/>
+
+      <!-- CORE HUMAN SERVICE (center) -->
+      <rect x="400" y="20" width="400" height="65" rx="8" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#fb7185" font-size="13" font-weight="700" text-anchor="middle">Fine Dining / Boutique Hotels</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">White-tablecloth · Concierge · Sommelier · Turndown service — human craft</text>
+      <text x="600" y="78" fill="#fb7185" font-size="7" text-anchor="middle">IRREDUCIBLY HUMAN — AI can assist around the edges, never the core</text>
+
+      <!-- PHYSICAL INFRASTRUCTURE (left) -->
+      <rect x="30" y="140" width="220" height="80" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="140" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Physical Venue / Real Estate</text>
+      <text x="140" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">The room · The dining room · The view · The garden — physical atmosphere</text>
+      <text x="140" y="200" fill="#fb923c" font-size="7" text-anchor="middle">Physical presence required</text>
+
+      <!-- SUPPORT SERVICES (right) -->
+      <rect x="700" y="140" width="230" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="815" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Reservation & CRM Systems</text>
+      <text x="815" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Guest preferences · Booking · Loyalty — AI handles the logistics perfectly</text>
+      <text x="815" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI handles scheduling/payments here</text>
+
+      <!-- TRUST / RELATIONSHIP (bottom) -->
+      <rect x="350" y="290" width="360" height="75" rx="8" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="530" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Events & Private Dining</text>
+      <text x="530" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Weddings · Chef's table · Wine dinners · Bespoke experiences — human curation</text>
+      <text x="530" y="350" fill="#fbbf24" font-size="7" text-anchor="middle">This is the moat — AI can't replicate it</text>
+
+      <!-- Core → Infra (needs physical) -->
+      <line x1="450" y1="85" x2="200" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia8)"/>
+      <text x="300" y="118" fill="#fb7185" font-size="7">requires</text>
+      <!-- Core → Support (feeds) -->
+      <line x1="750" y1="85" x2="780" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia8)"/>
+      <text x="780" y="118" fill="#fb7185" font-size="7">feeds</text>
+
+      <!-- Infra → Trust (enables consistency) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#fb923c" stroke-width="2" marker-end="url(#ib8)"/>
+      <text x="290" y="275" fill="#fb923c" font-size="7">enables →</text>
+      <!-- Support → Trust (feeds) -->
+      <line x1="800" y1="220" x2="650" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#ic8)"/>
+      <text x="700" y="275" fill="#34d399" font-size="7">supports</text>
+
+      <!-- Trust → Core (reinforcement loop) -->
+      <path d="M 530 290 Q 530 250 600 200 Q 650 180 650 120 Q 650 85 750 85" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#id8)"/>
+      <text x="680" y="200" fill="#fbbf24" font-size="7">trust reinforces</text>
+
+      <!-- WHY AI-IMMUNE annotation -->
+      <rect x="960" y="140" width="210" height="135" rx="8" fill="rgba(251,113,133,0.06)" stroke="#fb7185" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1065" y="165" fill="#fb7185" font-size="10" font-weight="600" text-anchor="middle">WHY AI-IMMUNE</text>
+      <line x1="975" y1="176" x2="1155" y2="176" stroke="#1e293b" stroke-width="1"/>
+      <text x="1065" y="197" fill="#94a3b8" font-size="8.5" text-anchor="middle">Luxury isn't efficient. It's personal. AI can remember your allergy. It can't remember how you like your martini shaken.</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">Core Human Service</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Physical Infrastructure</text>
+      <rect x="200" y="400" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="214" y="407" fill="#94a3b8" font-size="6.5">Support / Tech (AI here)</text>
+      <rect x="200" y="412" width="10" height="7" rx="2" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1"/><text x="214" y="419" fill="#94a3b8" font-size="6.5">Trust / Relationship Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>Why This Is AI-Immune</h3><p><span>Fine Dining / Boutique Hotel</span> delivers human-crafted experiences — the sommelier who remembers your anniversary → <span>Real Estate</span> owns the physical space with the view, the garden, the atmosphere → <span>CRM System</span> tracks every guest preference (AI does this beautifully — "Mr. Chen prefers table 7, still water, no flowers") → <span>Events</span> creates bespoke private dining and weddings that require human creativity. A hospitality group with 3 concepts and owned real estate generates <span>$5-12M revenue at 15-25% margins</span>. AI remembers the preferences. Humans deliver the magic.</p></div>
+
+  <hr class="section-divider" id="i9">
+  <div class="section-title"><span class="section-num">💪 09</span> Fitness & Personal Training Ecosystem</div>
+  <p class="section-sub">Form correction is visual and tactile. Motivation is personal. A screen can't spot you on a heavy squat.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="ia9" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb7185"/></marker>
+        <marker id="ib9" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="ic9" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="id9" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gi9" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gi9)"/>
+
+      <!-- CORE HUMAN SERVICE (center) -->
+      <rect x="400" y="20" width="400" height="65" rx="8" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#fb7185" font-size="13" font-weight="700" text-anchor="middle">Personal Training & Coaching</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">1:1 · Small group · Online coaching — human eyes on human movement</text>
+      <text x="600" y="78" fill="#fb7185" font-size="7" text-anchor="middle">IRREDUCIBLY HUMAN — AI can assist around the edges, never the core</text>
+
+      <!-- PHYSICAL INFRASTRUCTURE (left) -->
+      <rect x="30" y="140" width="220" height="80" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="140" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Physical Gym / Studio Facilities</text>
+      <text x="140" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Equipment · Floor space · Locker rooms · Atmosphere — physical third place</text>
+      <text x="140" y="200" fill="#fb923c" font-size="7" text-anchor="middle">Physical presence required</text>
+
+      <!-- SUPPORT SERVICES (right) -->
+      <rect x="700" y="140" width="230" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="815" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Booking & Programming Software</text>
+      <text x="815" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Scheduling · Program design · Progress tracking — AI handles the admin</text>
+      <text x="815" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI handles scheduling/payments here</text>
+
+      <!-- TRUST / RELATIONSHIP (bottom) -->
+      <rect x="350" y="290" width="360" height="75" rx="8" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="530" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Physical Therapy / Rehab / Recovery</text>
+      <text x="530" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Manual therapy · Movement assessment · Injury prevention — hands-on</text>
+      <text x="530" y="350" fill="#fbbf24" font-size="7" text-anchor="middle">This is the moat — AI can't replicate it</text>
+
+      <!-- Core → Infra (needs physical) -->
+      <line x1="450" y1="85" x2="200" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia9)"/>
+      <text x="300" y="118" fill="#fb7185" font-size="7">requires</text>
+      <!-- Core → Support (feeds) -->
+      <line x1="750" y1="85" x2="780" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia9)"/>
+      <text x="780" y="118" fill="#fb7185" font-size="7">feeds</text>
+
+      <!-- Infra → Trust (enables consistency) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#fb923c" stroke-width="2" marker-end="url(#ib9)"/>
+      <text x="290" y="275" fill="#fb923c" font-size="7">enables →</text>
+      <!-- Support → Trust (feeds) -->
+      <line x1="800" y1="220" x2="650" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#ic9)"/>
+      <text x="700" y="275" fill="#34d399" font-size="7">supports</text>
+
+      <!-- Trust → Core (reinforcement loop) -->
+      <path d="M 530 290 Q 530 250 600 200 Q 650 180 650 120 Q 650 85 750 85" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#id9)"/>
+      <text x="680" y="200" fill="#fbbf24" font-size="7">trust reinforces</text>
+
+      <!-- WHY AI-IMMUNE annotation -->
+      <rect x="960" y="140" width="210" height="135" rx="8" fill="rgba(251,113,133,0.06)" stroke="#fb7185" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1065" y="165" fill="#fb7185" font-size="10" font-weight="600" text-anchor="middle">WHY AI-IMMUNE</text>
+      <line x1="975" y1="176" x2="1155" y2="176" stroke="#1e293b" stroke-width="1"/>
+      <text x="1065" y="197" fill="#94a3b8" font-size="8.5" text-anchor="middle">AI can write a workout. It can't see that your left knee is caving on rep 7 and physically reposition you.</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">Core Human Service</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Physical Infrastructure</text>
+      <rect x="200" y="400" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="214" y="407" fill="#94a3b8" font-size="6.5">Support / Tech (AI here)</text>
+      <rect x="200" y="412" width="10" height="7" rx="2" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1"/><text x="214" y="419" fill="#94a3b8" font-size="6.5">Trust / Relationship Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>Why This Is AI-Immune</h3><p><span>Personal Training</span> provides human eyes on human movement — form correction, motivation, accountability → <span>Gym Facilities</span> provide the physical third place with equipment and community → <span>Booking Software</span> handles scheduling, payments, program templates (AI does the admin) → <span>PT / Recovery</span> provides hands-on manual therapy that requires human touch. A fitness group with 3 gyms, 25 trainers, and integrated PT captures <span>$3-6M revenue at 30-40% margins</span>. AI writes the program. The trainer makes sure you don't hurt yourself doing it.</p></div>
+
+  <hr class="section-divider" id="i10">
+  <div class="section-title"><span class="section-num">🎭 10</span> Performing Arts & Live Entertainment</div>
+  <p class="section-sub">You can stream anything. People still pay $500 to be in the room. The shared moment is the product.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 520">
+      <defs>
+        <marker id="ia10" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb7185"/></marker>
+        <marker id="ib10" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="ic10" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="id10" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gi10" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gi10)"/>
+
+      <!-- CORE HUMAN SERVICE (center) -->
+      <rect x="400" y="20" width="400" height="65" rx="8" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="2.5"/>
+      <text x="600" y="46" fill="#fb7185" font-size="13" font-weight="700" text-anchor="middle">Live Performance / Theater / Music</text>
+      <text x="600" y="64" fill="#94a3b8" font-size="8.5" text-anchor="middle">Concerts · Broadway · Comedy · Dance · Orchestra — the live moment</text>
+      <text x="600" y="78" fill="#fb7185" font-size="7" text-anchor="middle">IRREDUCIBLY HUMAN — AI can assist around the edges, never the core</text>
+
+      <!-- PHYSICAL INFRASTRUCTURE (left) -->
+      <rect x="30" y="140" width="220" height="80" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="140" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Venues & Physical Spaces</text>
+      <text x="140" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Theaters · Clubs · Arenas · Outdoor amphitheaters — physical gathering places</text>
+      <text x="140" y="200" fill="#fb923c" font-size="7" text-anchor="middle">Physical presence required</text>
+
+      <!-- SUPPORT SERVICES (right) -->
+      <rect x="700" y="140" width="230" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="815" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Ticketing & Fan Engagement</text>
+      <text x="815" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Sales · Dynamic pricing · Fan clubs · Merch — AI handles the logistics</text>
+      <text x="815" y="200" fill="#34d399" font-size="7" text-anchor="middle">AI handles scheduling/payments here</text>
+
+      <!-- TRUST / RELATIONSHIP (bottom) -->
+      <rect x="350" y="290" width="360" height="75" rx="8" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="530" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Artist Development & Representation</text>
+      <text x="530" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Talent scouting · Career strategy · Brand building — human mentorship</text>
+      <text x="530" y="350" fill="#fbbf24" font-size="7" text-anchor="middle">This is the moat — AI can't replicate it</text>
+
+      <!-- Core → Infra (needs physical) -->
+      <line x1="450" y1="85" x2="200" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia10)"/>
+      <text x="300" y="118" fill="#fb7185" font-size="7">requires</text>
+      <!-- Core → Support (feeds) -->
+      <line x1="750" y1="85" x2="780" y2="138" stroke="#fb7185" stroke-width="2.5" marker-end="url(#ia10)"/>
+      <text x="780" y="118" fill="#fb7185" font-size="7">feeds</text>
+
+      <!-- Infra → Trust (enables consistency) -->
+      <line x1="170" y1="220" x2="380" y2="320" stroke="#fb923c" stroke-width="2" marker-end="url(#ib10)"/>
+      <text x="290" y="275" fill="#fb923c" font-size="7">enables →</text>
+      <!-- Support → Trust (feeds) -->
+      <line x1="800" y1="220" x2="650" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#ic10)"/>
+      <text x="700" y="275" fill="#34d399" font-size="7">supports</text>
+
+      <!-- Trust → Core (reinforcement loop) -->
+      <path d="M 530 290 Q 530 250 600 200 Q 650 180 650 120 Q 650 85 750 85" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#id10)"/>
+      <text x="680" y="200" fill="#fbbf24" font-size="7">trust reinforces</text>
+
+      <!-- WHY AI-IMMUNE annotation -->
+      <rect x="960" y="140" width="210" height="135" rx="8" fill="rgba(251,113,133,0.06)" stroke="#fb7185" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1065" y="165" fill="#fb7185" font-size="10" font-weight="600" text-anchor="middle">WHY AI-IMMUNE</text>
+      <line x1="975" y1="176" x2="1155" y2="176" stroke="#1e293b" stroke-width="1"/>
+      <text x="1065" y="197" fill="#94a3b8" font-size="8.5" text-anchor="middle">AI can generate a song. It can't make 20,000 people cry, cheer, or dance together in a room. That's human.</text>
+
+      <!-- LEGEND -->
+      <text x="30" y="390" fill="white" font-size="8" font-weight="600">Legend</text>
+      <rect x="30" y="400" width="10" height="7" rx="2" fill="rgba(136,19,55,0.35)" stroke="#fb7185" stroke-width="1"/><text x="44" y="407" fill="#94a3b8" font-size="6.5">Core Human Service</text>
+      <rect x="30" y="412" width="10" height="7" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="44" y="419" fill="#94a3b8" font-size="6.5">Physical Infrastructure</text>
+      <rect x="200" y="400" width="10" height="7" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="214" y="407" fill="#94a3b8" font-size="6.5">Support / Tech (AI here)</text>
+      <rect x="200" y="412" width="10" height="7" rx="2" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="1"/><text x="214" y="419" fill="#94a3b8" font-size="6.5">Trust / Relationship Moat</text>
+    </svg>
+  </div>
+  <div class="flywheel-box"><h3>Why This Is AI-Immune</h3><p><span>Live Performance</span> creates a shared human moment — the artist, the crowd, the energy in the room → <span>Venues</span> own the physical spaces where this happens — real estate moat with irreplaceable atmosphere → <span>Ticketing</span> uses AI for dynamic pricing and fan analytics (this is where AI genuinely helps) → <span>Artist Development</span> requires human mentorship, creative direction, and career guidance. A live entertainment group with venues, ticketing, and artist management captures <span>ticket revenue + merch + F&B + sponsorship</span> at 20-35% margins. AI sells the ticket. Humans create the moment people pay for.</p></div>
+</div></body></html>
