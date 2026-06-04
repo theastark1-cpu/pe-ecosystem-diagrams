@@ -77,71 +77,13 @@
     .card ul { list-style: none; }
     .card li { margin-bottom: 0.25rem; }
     .pe-box {
-      background: rgba(251, 191, 36, 0.08);
-      border: 1px solid rgba(251, 191, 36, 0.3);
-      border-radius: 0.75rem;
-      padding: 1.25rem;
-      margin-top: 1rem;
-    }
-    .pe-box h3 {
-      font-size: 0.875rem; font-weight: 600;
-      color: #fbbf24;
-      margin-bottom: 0.75rem;
-    }
-    .pe-box .metric-row {
-      display: flex; gap: 2rem; flex-wrap: wrap;
-    }
-    .pe-box .metric {
-      color: #94a3b8; font-size: 0.75rem;
-    }
-    .pe-box .metric span {
-      color: #f8fafc; font-weight: 600;
-    }
-    .pulse-dot {
-      width: 10px; height: 10px;
-      background: #22d3ee;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-      display: inline-block;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-    .toc {
-      display: flex; gap: 0.75rem; flex-wrap: wrap;
-      margin-bottom: 2rem;
-    }
-    .toc a {
-      color: #94a3b8; text-decoration: none;
-      font-size: 0.8rem; padding: 0.4rem 0.75rem;
-      border: 1px solid #1e293b; border-radius: 0.5rem;
-      transition: all 0.2s;
-    }
-    .toc a:hover { color: #22d3ee; border-color: #22d3ee; }
-  </style>
-</head>
-<body>
-<div class="container">
-  <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;">
-    <span class="pulse-dot"></span>
-    <h1 style="font-size:1.6rem;font-weight:700;">PE Ecosystem Diagrams</h1>
-  </div>
-  <p style="color:#64748b;font-size:0.85rem;margin-bottom:2rem;">Four business life cycle circles primed for private equity roll-up in the next 5–10 years</p>
-
-  <div class="toc">
-    <a href="#eco1">01 · Health & Longevity</a>
-    <a href="#eco2">02 · Construction & Real Estate Services</a>
-    <a href="#eco3">03 · Technology / MSP & Cybersecurity</a>
-    <a href="#eco4">04 · Logistics & Supply Chain</a>
-  </div>
 
   <hr class="section-divider" id="eco1">
-  <div class="section-title"><span class="section-num">01</span> Health, Wellness & Longevity</div>
+  <div class="section-title"><span class="section-num">01</span> Health, Wellness &amp; Longevity</div>
   <p class="section-sub">Aging demographics + GLP-1 revolution + med spa fragmentation. Patient LTV grows 7x when you own the full patient journey.</p>
 
   <div class="diagram-container">
-    <svg viewBox="0 0 1200 680">
+    <svg viewBox="0 0 1200 750">
       <defs>
         <marker id="a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
         <marker id="a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
@@ -154,110 +96,114 @@
       <rect width="100%" height="100%" fill="url(#g1)"/>
 
       <!-- HOLDCO -->
-      <rect x="460" y="20" width="280" height="56" rx="8" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="430" y="20" width="340" height="56" rx="8" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2"/>
       <text x="600" y="43" fill="#fbbf24" font-size="12" font-weight="700" text-anchor="middle">HEALTH &amp; LONGEVITY HOLDCO</text>
-      <text x="600" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">Roll-up Platform · Shared Back Office · Cross-Referral Engine</text>
+      <text x="600" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">Roll-up Platform  ·  Shared Back Office  ·  Cross-Referral Engine</text>
 
-      <!-- ROW 1: ACQUISITION FUNNEL -->
-      <rect x="30" y="120" width="170" height="70" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-      <text x="115" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Gym &amp; Fitness Studios</text>
-      <text x="115" y="162" fill="#94a3b8" font-size="8" text-anchor="middle">Client Acquisition Funnel</text>
-      <text x="115" y="177" fill="#22d3ee" font-size="7" text-anchor="middle">$30-200/mo · 500-2000 members</text>
+      <!-- ROW 1: ACQUISITION FUNNEL (y=120) -->
+      <rect x="20" y="120" width="180" height="75" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="110" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Gym &amp; Fitness Studios</text>
+      <text x="110" y="162" fill="#94a3b8" font-size="8" text-anchor="middle">Client Acquisition Funnel</text>
+      <text x="110" y="178" fill="#22d3ee" font-size="7" text-anchor="middle">$30–200/mo · 500–2000 members</text>
 
-      <rect x="240" y="120" width="170" height="70" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-      <text x="325" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Med Spa / Aesthetics</text>
-      <text x="325" y="162" fill="#94a3b8" font-size="8" text-anchor="middle">Botox · Fillers · Lasers · Skin</text>
-      <text x="325" y="177" fill="#22d3ee" font-size="7" text-anchor="middle">Cash-pay · 40-60% margins</text>
+      <rect x="240" y="120" width="180" height="75" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="330" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Med Spa / Aesthetics</text>
+      <text x="330" y="162" fill="#94a3b8" font-size="8" text-anchor="middle">Botox · Fillers · Lasers · Skin</text>
+      <text x="330" y="178" fill="#22d3ee" font-size="7" text-anchor="middle">Cash-pay · 40–60% margins</text>
 
-      <rect x="450" y="120" width="170" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
-      <text x="535" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Hormone &amp; Longevity</text>
-      <text x="535" y="162" fill="#94a3b8" font-size="8" text-anchor="middle">TRT · Peptides · Anti-Aging</text>
-      <text x="535" y="177" fill="#34d399" font-size="7" text-anchor="middle">$200-500/mo · Subscription</text>
+      <rect x="460" y="120" width="180" height="75" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="550" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Hormone &amp; Longevity</text>
+      <text x="550" y="162" fill="#94a3b8" font-size="8" text-anchor="middle">TRT · Peptides · Anti-Aging</text>
+      <text x="550" y="178" fill="#34d399" font-size="7" text-anchor="middle">$200–500/mo · Subscription</text>
 
-      <rect x="660" y="120" width="170" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
-      <text x="745" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">PT &amp; Rehab Centers</text>
-      <text x="745" y="162" fill="#94a3b8" font-size="8" text-anchor="middle">Post-Injury · Surgery · Athletic</text>
-      <text x="745" y="177" fill="#34d399" font-size="7" text-anchor="middle">Insurance + Cash · 25-35% margins</text>
+      <rect x="680" y="120" width="180" height="75" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="770" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">PT &amp; Rehab Centers</text>
+      <text x="770" y="162" fill="#94a3b8" font-size="8" text-anchor="middle">Post-Injury · Surgery · Athletic</text>
+      <text x="770" y="178" fill="#34d399" font-size="7" text-anchor="middle">Insurance + Cash · 25–35%</text>
 
-      <!-- ROW 2: SUPPORT INFRASTRUCTURE -->
-      <rect x="90" y="260" width="190" height="75" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
-      <text x="185" y="283" fill="white" font-size="11" font-weight="600" text-anchor="middle">Diagnostic Lab</text>
-      <text x="185" y="300" fill="#94a3b8" font-size="8" text-anchor="middle">Blood Work · Imaging · Genetics</text>
-      <text x="185" y="315" fill="#a78bfa" font-size="7" text-anchor="middle">Capture testing revenue internally</text>
-      <text x="185" y="327" fill="#a78bfa" font-size="7" text-anchor="middle">vs sending to Quest/LabCorp</text>
+      <!-- ROW 2: SUPPORT INFRASTRUCTURE (y=270, gap=75 from row 1 bottom=195) -->
+      <rect x="60" y="270" width="210" height="80" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="165" y="294" fill="white" font-size="11" font-weight="600" text-anchor="middle">Diagnostic Lab</text>
+      <text x="165" y="312" fill="#94a3b8" font-size="8" text-anchor="middle">Blood Work · Imaging · Genetics</text>
+      <text x="165" y="328" fill="#a78bfa" font-size="7" text-anchor="middle">Capture testing revenue internally</text>
+      <text x="165" y="342" fill="#a78bfa" font-size="7" text-anchor="middle">vs sending to Quest / LabCorp</text>
 
-      <rect x="340" y="260" width="200" height="75" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
-      <text x="440" y="283" fill="white" font-size="11" font-weight="600" text-anchor="middle">Compounding Pharmacy</text>
-      <text x="440" y="300" fill="#94a3b8" font-size="8" text-anchor="middle">503A/503B · Custom Formulations</text>
-      <text x="440" y="315" fill="#a78bfa" font-size="7" text-anchor="middle">Semaglutide · Tirzepatide · Peptides</text>
-      <text x="440" y="327" fill="#a78bfa" font-size="7" text-anchor="middle">Supply all clinics at cost</text>
+      <rect x="330" y="270" width="220" height="80" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="440" y="294" fill="white" font-size="11" font-weight="600" text-anchor="middle">Compounding Pharmacy</text>
+      <text x="440" y="312" fill="#94a3b8" font-size="8" text-anchor="middle">503A / 503B · Custom Formulations</text>
+      <text x="440" y="328" fill="#a78bfa" font-size="7" text-anchor="middle">Semaglutide · Tirzepatide · Peptides</text>
+      <text x="440" y="342" fill="#a78bfa" font-size="7" text-anchor="middle">Supply all clinics at cost</text>
 
-      <rect x="600" y="260" width="200" height="75" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
-      <text x="700" y="283" fill="white" font-size="11" font-weight="600" text-anchor="middle">Medical Billing / RCM</text>
-      <text x="700" y="300" fill="#94a3b8" font-size="8" text-anchor="middle">Revenue Cycle Management</text>
-      <text x="700" y="315" fill="#fb7185" font-size="7" text-anchor="middle">Service your clinics + 3rd-party</text>
-      <text x="700" y="327" fill="#fb7185" font-size="7" text-anchor="middle">5-8% of collections · Recurring B2B</text>
+      <rect x="610" y="270" width="210" height="80" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+      <text x="715" y="294" fill="white" font-size="11" font-weight="600" text-anchor="middle">Medical Billing / RCM</text>
+      <text x="715" y="312" fill="#94a3b8" font-size="8" text-anchor="middle">Revenue Cycle Management</text>
+      <text x="715" y="328" fill="#fb7185" font-size="7" text-anchor="middle">Service your clinics + 3rd-party</text>
+      <text x="715" y="342" fill="#fb7185" font-size="7" text-anchor="middle">5–8% of collections · Recurring B2B</text>
 
-      <!-- ROW 3: RETENTION & ANCILLARY -->
-      <rect x="200" y="410" width="190" height="70" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
-      <text x="295" y="435" fill="white" font-size="11" font-weight="600" text-anchor="middle">Health Coaching / Nutrition</text>
-      <text x="295" y="452" fill="#94a3b8" font-size="8" text-anchor="middle">Subscription · $100-300/mo</text>
-      <text x="295" y="467" fill="#94a3b8" font-size="7" text-anchor="middle">Retention bridge between visits</text>
+      <!-- ROW 3: RETENTION & ANCILLARY (y=430, gap=80) -->
+      <rect x="180" y="430" width="210" height="75" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+      <text x="285" y="455" fill="white" font-size="11" font-weight="600" text-anchor="middle">Health Coaching / Nutrition</text>
+      <text x="285" y="473" fill="#94a3b8" font-size="8" text-anchor="middle">Subscription · $100–300/mo</text>
+      <text x="285" y="490" fill="#94a3b8" font-size="7" text-anchor="middle">Retention bridge between visits</text>
 
-      <rect x="450" y="410" width="190" height="70" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
-      <text x="545" y="435" fill="white" font-size="11" font-weight="600" text-anchor="middle">DME / Medical Supply</text>
-      <text x="545" y="452" fill="#94a3b8" font-size="8" text-anchor="middle">Braces · Supports · Recovery</text>
-      <text x="545" y="467" fill="#94a3b8" font-size="7" text-anchor="middle">Supply clinics at cost + DTC sales</text>
+      <rect x="450" y="430" width="210" height="75" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+      <text x="555" y="455" fill="white" font-size="11" font-weight="600" text-anchor="middle">DME / Medical Supply</text>
+      <text x="555" y="473" fill="#94a3b8" font-size="8" text-anchor="middle">Braces · Supports · Recovery</text>
+      <text x="555" y="490" fill="#94a3b8" font-size="7" text-anchor="middle">Supply clinics at cost + DTC</text>
 
-      <!-- PATIENT JOURNEY ANNOTATION -->
-      <rect x="870" y="120" width="280" height="70" rx="8" fill="rgba(251,191,36,0.08)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="6,3"/>
-      <text x="1010" y="145" fill="#fbbf24" font-size="10" font-weight="600" text-anchor="middle">PATIENT JOURNEY (LTV)</text>
-      <text x="1010" y="162" fill="#94a3b8" font-size="8" text-anchor="middle">Gym $1.8K/yr → Med Spa $5K/yr</text>
-      <text x="1010" y="177" fill="#94a3b8" font-size="8" text-anchor="middle">→ Hormone $4K/yr + PT $3K/yr = $13.8K</text>
+      <!-- PATIENT LTV ANNOTATION (right side, clear zone) -->
+      <rect x="900" y="120" width="270" height="110" rx="8" fill="rgba(251,191,36,0.08)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1035" y="148" fill="#fbbf24" font-size="11" font-weight="600" text-anchor="middle">PATIENT LTV JOURNEY</text>
+      <line x1="920" y1="160" x2="1150" y2="160" stroke="#1e293b" stroke-width="1"/>
+      <text x="1035" y="180" fill="white" font-size="9" text-anchor="middle">Gym membership         $1,800/yr</text>
+      <text x="1035" y="196" fill="white" font-size="9" text-anchor="middle">Med Spa treatments      $5,000/yr</text>
+      <text x="1035" y="212" fill="white" font-size="9" text-anchor="middle">Hormone subscription     $4,000/yr</text>
+      <text x="1035" y="228" fill="#22d3ee" font-size="9" font-weight="600" text-anchor="middle">Combined LTV            $13,800/yr</text>
 
-      <!-- ARROWS: Patient Flow -->
-      <line x1="200" y1="155" x2="238" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#a1)"/>
+      <!-- ARROWS: Patient Flow (Row 1, horizontal) -->
+      <line x1="200" y1="157" x2="238" y2="157" stroke="#22d3ee" stroke-width="2" marker-end="url(#a1)"/>
       <text x="219" y="148" fill="#22d3ee" font-size="7" text-anchor="middle">referral</text>
-      <line x1="410" y1="155" x2="448" y2="155" stroke="#34d399" stroke-width="2" marker-end="url(#a2)"/>
-      <text x="429" y="148" fill="#34d399" font-size="7" text-anchor="middle">upsell</text>
-      <line x1="620" y1="155" x2="658" y2="155" stroke="#34d399" stroke-width="2" marker-end="url(#a2)"/>
+      <line x1="420" y1="157" x2="458" y2="157" stroke="#34d399" stroke-width="2" marker-end="url(#a2)"/>
+      <text x="439" y="148" fill="#34d399" font-size="7" text-anchor="middle">upsell</text>
+      <line x1="640" y1="157" x2="678" y2="157" stroke="#34d399" stroke-width="2" marker-end="url(#a2)"/>
 
-      <!-- Clinics → Lab -->
-      <line x1="325" y1="190" x2="220" y2="258" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#a3)"/>
-      <line x1="535" y1="190" x2="300" y2="258" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#a3)"/>
-      <line x1="745" y1="190" x2="640" y2="258" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#a3)"/>
-      <text x="460" y="235" fill="#a78bfa" font-size="7" text-anchor="middle">lab orders</text>
+      <!-- ARROWS: Row 1 → Row 2 (lab orders, spaced between rows) -->
+      <line x1="250" y1="195" x2="200" y2="268" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#a3)"/>
+      <line x1="450" y1="195" x2="300" y2="268" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#a3)"/>
+      <line x1="680" y1="195" x2="620" y2="268" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#a3)"/>
+      <text x="460" y="240" fill="#a78bfa" font-size="7" text-anchor="middle">lab orders →</text>
 
-      <!-- Lab → Pharmacy -->
-      <line x1="280" y1="297" x2="338" y2="297" stroke="#a78bfa" stroke-width="2" marker-end="url(#a3)"/>
-      <text x="309" y="290" fill="#a78bfa" font-size="7" text-anchor="middle">results</text>
+      <!-- ARROWS: Lab → Pharmacy (horizontal between them) -->
+      <line x1="270" y1="310" x2="328" y2="310" stroke="#a78bfa" stroke-width="2" marker-end="url(#a3)"/>
+      <text x="299" y="302" fill="#a78bfa" font-size="7" text-anchor="middle">results</text>
 
-      <!-- Pharmacy → clinics (med supply) -->
-      <line x1="440" y1="335" x2="325" y2="190" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a3)"/>
-      <line x1="500" y1="335" x2="535" y2="190" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a3)"/>
-      <text x="500" y="225" fill="#a78bfa" font-size="7" text-anchor="middle">medications</text>
+      <!-- ARROWS: Pharmacy → clinics (med supply, up from pharmacy) -->
+      <path d="M 440 270 Q 440 240 380 195" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a3)"/>
+      <path d="M 500 270 Q 500 240 550 195" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a3)"/>
+      <text x="470" y="242" fill="#a78bfa" font-size="7">↑ medications</text>
 
-      <!-- Clinics → Billing -->
-      <line x1="535" y1="190" x2="700" y2="258" stroke="#fb7185" stroke-width="1.5" marker-end="url(#a5)"/>
-      <text x="640" y="225" fill="#fb7185" font-size="7" text-anchor="middle">claims</text>
+      <!-- ARROWS: Clinics → Billing (rightward) -->
+      <line x1="640" y1="195" x2="660" y2="268" stroke="#fb7185" stroke-width="1.5" marker-end="url(#a5)"/>
+      <text x="655" y="235" fill="#fb7185" font-size="7">claims</text>
 
-      <!-- Health Coaching ↔ Clinics -->
-      <line x1="350" y1="445" x2="535" y2="190" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#a6)"/>
-      <text x="470" y="380" fill="#94a3b8" font-size="7" text-anchor="middle">patient retention loop</text>
+      <!-- ARROWS: Health Coaching ↔ Clinics (upward curves) -->
+      <path d="M 285 430 Q 285 370 330 300" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#a6)"/>
+      <path d="M 350 430 Q 450 380 550 300" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#a6)"/>
+      <text x="480" y="380" fill="#94a3b8" font-size="7" text-anchor="middle">patient retention loop</text>
 
-      <!-- HoldCo ownership lines -->
-      <line x1="530" y1="76" x2="200" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
-      <line x1="600" y1="76" x2="410" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
-      <line x1="650" y1="76" x2="620" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
-      <line x1="640" y1="76" x2="830" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <!-- HoldCo ownership lines (subtle) -->
+      <line x1="500" y1="76" x2="180" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="580" y1="76" x2="420" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="630" y1="76" x2="640" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="680" y1="76" x2="860" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
 
-      <!-- LEGEND -->
-      <text x="870" y="260" fill="white" font-size="10" font-weight="600">Legend</text>
-      <rect x="870" y="272" width="14" height="9" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="890" y="280" fill="#94a3b8" font-size="7">Acquisition / Front-End</text>
-      <rect x="870" y="286" width="14" height="9" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="890" y="294" fill="#94a3b8" font-size="7">Clinical Services (recurring)</text>
-      <rect x="870" y="300" width="14" height="9" rx="2" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1"/><text x="890" y="308" fill="#94a3b8" font-size="7">Infrastructure / Supply Chain</text>
-      <rect x="870" y="314" width="14" height="9" rx="2" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1"/><text x="890" y="322" fill="#94a3b8" font-size="7">Back-Office / Revenue Cycle</text>
-      <rect x="870" y="328" width="14" height="9" rx="2" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1"/><text x="890" y="336" fill="#94a3b8" font-size="7">Retention / Ancillary</text>
+      <!-- LEGEND (bottom area) -->
+      <text x="30" y="560" fill="white" font-size="10" font-weight="600">Legend</text>
+      <rect x="30" y="572" width="14" height="9" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="50" y="580" fill="#94a3b8" font-size="7">Acquisition / Front-End</text>
+      <rect x="30" y="586" width="14" height="9" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="50" y="594" fill="#94a3b8" font-size="7">Clinical Services (recurring)</text>
+      <rect x="280" y="572" width="14" height="9" rx="2" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1"/><text x="300" y="580" fill="#94a3b8" font-size="7">Infrastructure / Supply Chain</text>
+      <rect x="280" y="586" width="14" height="9" rx="2" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1"/><text x="300" y="594" fill="#94a3b8" font-size="7">Back-Office / Revenue Cycle</text>
+      <rect x="530" y="572" width="14" height="9" rx="2" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1"/><text x="550" y="580" fill="#94a3b8" font-size="7">Retention / Ancillary</text>
     </svg>
   </div>
 
@@ -276,12 +222,12 @@
     <div class="card">
       <div class="card-header"><div class="card-dot emerald"></div><h3>Key Margins</h3></div>
       <ul>
-        <li>• Med Spa: 40-60% EBITDA (cash-pay, no insurance)</li>
-        <li>• Hormone Clinic: 50-65% (subscription, low overhead)</li>
-        <li>• Diagnostic Lab: 35-45% (high fixed cost, high volume leverage)</li>
-        <li>• Compounding Pharmacy: 40-55% (503A = higher margin, 503B = scale)</li>
-        <li>• PT: 25-35% (insurance-dependent, volume play)</li>
-        <li>• Billing/RCM: 20-30% (recurring, sticky, low capex)</li>
+        <li>• Med Spa: 40–60% EBITDA (cash-pay, no insurance)</li>
+        <li>• Hormone Clinic: 50–65% (subscription, low overhead)</li>
+        <li>• Diagnostic Lab: 35–45% (high fixed cost, high volume leverage)</li>
+        <li>• Compounding Pharmacy: 40–55% (503A = higher margin, 503B = scale)</li>
+        <li>• PT: 25–35% (insurance-dependent, volume play)</li>
+        <li>• Billing/RCM: 20–30% (recurring, sticky, low capex)</li>
       </ul>
     </div>
     <div class="card">
@@ -290,8 +236,8 @@
         <li>• 10,000 Americans turn 65 every day — 20-year demographic freight train</li>
         <li>• Healthcare is 18% of U.S. GDP with 80%+ fragmentation at the clinic level</li>
         <li>• GLP-1 drugs opened a $100B obesity market — compounding pharmacies are the gateway</li>
-        <li>• Cross-referral turns $2K patient LTV into $15K+ — the roll-up math is undeniable</li>
-        <li>• Med spa chains are the #1 healthcare PE target right now (L Catterton, TSG, etc.)</li>
+        <li>• Cross-referral turns $2K patient LTV into $15K+ — roll-up math is undeniable</li>
+        <li>• Med spa chains are the #1 healthcare PE target right now (L Catterton, TSG)</li>
       </ul>
     </div>
   </div>
@@ -312,7 +258,7 @@
   <p class="section-sub">$600B+ home services market, 80% mom-and-pop. Vertical integration turns a 15% margin GC into a 25–30% margin platform.</p>
 
   <div class="diagram-container">
-    <svg viewBox="0 0 1200 680">
+    <svg viewBox="0 0 1200 750">
       <defs>
         <marker id="b1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
         <marker id="b2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
@@ -327,110 +273,110 @@
       <!-- HOLDCO -->
       <rect x="380" y="20" width="440" height="56" rx="8" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2"/>
       <text x="600" y="43" fill="#fbbf24" font-size="12" font-weight="700" text-anchor="middle">CONSTRUCTION &amp; REAL ESTATE HOLDCO</text>
-      <text x="600" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">Land → Build → Manage → Service — The Full Vertical</text>
+      <text x="600" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">Land → Build → Manage → Service  —  The Full Vertical</text>
 
-      <!-- PROJECT LIFECYCLE (Left to Right) -->
-      <rect x="20" y="120" width="180" height="75" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-      <text x="110" y="143" fill="white" font-size="11" font-weight="600" text-anchor="middle">Land Acquisition Co</text>
-      <text x="110" y="160" fill="#94a3b8" font-size="8" text-anchor="middle">Find · Option · Entitle Raw Land</text>
-      <text x="110" y="175" fill="#22d3ee" font-size="7" text-anchor="middle">Feeds entire pipeline</text>
-      <text x="110" y="188" fill="#22d3ee" font-size="7" text-anchor="middle">Options = low-cash control</text>
+      <!-- ROW 1: PROJECT LIFECYCLE (y=120) -->
+      <rect x="15" y="120" width="170" height="80" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="100" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Land Acquisition</text>
+      <text x="100" y="163" fill="#94a3b8" font-size="8" text-anchor="middle">Find · Option · Entitle</text>
+      <text x="100" y="180" fill="#22d3ee" font-size="7" text-anchor="middle">Feeds entire pipeline</text>
+      <text x="100" y="194" fill="#22d3ee" font-size="7" text-anchor="middle">Options = low-cash control</text>
 
-      <rect x="230" y="120" width="190" height="75" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
-      <text x="325" y="143" fill="white" font-size="11" font-weight="600" text-anchor="middle">Permitting &amp; Entitlements</text>
-      <text x="325" y="160" fill="#94a3b8" font-size="8" text-anchor="middle">Zoning · Variances · Environmental</text>
-      <text x="325" y="175" fill="#fb7185" font-size="7" text-anchor="middle">De-risks land · 6-18 month gate</text>
-      <text x="325" y="188" fill="#fb7185" font-size="7" text-anchor="middle">Where most developers die</text>
+      <rect x="215" y="120" width="180" height="80" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+      <text x="305" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Permitting &amp; Entitlements</text>
+      <text x="305" y="163" fill="#94a3b8" font-size="8" text-anchor="middle">Zoning · Variances · Enviro</text>
+      <text x="305" y="180" fill="#fb7185" font-size="7" text-anchor="middle">De-risks land · 6–18 mo gate</text>
+      <text x="305" y="194" fill="#fb7185" font-size="7" text-anchor="middle">Where most developers die</text>
 
-      <rect x="450" y="120" width="180" height="75" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
-      <text x="540" y="143" fill="white" font-size="11" font-weight="600" text-anchor="middle">Construction Co (GC)</text>
-      <text x="540" y="160" fill="#94a3b8" font-size="8" text-anchor="middle">General Contracting · Build</text>
-      <text x="540" y="175" fill="#34d399" font-size="7" text-anchor="middle">Licensed GC in target states</text>
-      <text x="540" y="188" fill="#34d399" font-size="7" text-anchor="middle">15-20% standalone margin</text>
+      <rect x="425" y="120" width="170" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="510" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Construction Co (GC)</text>
+      <text x="510" y="163" fill="#94a3b8" font-size="8" text-anchor="middle">General Contracting</text>
+      <text x="510" y="180" fill="#34d399" font-size="7" text-anchor="middle">Licensed GC in target states</text>
+      <text x="510" y="194" fill="#34d399" font-size="7" text-anchor="middle">15–20% standalone margin</text>
 
-      <rect x="660" y="120" width="180" height="75" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-      <text x="750" y="143" fill="white" font-size="11" font-weight="600" text-anchor="middle">Real Estate Brokerage</text>
-      <text x="750" y="160" fill="#94a3b8" font-size="8" text-anchor="middle">Sell/Lease Finished Product</text>
-      <text x="750" y="175" fill="#22d3ee" font-size="7" text-anchor="middle">2.5-6% commission captured</text>
-      <text x="750" y="188" fill="#22d3ee" font-size="7" text-anchor="middle">Internal + external listings</text>
+      <rect x="625" y="120" width="170" height="80" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="710" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Real Estate Brokerage</text>
+      <text x="710" y="163" fill="#94a3b8" font-size="8" text-anchor="middle">Sell / Lease Finished</text>
+      <text x="710" y="180" fill="#22d3ee" font-size="7" text-anchor="middle">2.5–6% commission captured</text>
+      <text x="710" y="194" fill="#22d3ee" font-size="7" text-anchor="middle">Internal + external listings</text>
 
-      <rect x="870" y="120" width="200" height="75" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
-      <text x="970" y="143" fill="white" font-size="11" font-weight="600" text-anchor="middle">Property Management</text>
-      <text x="970" y="160" fill="#94a3b8" font-size="8" text-anchor="middle">Manage Completed Assets</text>
-      <text x="970" y="175" fill="#34d399" font-size="7" text-anchor="middle">8-10% of gross rents</text>
-      <text x="970" y="188" fill="#34d399" font-size="7" text-anchor="middle">Stable recurring cash flow</text>
+      <rect x="825" y="120" width="190" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="920" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Property Management</text>
+      <text x="920" y="163" fill="#94a3b8" font-size="8" text-anchor="middle">Manage Completed Assets</text>
+      <text x="920" y="180" fill="#34d399" font-size="7" text-anchor="middle">8–10% of gross rents</text>
+      <text x="920" y="194" fill="#34d399" font-size="7" text-anchor="middle">Stable recurring cash flow</text>
 
-      <!-- ROW 2: SUPPLY CHAIN & CAPITAL -->
-      <rect x="50" y="270" width="200" height="80" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
-      <text x="150" y="293" fill="white" font-size="11" font-weight="600" text-anchor="middle">Heavy Equipment Leasing</text>
-      <text x="150" y="310" fill="#94a3b8" font-size="8" text-anchor="middle">Excavators · Dozers · Cranes</text>
-      <text x="150" y="325" fill="#fb923c" font-size="7" text-anchor="middle">Rent to your GC at cost</text>
-      <text x="150" y="340" fill="#fb923c" font-size="7" text-anchor="middle">Rent to competitors at 15-25% ROI</text>
+      <!-- ROW 2: SUPPLY CHAIN & CAPITAL (y=280, gap=80) -->
+      <rect x="40" y="280" width="210" height="85" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="145" y="305" fill="white" font-size="11" font-weight="600" text-anchor="middle">Heavy Equipment Leasing</text>
+      <text x="145" y="323" fill="#94a3b8" font-size="8" text-anchor="middle">Excavators · Dozers · Cranes</text>
+      <text x="145" y="340" fill="#fb923c" font-size="7" text-anchor="middle">Rent to your GC at cost</text>
+      <text x="145" y="356" fill="#fb923c" font-size="7" text-anchor="middle">Rent to competitors at 15–25% ROI</text>
 
-      <rect x="290" y="270" width="200" height="80" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
-      <text x="390" y="293" fill="white" font-size="11" font-weight="600" text-anchor="middle">Materials Supply Co</text>
-      <text x="390" y="310" fill="#94a3b8" font-size="8" text-anchor="middle">Concrete · Lumber · Steel · Drywall</text>
-      <text x="390" y="325" fill="#fb923c" font-size="7" text-anchor="middle">Supply your GC at cost</text>
-      <text x="390" y="340" fill="#fb923c" font-size="7" text-anchor="middle">10-20% savings vs market price</text>
+      <rect x="290" y="280" width="210" height="85" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="395" y="305" fill="white" font-size="11" font-weight="600" text-anchor="middle">Materials Supply Co</text>
+      <text x="395" y="323" fill="#94a3b8" font-size="8" text-anchor="middle">Concrete · Lumber · Steel</text>
+      <text x="395" y="340" fill="#fb923c" font-size="7" text-anchor="middle">Supply your GC at cost</text>
+      <text x="395" y="356" fill="#fb923c" font-size="7" text-anchor="middle">10–20% savings vs market</text>
 
-      <rect x="530" y="270" width="220" height="80" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-      <text x="640" y="293" fill="white" font-size="11" font-weight="600" text-anchor="middle">Private Lending Co</text>
-      <text x="640" y="310" fill="#94a3b8" font-size="8" text-anchor="middle">Hard Money Loans · 10-14% + 2-4 pts</text>
-      <text x="640" y="325" fill="#fbbf24" font-size="7" text-anchor="middle">Fund your own projects + external</text>
-      <text x="640" y="340" fill="#fbbf24" font-size="7" text-anchor="middle">Asset-backed · Low default risk</text>
+      <rect x="540" y="280" width="230" height="85" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="655" y="305" fill="white" font-size="11" font-weight="600" text-anchor="middle">Private Lending Co</text>
+      <text x="655" y="323" fill="#94a3b8" font-size="8" text-anchor="middle">Hard Money · 10–14% + 2–4 pts</text>
+      <text x="655" y="340" fill="#fbbf24" font-size="7" text-anchor="middle">Fund your own projects + external</text>
+      <text x="655" y="356" fill="#fbbf24" font-size="7" text-anchor="middle">Asset-backed · Low default risk</text>
 
-      <!-- ROW 3: HOME SERVICES — THE PE DARLING -->
-      <rect x="510" y="420" width="500" height="80" rx="8" fill="rgba(6,78,59,0.3)" stroke="#34d399" stroke-width="2"/>
-      <text x="760" y="445" fill="#34d399" font-size="12" font-weight="700" text-anchor="middle">HOME SERVICES CO (The PE Darling)</text>
-      <text x="760" y="465" fill="white" font-size="10" text-anchor="middle">HVAC  ·  Plumbing  ·  Electrical  ·  Roofing  ·  Landscaping  ·  Pest Control</text>
-      <text x="760" y="485" fill="#94a3b8" font-size="8" text-anchor="middle">Recurring maintenance contracts · Service your managed properties + 3rd-party · 20-35% EBITDA</text>
+      <!-- ROW 3: HOME SERVICES (y=450, gap=85) -->
+      <rect x="400" y="450" width="540" height="85" rx="8" fill="rgba(6,78,59,0.3)" stroke="#34d399" stroke-width="2"/>
+      <text x="670" y="477" fill="#34d399" font-size="13" font-weight="700" text-anchor="middle">HOME SERVICES CO  —  The PE Darling</text>
+      <text x="670" y="498" fill="white" font-size="10" text-anchor="middle">HVAC  ·  Plumbing  ·  Electrical  ·  Roofing  ·  Landscaping  ·  Pest Control</text>
+      <text x="670" y="518" fill="#94a3b8" font-size="8" text-anchor="middle">Recurring maintenance contracts  ·  Service your properties + 3rd-party  ·  20–35% EBITDA</text>
 
-      <!-- ARROWS: Development Pipeline -->
-      <line x1="200" y1="157" x2="228" y2="157" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#b2)"/>
-      <text x="214" y="149" fill="#22d3ee" font-size="7" text-anchor="middle">land</text>
-      <line x1="420" y1="157" x2="448" y2="157" stroke="#fb7185" stroke-width="2.5" marker-end="url(#b5)"/>
-      <text x="434" y="149" fill="#fb7185" font-size="7" text-anchor="middle">entitled</text>
-      <line x1="630" y1="157" x2="658" y2="157" stroke="#34d399" stroke-width="2.5" marker-end="url(#b3)"/>
-      <text x="644" y="149" fill="#34d399" font-size="7" text-anchor="middle">built</text>
-      <line x1="840" y1="157" x2="868" y2="157" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#b2)"/>
-      <text x="854" y="149" fill="#22d3ee" font-size="7" text-anchor="middle">sold</text>
+      <!-- ARROWS: Development Pipeline (horizontal, Row 1) -->
+      <line x1="185" y1="160" x2="213" y2="160" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#b2)"/>
+      <text x="199" y="151" fill="#22d3ee" font-size="7" text-anchor="middle">land</text>
+      <line x1="395" y1="160" x2="423" y2="160" stroke="#fb7185" stroke-width="2.5" marker-end="url(#b5)"/>
+      <text x="409" y="151" fill="#fb7185" font-size="7" text-anchor="middle">entitled</text>
+      <line x1="595" y1="160" x2="623" y2="160" stroke="#34d399" stroke-width="2.5" marker-end="url(#b3)"/>
+      <text x="609" y="151" fill="#34d399" font-size="7" text-anchor="middle">built</text>
+      <line x1="795" y1="160" x2="823" y2="160" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#b2)"/>
+      <text x="809" y="151" fill="#22d3ee" font-size="7" text-anchor="middle">sold</text>
 
-      <!-- Equipment → GC -->
-      <line x1="200" y1="270" x2="500" y2="195" stroke="#fb923c" stroke-width="2" marker-end="url(#b4)"/>
-      <text x="340" y="235" fill="#fb923c" font-size="7" text-anchor="middle">equipment at cost</text>
+      <!-- ARROWS: Equipment → GC (clean diagonal) -->
+      <line x1="190" y1="365" x2="470" y2="200" stroke="#fb923c" stroke-width="2" marker-end="url(#b4)"/>
+      <text x="310" y="290" fill="#fb923c" font-size="7">equipment at cost</text>
 
-      <!-- Materials → GC -->
-      <line x1="450" y1="270" x2="540" y2="195" stroke="#fb923c" stroke-width="2" marker-end="url(#b4)"/>
-      <text x="510" y="235" fill="#fb923c" font-size="7" text-anchor="middle">materials</text>
+      <!-- ARROWS: Materials → GC -->
+      <line x1="450" y1="365" x2="530" y2="200" stroke="#fb923c" stroke-width="2" marker-end="url(#b4)"/>
+      <text x="510" y="290" fill="#fb923c" font-size="7">materials</text>
 
-      <!-- Lending → Land + GC -->
-      <line x1="560" y1="270" x2="140" y2="195" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#b1)"/>
-      <text x="320" y="240" fill="#fbbf24" font-size="7" text-anchor="middle">acquisition financing</text>
-      <line x1="640" y1="270" x2="580" y2="195" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#b1)"/>
-      <text x="595" y="235" fill="#fbbf24" font-size="7" text-anchor="middle">construction loan</text>
+      <!-- ARROWS: Lending → Land (curved) + Lending → GC -->
+      <path d="M 590 365 Q 250 340 140 280 Q 100 250 100 202" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#b1)"/>
+      <text x="340" y="330" fill="#fbbf24" font-size="7">acquisition financing →</text>
+      <line x1="655" y1="365" x2="540" y2="200" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#b1)"/>
+      <text x="585" y="290" fill="#fbbf24" font-size="7">construction loan</text>
 
-      <!-- Property Mgmt ↔ Home Services -->
-      <line x1="970" y1="195" x2="860" y2="418" stroke="#34d399" stroke-width="2" marker-end="url(#b3)"/>
-      <text x="935" y="380" fill="#34d399" font-size="7" text-anchor="middle">work orders</text>
-      <line x1="760" y1="420" x2="1000" y2="195" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#b6)"/>
-      <text x="910" y="350" fill="#94a3b8" font-size="7" text-anchor="middle">service contracts</text>
+      <!-- ARROWS: Property Mgmt ↔ Home Services -->
+      <line x1="920" y1="200" x2="800" y2="448" stroke="#34d399" stroke-width="2" marker-end="url(#b3)"/>
+      <text x="875" y="380" fill="#34d399" font-size="7">work orders</text>
+      <path d="M 800 450 Q 900 400 960 200" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#b6)"/>
+      <text x="920" y="370" fill="#94a3b8" font-size="7">service contracts</text>
 
-      <!-- Brokerage → Property Mgmt -->
-      <line x1="810" y1="120" x2="930" y2="195" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#b2)"/>
-      <text x="890" y="160" fill="#22d3ee" font-size="7" text-anchor="middle">tenant placement</text>
+      <!-- ARROWS: Brokerage → Property Mgmt -->
+      <path d="M 780 120 Q 880 160 900 200" fill="none" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#b2)"/>
+      <text x="860" y="155" fill="#22d3ee" font-size="7">tenant placement</text>
 
-      <!-- HoldCo ownership -->
-      <line x1="460" y1="76" x2="180" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
-      <line x1="600" y1="76" x2="540" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
-      <line x1="700" y1="76" x2="750" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <!-- HoldCo ownership (subtle) -->
+      <line x1="440" y1="76" x2="180" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="580" y1="76" x2="530" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="700" y1="76" x2="710" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
 
       <!-- LEGEND -->
-      <text x="30" y="550" fill="white" font-size="10" font-weight="600">Legend</text>
-      <rect x="30" y="562" width="14" height="9" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="50" y="570" fill="#94a3b8" font-size="7">Front-End (Land, Brokerage)</text>
-      <rect x="30" y="576" width="14" height="9" rx="2" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1"/><text x="50" y="584" fill="#94a3b8" font-size="7">De-Risking / Regulatory</text>
-      <rect x="30" y="590" width="14" height="9" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="50" y="598" fill="#94a3b8" font-size="7">Core Operations / Services</text>
-      <rect x="30" y="604" width="14" height="9" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="50" y="612" fill="#94a3b8" font-size="7">Supply Chain / Equipment</text>
-      <rect x="30" y="618" width="14" height="9" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="50" y="626" fill="#94a3b8" font-size="7">Capital / Financing</text>
+      <text x="30" y="590" fill="white" font-size="10" font-weight="600">Legend</text>
+      <rect x="30" y="602" width="14" height="9" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="50" y="610" fill="#94a3b8" font-size="7">Front-End (Land, Brokerage)</text>
+      <rect x="30" y="616" width="14" height="9" rx="2" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1"/><text x="50" y="624" fill="#94a3b8" font-size="7">De-Risking / Regulatory</text>
+      <rect x="280" y="602" width="14" height="9" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="300" y="610" fill="#94a3b8" font-size="7">Core Operations / Services</text>
+      <rect x="280" y="616" width="14" height="9" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="300" y="624" fill="#94a3b8" font-size="7">Supply Chain / Equipment</text>
+      <rect x="530" y="602" width="14" height="9" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="550" y="610" fill="#94a3b8" font-size="7">Capital / Financing</text>
     </svg>
   </div>
 
@@ -438,23 +384,23 @@
     <div class="card">
       <div class="card-header"><div class="card-dot cyan"></div><h3>How the Flywheel Spins</h3></div>
       <ul>
-        <li>• Land Co options raw parcel for $500K → Permitting Co entitles it (6-12 mo) → value 3-5x</li>
-        <li>• Private Lending funds acquisition at 12% — interest is deductible expense to HoldCo, revenue to Lending Co</li>
-        <li>• GC builds using your Equipment (at cost) + Materials (at cost) → project margin 25-30% vs 15% standalone</li>
-        <li>• Brokerage sells finished homes/units — 3% commission stays internal ($15K on a $500K home)</li>
-        <li>• Property Mgmt runs the retained assets — 8% of gross = $160K/yr on $2M property</li>
-        <li>• Home Services handles all maintenance calls — $89/service call x 50 units/mo = $53K/yr recurring</li>
+        <li>• Land Co options raw parcel for $500K → Permitting Co entitles it (6–12 mo) → value 3–5x</li>
+        <li>• Private Lending funds acquisition at 12% — interest is deductible to HoldCo, revenue to Lending Co</li>
+        <li>• GC builds using your Equipment (at cost) + Materials (at cost) → margin 25–30% vs 15% standalone</li>
+        <li>• Brokerage sells finished homes — 3% commission stays internal ($15K on $500K home)</li>
+        <li>• Property Mgmt runs retained assets — 8% of gross = $160K/yr on $2M property</li>
+        <li>• Home Services handles all maintenance calls — $89/call × 50 units/mo = $53K/yr recurring</li>
       </ul>
     </div>
     <div class="card">
       <div class="card-header"><div class="card-dot amber"></div><h3>Key Margins</h3></div>
       <ul>
-        <li>• Land Acquisition: 20-50% ROI on entitled land flip (highest risk, highest return)</li>
-        <li>• GC: 15% standalone → 25-30% vertically integrated (equipment + materials internal)</li>
-        <li>• Equipment Leasing: 15-25% ROI on fleet (depreciation is tax shield)</li>
-        <li>• Private Lending: 10-14% yield + 2-4 points origination (12-18% effective)</li>
-        <li>• Home Services (HVAC/Plumbing/Elec): 20-35% EBITDA — this is the PE gold mine</li>
-        <li>• Property Management: 25-35% margin (low capex, high recurring)</li>
+        <li>• Land Acquisition: 20–50% ROI on entitled land flip (highest risk, highest return)</li>
+        <li>• GC: 15% standalone → 25–30% vertically integrated (equipment + materials internal)</li>
+        <li>• Equipment Leasing: 15–25% ROI on fleet (depreciation is tax shield)</li>
+        <li>• Private Lending: 10–14% yield + 2–4 pts origination (12–18% effective)</li>
+        <li>• Home Services (HVAC/Plumb/Elec): 20–35% EBITDA — the PE gold mine</li>
+        <li>• Property Management: 25–35% (low capex, high recurring)</li>
       </ul>
     </div>
     <div class="card">
@@ -463,7 +409,7 @@
         <li>• Home services is a $600B market with 80%+ still mom-and-pop shops</li>
         <li>• HVAC/plumbing is recession-proof: your furnace breaks, you pay — period</li>
         <li>• Maintenance contracts = recurring revenue with 90%+ renewal rates</li>
-        <li>• Vertical integration adds 10-15% margin that standalone players cannot touch</li>
+        <li>• Vertical integration adds 10–15% margin that standalone players cannot touch</li>
         <li>• Equipment leasing adds a hard-asset collateral layer — lenders love it</li>
       </ul>
     </div>
@@ -472,11 +418,11 @@
   <div class="pe-box">
     <h3>PE Platform Playbook: Construction &amp; Home Services Roll-Up</h3>
     <div class="metric-row">
-      <span class="metric"><span>Platform:</span> Acquire established GC ($10-20M rev) or regional HVAC/plumbing group ($5-15M EBITDA) at 6-8x</span>
-      <span class="metric"><span>Add-Ons:</span> Equipment leasing co (4-5x asset value), materials yard, 8-15 HVAC/plumbing/elec tuck-ins (4-6x each)</span>
-      <span class="metric"><span>Synergy:</span> Internal equipment/materials cuts project costs 10-15% · Home services cross-sell to property mgmt portfolio</span>
-      <span class="metric"><span>Exit:</span> Year 5-7 at 8-12x EBITDA to strategics (Lennar, ServiceTitan, larger PE) or IPO</span>
-      <span class="metric"><span>Target IRR:</span> 20-30% · <span>Equity Multiple:</span> 2.5-3.5x</span>
+      <span class="metric"><span>Platform:</span> Acquire established GC ($10–20M rev) or regional HVAC/plumbing group ($5–15M EBITDA) at 6–8x</span>
+      <span class="metric"><span>Add-Ons:</span> Equipment leasing co (4–5x asset value), materials yard, 8–15 HVAC/plumb/elec tuck-ins (4–6x each)</span>
+      <span class="metric"><span>Synergy:</span> Internal equipment/materials cuts project costs 10–15% · Home services cross-sell to property mgmt</span>
+      <span class="metric"><span>Exit:</span> Year 5–7 at 8–12x EBITDA to strategics (Lennar, ServiceTitan, larger PE) or IPO</span>
+      <span class="metric"><span>Target IRR:</span> 20–30% · <span>Equity Multiple:</span> 2.5–3.5x</span>
     </div>
   </div>
 
@@ -485,7 +431,7 @@
   <p class="section-sub">40,000+ MSPs in the U.S., most under $5M revenue. Platform + add-on model turns $2K/mo per client into $6K+/mo.</p>
 
   <div class="diagram-container">
-    <svg viewBox="0 0 1200 680">
+    <svg viewBox="0 0 1200 750">
       <defs>
         <marker id="c1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
         <marker id="c2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
@@ -498,114 +444,116 @@
       <rect width="100%" height="100%" fill="url(#g3)"/>
 
       <!-- HOLDCO -->
-      <rect x="400" y="20" width="400" height="56" rx="8" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="380" y="20" width="440" height="56" rx="8" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2"/>
       <text x="600" y="43" fill="#fbbf24" font-size="12" font-weight="700" text-anchor="middle">TECH HOLDINGS GROUP</text>
-      <text x="600" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">MSP Platform · Cross-Sell Engine · Shared Sales &amp; Back Office</text>
+      <text x="600" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">MSP Platform  ·  Cross-Sell Engine  ·  Shared Sales &amp; Back Office</text>
 
       <!-- CENTER: MSP PLATFORM -->
-      <rect x="440" y="120" width="220" height="85" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
-      <text x="550" y="148" fill="#22d3ee" font-size="13" font-weight="700" text-anchor="middle">MSP (Managed Services)</text>
-      <text x="550" y="168" fill="white" font-size="10" text-anchor="middle">Help Desk · Infrastructure · Cloud</text>
-      <text x="550" y="184" fill="#94a3b8" font-size="8" text-anchor="middle">$100-250/seat/mo · 100-500 clients</text>
-      <text x="550" y="198" fill="#22d3ee" font-size="7" text-anchor="middle">THE PLATFORM — all cross-sell flows from here</text>
+      <rect x="430" y="120" width="240" height="90" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
+      <text x="550" y="150" fill="#22d3ee" font-size="14" font-weight="700" text-anchor="middle">MSP (Managed Services)</text>
+      <text x="550" y="172" fill="white" font-size="10" text-anchor="middle">Help Desk · Infrastructure · Cloud Migration</text>
+      <text x="550" y="190" fill="#94a3b8" font-size="8" text-anchor="middle">$100–250/seat/mo · 100–500 clients</text>
+      <text x="550" y="204" fill="#22d3ee" font-size="7" text-anchor="middle">THE PLATFORM  —  all cross-sell flows originate here</text>
 
-      <!-- LEFT: Security + Recurring Add-ons -->
-      <rect x="30" y="140" width="180" height="70" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
-      <text x="120" y="163" fill="white" font-size="11" font-weight="600" text-anchor="middle">Cybersecurity Co</text>
-      <text x="120" y="180" fill="#94a3b8" font-size="8" text-anchor="middle">Pen Testing · SOC 2/HIPAA/PCI</text>
-      <text x="120" y="195" fill="#fb7185" font-size="7" text-anchor="middle">Monitoring · IR · vCISO</text>
+      <!-- LEFT COLUMN: Security + Add-Ons (more vertical spacing) -->
+      <rect x="20" y="140" width="190" height="75" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+      <text x="115" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Cybersecurity Co</text>
+      <text x="115" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Pen Testing · SOC 2 · HIPAA · PCI</text>
+      <text x="115" y="200" fill="#fb7185" font-size="7" text-anchor="middle">Monitoring · IR · vCISO</text>
 
-      <rect x="30" y="260" width="180" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
-      <text x="120" y="283" fill="white" font-size="11" font-weight="600" text-anchor="middle">VoIP / UCaaS Reselling</text>
-      <text x="120" y="300" fill="#94a3b8" font-size="8" text-anchor="middle">Phone Systems · Teams/Zoom</text>
-      <text x="120" y="315" fill="#34d399" font-size="7" text-anchor="middle">30-50% margin · $20-40/seat</text>
+      <rect x="20" y="260" width="190" height="75" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="115" y="285" fill="white" font-size="11" font-weight="600" text-anchor="middle">VoIP / UCaaS Reselling</text>
+      <text x="115" y="303" fill="#94a3b8" font-size="8" text-anchor="middle">Phone Systems · Teams / Zoom</text>
+      <text x="115" y="320" fill="#34d399" font-size="7" text-anchor="middle">30–50% margin · $20–40/seat</text>
 
-      <rect x="30" y="380" width="180" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
-      <text x="120" y="403" fill="white" font-size="11" font-weight="600" text-anchor="middle">Backup &amp; DR (BaaS/DRaaS)</text>
-      <text x="120" y="420" fill="#94a3b8" font-size="8" text-anchor="middle">Cloud Backup · Disaster Recovery</text>
-      <text x="120" y="435" fill="#34d399" font-size="7" text-anchor="middle">Regulatory requirement play</text>
+      <rect x="20" y="380" width="190" height="75" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="115" y="405" fill="white" font-size="11" font-weight="600" text-anchor="middle">Backup &amp; DR (BaaS/DRaaS)</text>
+      <text x="115" y="423" fill="#94a3b8" font-size="8" text-anchor="middle">Cloud Backup · Disaster Recovery</text>
+      <text x="115" y="440" fill="#34d399" font-size="7" text-anchor="middle">Regulatory requirement play</text>
 
-      <!-- RIGHT: Infrastructure -->
-      <rect x="740" y="140" width="190" height="70" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-      <text x="835" y="163" fill="white" font-size="11" font-weight="600" text-anchor="middle">Hardware VAR / Reselling</text>
-      <text x="835" y="180" fill="#94a3b8" font-size="8" text-anchor="middle">Servers · Networking · Endpoints</text>
-      <text x="835" y="195" fill="#fbbf24" font-size="7" text-anchor="middle">15-25% margin · $50K+ deals</text>
+      <!-- RIGHT COLUMN: Infrastructure -->
+      <rect x="740" y="140" width="200" height="75" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="840" y="165" fill="white" font-size="11" font-weight="600" text-anchor="middle">Hardware VAR / Reselling</text>
+      <text x="840" y="183" fill="#94a3b8" font-size="8" text-anchor="middle">Servers · Networking · Endpoints</text>
+      <text x="840" y="200" fill="#fbbf24" font-size="7" text-anchor="middle">15–25% margin · $50K+ deals</text>
 
-      <rect x="740" y="260" width="190" height="70" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-      <text x="835" y="283" fill="white" font-size="11" font-weight="600" text-anchor="middle">Cloud / Data Center Hosting</text>
-      <text x="835" y="300" fill="#94a3b8" font-size="8" text-anchor="middle">Colo · Private Cloud · IaaS</text>
-      <text x="835" y="315" fill="#fbbf24" font-size="7" text-anchor="middle">Recurring infra revenue</text>
+      <rect x="740" y="260" width="200" height="75" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="840" y="285" fill="white" font-size="11" font-weight="600" text-anchor="middle">Cloud / Data Center</text>
+      <text x="840" y="303" fill="#94a3b8" font-size="8" text-anchor="middle">Colo · Private Cloud · IaaS</text>
+      <text x="840" y="320" fill="#fbbf24" font-size="7" text-anchor="middle">Recurring infra revenue</text>
 
-      <rect x="740" y="380" width="190" height="70" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
-      <text x="835" y="403" fill="white" font-size="11" font-weight="600" text-anchor="middle">IT Staffing &amp; Recruiting</text>
-      <text x="835" y="420" fill="#94a3b8" font-size="8" text-anchor="middle">Contract &amp; Perm Placement</text>
-      <text x="835" y="435" fill="#94a3b8" font-size="7" text-anchor="middle">15-25% fee · Counter-cyclical</text>
+      <rect x="740" y="380" width="200" height="75" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+      <text x="840" y="405" fill="white" font-size="11" font-weight="600" text-anchor="middle">IT Staffing &amp; Recruiting</text>
+      <text x="840" y="423" fill="#94a3b8" font-size="8" text-anchor="middle">Contract &amp; Perm Placement</text>
+      <text x="840" y="440" fill="#94a3b8" font-size="7" text-anchor="middle">15–25% fee · Counter-cyclical</text>
 
-      <!-- BOTTOM: BUILD SIDE -->
-      <rect x="240" y="420" width="200" height="75" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
-      <text x="340" y="443" fill="white" font-size="11" font-weight="600" text-anchor="middle">Dev Shop / Consulting</text>
-      <text x="340" y="460" fill="#94a3b8" font-size="8" text-anchor="middle">Custom Development · $150-250/hr</text>
-      <text x="340" y="475" fill="#a78bfa" font-size="7" text-anchor="middle">Build your products at cost</text>
-      <text x="340" y="488" fill="#a78bfa" font-size="7" text-anchor="middle">Bill clients at market rate</text>
+      <!-- BOTTOM ROW: Build Side (y=500) -->
+      <rect x="230" y="500" width="220" height="80" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="340" y="525" fill="white" font-size="11" font-weight="600" text-anchor="middle">Dev Shop / Consulting</text>
+      <text x="340" y="543" fill="#94a3b8" font-size="8" text-anchor="middle">Custom Development · $150–250/hr</text>
+      <text x="340" y="560" fill="#a78bfa" font-size="7" text-anchor="middle">Build your products at cost</text>
+      <text x="340" y="574" fill="#a78bfa" font-size="7" text-anchor="middle">Bill clients at market rate</text>
 
-      <rect x="500" y="420" width="200" height="75" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
-      <text x="600" y="443" fill="white" font-size="11" font-weight="600" text-anchor="middle">SaaS Product Co</text>
-      <text x="600" y="460" fill="#94a3b8" font-size="8" text-anchor="middle">Recurring Software Revenue</text>
-      <text x="600" y="475" fill="#a78bfa" font-size="7" text-anchor="middle">Build tools your MSP uses</text>
-      <text x="600" y="488" fill="#a78bfa" font-size="7" text-anchor="middle">Sell externally at SaaS multiples</text>
+      <rect x="500" y="500" width="220" height="80" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="610" y="525" fill="white" font-size="11" font-weight="600" text-anchor="middle">SaaS Product Co</text>
+      <text x="610" y="543" fill="#94a3b8" font-size="8" text-anchor="middle">Recurring Software Revenue</text>
+      <text x="610" y="560" fill="#a78bfa" font-size="7" text-anchor="middle">Build tools your MSP uses</text>
+      <text x="610" y="574" fill="#a78bfa" font-size="7" text-anchor="middle">Sell externally at SaaS multiples</text>
 
-      <!-- ARROWS: Cross-Sell from MSP -->
-      <line x1="440" y1="162" x2="212" y2="175" stroke="#fb7185" stroke-width="2" marker-end="url(#c3)"/>
-      <text x="320" y="155" fill="#fb7185" font-size="7">cross-sell security</text>
-      <line x1="440" y1="175" x2="212" y2="295" stroke="#34d399" stroke-width="1.5" marker-end="url(#c2)"/>
-      <text x="310" y="250" fill="#34d399" font-size="7">cross-sell VoIP</text>
-      <line x1="440" y1="188" x2="212" y2="415" stroke="#34d399" stroke-width="1.5" marker-end="url(#c2)"/>
-      <text x="340" y="390" fill="#34d399" font-size="7">cross-sell BaaS</text>
+      <!-- ARROWS: MSP → Left Column (cross-sell) -->
+      <line x1="430" y1="165" x2="212" y2="177" stroke="#fb7185" stroke-width="2" marker-end="url(#c3)"/>
+      <text x="310" y="158" fill="#fb7185" font-size="7">cross-sell security →</text>
+      <line x1="430" y1="185" x2="212" y2="297" stroke="#34d399" stroke-width="1.5" marker-end="url(#c2)"/>
+      <text x="300" y="270" fill="#34d399" font-size="7">→ cross-sell VoIP</text>
+      <line x1="430" y1="198" x2="212" y2="417" stroke="#34d399" stroke-width="1.5" marker-end="url(#c2)"/>
+      <text x="310" y="390" fill="#34d399" font-size="7">→ cross-sell BaaS</text>
 
-      <line x1="660" y1="162" x2="738" y2="175" stroke="#fbbf24" stroke-width="2" marker-end="url(#c5)"/>
-      <text x="710" y="155" fill="#fbbf24" font-size="7">hw procurement</text>
-      <line x1="660" y1="175" x2="738" y2="295" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#c5)"/>
-      <text x="715" y="250" fill="#fbbf24" font-size="7">hosting</text>
-      <line x1="660" y1="188" x2="738" y2="415" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#c6)"/>
-      <text x="720" y="390" fill="#94a3b8" font-size="7">staffing</text>
+      <!-- ARROWS: MSP → Right Column -->
+      <line x1="670" y1="165" x2="738" y2="177" stroke="#fbbf24" stroke-width="2" marker-end="url(#c5)"/>
+      <text x="710" y="158" fill="#fbbf24" font-size="7">hw sales</text>
+      <line x1="670" y1="185" x2="738" y2="297" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#c5)"/>
+      <text x="715" y="270" fill="#fbbf24" font-size="7">hosting</text>
+      <line x1="670" y1="198" x2="738" y2="417" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#c6)"/>
+      <text x="720" y="385" fill="#94a3b8" font-size="7">staffing</text>
 
       <!-- Cybersecurity → MSP (compliance drives infra upgrades) -->
-      <path d="M 120 210 Q 120 250 300 250 Q 440 250 440 210" fill="none" stroke="#fb7185" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#c3)"/>
-      <text x="280" y="242" fill="#fb7185" font-size="7">compliance → infra upgrades</text>
+      <path d="M 115 215 Q 115 250 300 250 Q 430 250 430 215" fill="none" stroke="#fb7185" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#c3)"/>
+      <text x="270" y="243" fill="#fb7185" font-size="7">compliance → infra upgrades</text>
 
-      <!-- Dev Shop → SaaS -->
-      <line x1="440" y1="457" x2="498" y2="457" stroke="#a78bfa" stroke-width="2.5" marker-end="url(#c4)"/>
-      <text x="469" y="450" fill="#a78bfa" font-size="7">build at cost</text>
+      <!-- Dev Shop → SaaS (horizontal) -->
+      <line x1="450" y1="540" x2="498" y2="540" stroke="#a78bfa" stroke-width="2.5" marker-end="url(#c4)"/>
+      <text x="474" y="532" fill="#a78bfa" font-size="7">build at cost</text>
 
-      <!-- SaaS → MSP (deploy/manage) -->
-      <path d="M 600 420 Q 600 370 550 370 L 550 207" fill="none" stroke="#a78bfa" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#c4)"/>
-      <text x="560" y="365" fill="#a78bfa" font-size="7">MSP deploys the SaaS</text>
+      <!-- SaaS → MSP (deploy/manage, goes up) -->
+      <path d="M 610 500 Q 610 450 550 450 L 550 212" fill="none" stroke="#a78bfa" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#c4)"/>
+      <text x="565" y="380" fill="#a78bfa" font-size="7">MSP deploys SaaS</text>
 
       <!-- Staffing → Dev Shop + MSP -->
-      <line x1="740" y1="415" x2="440" y2="457" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#c6)"/>
-      <text x="590" y="440" fill="#94a3b8" font-size="7">place developers</text>
+      <line x1="740" y1="430" x2="450" y2="520" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#c6)"/>
+      <text x="590" y="485" fill="#94a3b8" font-size="7">place developers</text>
 
       <!-- HoldCo ownership -->
-      <line x1="460" y1="76" x2="250" y2="138" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="440" y1="76" x2="240" y2="138" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
       <line x1="600" y1="76" x2="600" y2="118" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
-      <line x1="720" y1="76" x2="835" y2="138" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <line x1="740" y1="76" x2="840" y2="138" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,3"/>
 
       <!-- REVENUE PER CLIENT ANNOTATION -->
-      <rect x="970" y="140" width="200" height="100" rx="8" fill="rgba(251,191,36,0.08)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="6,3"/>
-      <text x="1070" y="162" fill="#fbbf24" font-size="10" font-weight="600" text-anchor="middle">REVENUE PER CLIENT/MO</text>
-      <line x1="990" y1="172" x2="1150" y2="172" stroke="#1e293b" stroke-width="1"/>
-      <text x="1070" y="190" fill="white" font-size="9" text-anchor="middle">MSP only:          $2,000</text>
-      <text x="1070" y="206" fill="white" font-size="9" text-anchor="middle">+ Security:        $1,500</text>
-      <text x="1070" y="222" fill="white" font-size="9" text-anchor="middle">+ VoIP + BaaS:     $1,200</text>
-      <text x="1070" y="238" fill="#22d3ee" font-size="9" font-weight="600" text-anchor="middle">Full Stack:       $6,000+/mo</text>
+      <rect x="980" y="140" width="190" height="130" rx="8" fill="rgba(251,191,36,0.08)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1075" y="163" fill="#fbbf24" font-size="10" font-weight="600" text-anchor="middle">REVENUE / CLIENT</text>
+      <line x1="998" y1="174" x2="1152" y2="174" stroke="#1e293b" stroke-width="1"/>
+      <text x="1075" y="194" fill="white" font-size="9" text-anchor="middle">MSP only           $2,000</text>
+      <text x="1075" y="212" fill="white" font-size="9" text-anchor="middle">+ Security         $1,500</text>
+      <text x="1075" y="230" fill="white" font-size="9" text-anchor="middle">+ VoIP + BaaS      $1,200</text>
+      <line x1="998" y1="242" x2="1152" y2="242" stroke="#1e293b" stroke-width="1"/>
+      <text x="1075" y="258" fill="#22d3ee" font-size="9" font-weight="600" text-anchor="middle">Full Stack         $6,000+/mo</text>
 
       <!-- LEGEND -->
-      <text x="30" y="550" fill="white" font-size="10" font-weight="600">Legend</text>
-      <rect x="30" y="562" width="14" height="9" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="50" y="570" fill="#94a3b8" font-size="7">Platform / Core MSP</text>
-      <rect x="30" y="576" width="14" height="9" rx="2" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1"/><text x="50" y="584" fill="#94a3b8" font-size="7">Security / Compliance</text>
-      <rect x="30" y="590" width="14" height="9" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="50" y="598" fill="#94a3b8" font-size="7">Recurring Add-Ons</text>
-      <rect x="30" y="604" width="14" height="9" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="50" y="612" fill="#94a3b8" font-size="7">Infrastructure / HW</text>
-      <rect x="30" y="618" width="14" height="9" rx="2" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1"/><text x="50" y="626" fill="#94a3b8" font-size="7">Build / IP / SaaS</text>
+      <text x="30" y="630" fill="white" font-size="10" font-weight="600">Legend</text>
+      <rect x="30" y="642" width="14" height="9" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="50" y="650" fill="#94a3b8" font-size="7">Platform / Core MSP</text>
+      <rect x="30" y="656" width="14" height="9" rx="2" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1"/><text x="50" y="664" fill="#94a3b8" font-size="7">Security / Compliance</text>
+      <rect x="280" y="642" width="14" height="9" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="300" y="650" fill="#94a3b8" font-size="7">Recurring Add-Ons</text>
+      <rect x="280" y="656" width="14" height="9" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="300" y="664" fill="#94a3b8" font-size="7">Infrastructure / HW</text>
+      <rect x="530" y="642" width="14" height="9" rx="2" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1"/><text x="550" y="650" fill="#94a3b8" font-size="7">Build / IP / SaaS</text>
     </svg>
   </div>
 
@@ -615,21 +563,21 @@
       <ul>
         <li>• MSP signs 50-seat law firm at $175/seat = $8,750/mo base</li>
         <li>• Cybersecurity Co does SOC 2 gap assessment = $15K project + $1,500/mo monitoring</li>
-        <li>• VoIP reseller ports their phones = $25/seat x 50 = $1,250/mo at 40% margin</li>
+        <li>• VoIP reseller ports their phones = $25/seat × 50 = $1,250/mo at 40% margin</li>
         <li>• Backup/DR for their servers = $800/mo recurring</li>
         <li>• Hardware VAR refreshes their endpoints = $60K one-time at 18% margin</li>
-        <li>• Client goes from $2K/mo (MSP only) to $6K+/mo (full stack) — 3x wallet share</li>
+        <li>• Client goes from $2K/mo (MSP only) to $6K+/mo (full stack) — 3× wallet share</li>
       </ul>
     </div>
     <div class="card">
       <div class="card-header"><div class="card-dot emerald"></div><h3>Key Margins</h3></div>
       <ul>
-        <li>• MSP: 35-45% EBITDA (labor-heavy but recurring, 90%+ retention)</li>
-        <li>• Cybersecurity: 40-55% (high-value consulting + recurring monitoring)</li>
-        <li>• VoIP/UCaaS: 30-50% (reseller model, low overhead)</li>
-        <li>• Hardware VAR: 15-25% (low margin but large deal sizes)</li>
-        <li>• Cloud Hosting: 40-60% (once infra is built, margin scales)</li>
-        <li>• Staffing: 15-25% placement fee (counter-cyclical balance)</li>
+        <li>• MSP: 35–45% EBITDA (labor-heavy but recurring, 90%+ retention)</li>
+        <li>• Cybersecurity: 40–55% (high-value consulting + recurring monitoring)</li>
+        <li>• VoIP/UCaaS: 30–50% (reseller model, low overhead)</li>
+        <li>• Hardware VAR: 15–25% (low margin but large deal sizes)</li>
+        <li>• Cloud Hosting: 40–60% (once infra is built, margin scales)</li>
+        <li>• Staffing: 15–25% placement fee (counter-cyclical balance)</li>
       </ul>
     </div>
     <div class="card">
@@ -638,7 +586,7 @@
         <li>• 40,000+ MSPs — most sub-$5M, perfect roll-up math (buy at 6x, exit at 12x)</li>
         <li>• Monthly recurring contracts with 90%+ retention — 24-month revenue visibility</li>
         <li>• Cybersecurity is regulatory-mandated (SEC, HIPAA, state privacy laws) — forced demand</li>
-        <li>• Cross-sell adds 2-3x wallet share without new customer acquisition cost</li>
+        <li>• Cross-sell adds 2–3× wallet share without new customer acquisition cost</li>
         <li>• Thoma Bravo, Vista, KKR all actively building MSP/Cyber platforms</li>
       </ul>
     </div>
@@ -647,20 +595,20 @@
   <div class="pe-box">
     <h3>PE Platform Playbook: MSP &amp; Cybersecurity Roll-Up</h3>
     <div class="metric-row">
-      <span class="metric"><span>Platform:</span> Acquire MSP with $3-8M revenue, 100+ managed clients at 6-8x EBITDA</span>
-      <span class="metric"><span>Add-Ons:</span> Cybersecurity firm (6-8x), VoIP provider (5-7x), hardware VAR (4-6x), 5-10 smaller MSPs (4-6x)</span>
-      <span class="metric"><span>Synergy:</span> Cross-sell security/VoIP/backup to every client · Shared NOC/SOC · Consolidated vendor purchasing power</span>
-      <span class="metric"><span>Exit:</span> Year 5-7 at 10-14x EBITDA to strategics (Cognizant, Accenture, CDW) or larger PE (Thoma Bravo, Vista)</span>
-      <span class="metric"><span>Target IRR:</span> 25-40% · <span>Equity Multiple:</span> 3.0-5.0x</span>
+      <span class="metric"><span>Platform:</span> Acquire MSP with $3–8M revenue, 100+ managed clients at 6–8x EBITDA</span>
+      <span class="metric"><span>Add-Ons:</span> Cybersecurity firm (6–8x), VoIP provider (5–7x), hardware VAR (4–6x), 5–10 smaller MSPs (4–6x)</span>
+      <span class="metric"><span>Synergy:</span> Cross-sell security/VoIP/backup to every client · Shared NOC/SOC · Consolidated vendor purchasing</span>
+      <span class="metric"><span>Exit:</span> Year 5–7 at 10–14x EBITDA to strategics (Cognizant, Accenture, CDW) or larger PE (Thoma Bravo, Vista)</span>
+      <span class="metric"><span>Target IRR:</span> 25–40% · <span>Equity Multiple:</span> 3.0–5.0x</span>
     </div>
   </div>
 
   <hr class="section-divider" id="eco4">
   <div class="section-title"><span class="section-num">04</span> Logistics &amp; Supply Chain</div>
-  <p class="section-sub">E-commerce created permanent demand. Reshoring means more domestic freight. Revenue per sq ft triples when you add value-add services on top of basic 3PL.</p>
+  <p class="section-sub">E-commerce created permanent demand. Reshoring means more domestic freight. Revenue per sq ft triples when you stack value-add services.</p>
 
   <div class="diagram-container">
-    <svg viewBox="0 0 1200 680">
+    <svg viewBox="0 0 1200 750">
       <defs>
         <marker id="d1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
         <marker id="d2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
@@ -674,118 +622,125 @@
       <rect width="100%" height="100%" fill="url(#g4)"/>
 
       <!-- HOLDCO -->
-      <rect x="380" y="20" width="440" height="56" rx="8" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="360" y="20" width="480" height="56" rx="8" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2"/>
       <text x="600" y="43" fill="#fbbf24" font-size="12" font-weight="700" text-anchor="middle">LOGISTICS HOLDINGS</text>
-      <text x="600" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">Warehousing → Transport → Value-Add → Returns — The Full Freight Lifecycle</text>
+      <text x="600" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">Warehousing → Transport → Value-Add → Returns  —  The Full Freight Lifecycle</text>
 
-      <!-- CENTER: 3PL PLATFORM -->
-      <rect x="430" y="120" width="240" height="85" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
-      <text x="550" y="148" fill="#22d3ee" font-size="13" font-weight="700" text-anchor="middle">Warehousing / 3PL Co</text>
-      <text x="550" y="168" fill="white" font-size="10" text-anchor="middle">Storage · Pick/Pack/Ship · Fulfillment</text>
-      <text x="550" y="184" fill="#94a3b8" font-size="8" text-anchor="middle">$5-15/sq ft + transaction fees · 200K+ sq ft</text>
-      <text x="550" y="198" fill="#22d3ee" font-size="7" text-anchor="middle">THE PLATFORM — all freight originates here</text>
+      <!-- ROW 1: TRANSPORT + 3PL PLATFORM (y=120) -->
+      <!-- Trucking (left) -->
+      <rect x="20" y="120" width="180" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="110" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Trucking / Freight Co</text>
+      <text x="110" y="163" fill="#94a3b8" font-size="8" text-anchor="middle">FTL · LTL · Own Fleet</text>
+      <text x="110" y="180" fill="#34d399" font-size="7" text-anchor="middle">Move your 3PL freight first</text>
+      <text x="110" y="195" fill="#34d399" font-size="7" text-anchor="middle">Then fill with 3rd-party loads</text>
 
-      <!-- TRANSPORT LAYER -->
-      <rect x="30" y="120" width="180" height="75" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
-      <text x="120" y="143" fill="white" font-size="11" font-weight="600" text-anchor="middle">Trucking / Freight Co</text>
-      <text x="120" y="160" fill="#94a3b8" font-size="8" text-anchor="middle">FTL · LTL · Own Fleet</text>
-      <text x="120" y="175" fill="#34d399" font-size="7" text-anchor="middle">Move your 3PL freight first</text>
-      <text x="120" y="188" fill="#34d399" font-size="7" text-anchor="middle">Then fill with 3rd-party loads</text>
+      <!-- 3PL (center) -->
+      <rect x="430" y="120" width="250" height="90" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2.5"/>
+      <text x="555" y="150" fill="#22d3ee" font-size="14" font-weight="700" text-anchor="middle">Warehousing / 3PL Co</text>
+      <text x="555" y="172" fill="white" font-size="10" text-anchor="middle">Storage · Pick / Pack / Ship · Fulfillment</text>
+      <text x="555" y="190" fill="#94a3b8" font-size="8" text-anchor="middle">$5–15/sq ft + transaction fees · 200K+ sq ft</text>
+      <text x="555" y="204" fill="#22d3ee" font-size="7" text-anchor="middle">THE PLATFORM  —  all freight originates here</text>
 
-      <rect x="740" y="120" width="190" height="75" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
-      <text x="835" y="143" fill="white" font-size="11" font-weight="600" text-anchor="middle">Last-Mile Delivery</text>
-      <text x="835" y="160" fill="#94a3b8" font-size="8" text-anchor="middle">Final Mile · White-Glove</text>
-      <text x="835" y="175" fill="#34d399" font-size="7" text-anchor="middle">Furniture · Appliances · Big Box</text>
-      <text x="835" y="188" fill="#34d399" font-size="7" text-anchor="middle">Higher touch = higher margin</text>
+      <!-- Last-Mile (right) -->
+      <rect x="740" y="120" width="200" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="840" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Last-Mile Delivery</text>
+      <text x="840" y="163" fill="#94a3b8" font-size="8" text-anchor="middle">Final Mile · White-Glove</text>
+      <text x="840" y="180" fill="#34d399" font-size="7" text-anchor="middle">Furniture · Appliances · Big Box</text>
+      <text x="840" y="195" fill="#34d399" font-size="7" text-anchor="middle">Higher touch = higher margin</text>
 
-      <rect x="970" y="120" width="200" height="75" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-      <text x="1070" y="143" fill="white" font-size="11" font-weight="600" text-anchor="middle">Freight Brokerage</text>
-      <text x="1070" y="160" fill="#94a3b8" font-size="8" text-anchor="middle">Match Shippers → Carriers</text>
-      <text x="1070" y="175" fill="#fbbf24" font-size="7" text-anchor="middle">Asset-light · 15-20% margin</text>
-      <text x="1070" y="188" fill="#fbbf24" font-size="7" text-anchor="middle">Overflow freight from your fleet</text>
+      <!-- Freight Brokerage (far right) -->
+      <rect x="980" y="120" width="190" height="80" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="1075" y="145" fill="white" font-size="11" font-weight="600" text-anchor="middle">Freight Brokerage</text>
+      <text x="1075" y="163" fill="#94a3b8" font-size="8" text-anchor="middle">Match Shippers → Carriers</text>
+      <text x="1075" y="180" fill="#fbbf24" font-size="7" text-anchor="middle">Asset-light · 15–20% gross</text>
+      <text x="1075" y="195" fill="#fbbf24" font-size="7" text-anchor="middle">Overflow from your fleet</text>
 
-      <!-- VALUE-ADD LAYER -->
-      <rect x="30" y="270" width="190" height="80" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
-      <text x="125" y="293" fill="white" font-size="11" font-weight="600" text-anchor="middle">Packaging &amp; Kitting</text>
-      <text x="125" y="310" fill="#94a3b8" font-size="8" text-anchor="middle">Custom Packaging · Sub Boxes</text>
-      <text x="125" y="325" fill="#fb923c" font-size="7" text-anchor="middle">Retail-Ready · Co-Packing</text>
-      <text x="125" y="340" fill="#fb923c" font-size="7" text-anchor="middle">Higher margin than basic 3PL</text>
+      <!-- ROW 2: VALUE-ADD LAYER (y=290, gap=90 from row 1 bottom=200) -->
+      <rect x="20" y="290" width="200" height="85" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="120" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Packaging &amp; Kitting</text>
+      <text x="120" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Custom Packaging · Sub Boxes</text>
+      <text x="120" y="350" fill="#fb923c" font-size="7" text-anchor="middle">Retail-Ready · Co-Packing</text>
+      <text x="120" y="366" fill="#fb923c" font-size="7" text-anchor="middle">Higher margin than basic 3PL</text>
 
-      <rect x="270" y="270" width="190" height="80" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
-      <text x="365" y="293" fill="white" font-size="11" font-weight="600" text-anchor="middle">Returns / Reverse Log</text>
-      <text x="365" y="310" fill="#94a3b8" font-size="8" text-anchor="middle">Grading · Refurb · Liquidation</text>
-      <text x="365" y="325" fill="#fb7185" font-size="7" text-anchor="middle">20-30% e-comm return rate</text>
-      <text x="365" y="340" fill="#fb7185" font-size="7" text-anchor="middle">Growing 10%+ YoY</text>
+      <rect x="260" y="290" width="200" height="85" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+      <text x="360" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Returns / Reverse Log</text>
+      <text x="360" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Grading · Refurb · Liquidation</text>
+      <text x="360" y="350" fill="#fb7185" font-size="7" text-anchor="middle">20–30% e-comm return rate</text>
+      <text x="360" y="366" fill="#fb7185" font-size="7" text-anchor="middle">Growing 10%+ YoY</text>
 
-      <rect x="510" y="270" width="200" height="80" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
-      <text x="610" y="293" fill="white" font-size="11" font-weight="600" text-anchor="middle">Customs Brokerage</text>
-      <text x="610" y="310" fill="#94a3b8" font-size="8" text-anchor="middle">Import Clearance · Bonded WH</text>
-      <text x="610" y="325" fill="#a78bfa" font-size="7" text-anchor="middle">Essential for any importer</text>
-      <text x="610" y="340" fill="#a78bfa" font-size="7" text-anchor="middle">Sticky — hard to switch brokers</text>
+      <rect x="500" y="290" width="210" height="85" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="605" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Customs Brokerage</text>
+      <text x="605" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Import Clearance · Bonded WH</text>
+      <text x="605" y="350" fill="#a78bfa" font-size="7" text-anchor="middle">Essential for any importer</text>
+      <text x="605" y="366" fill="#a78bfa" font-size="7" text-anchor="middle">Sticky — hard to switch</text>
 
-      <rect x="760" y="270" width="200" height="80" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
-      <text x="860" y="293" fill="white" font-size="11" font-weight="600" text-anchor="middle">Cold Chain Logistics</text>
-      <text x="860" y="310" fill="#94a3b8" font-size="8" text-anchor="middle">Pharma · Food · Biotech</text>
-      <text x="860" y="325" fill="#a78bfa" font-size="7" text-anchor="middle">2-3x premium over ambient</text>
-      <text x="860" y="340" fill="#a78bfa" font-size="7" text-anchor="middle">Infrastructure moat · Long contracts</text>
+      <rect x="750" y="290" width="200" height="85" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="850" y="315" fill="white" font-size="11" font-weight="600" text-anchor="middle">Cold Chain Logistics</text>
+      <text x="850" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Pharma · Food · Biotech</text>
+      <text x="850" y="350" fill="#a78bfa" font-size="7" text-anchor="middle">2–3× premium over ambient</text>
+      <text x="850" y="366" fill="#a78bfa" font-size="7" text-anchor="middle">Infrastructure moat · Long contracts</text>
 
-      <!-- SUPPORT LAYER -->
-      <rect x="400" y="430" width="300" height="75" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-      <text x="550" y="453" fill="white" font-size="11" font-weight="600" text-anchor="middle">Fleet Maintenance &amp; Leasing</text>
-      <text x="550" y="470" fill="#94a3b8" font-size="8" text-anchor="middle">Service your own fleet at cost · Mobile repair units</text>
-      <text x="550" y="487" fill="#fbbf24" font-size="7" text-anchor="middle">Parts markup · External fleet service · Reduced downtime = more loads</text>
+      <!-- ROW 3: FLEET MAINTENANCE (y=460, gap=85) -->
+      <rect x="350" y="460" width="340" height="80" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="520" y="485" fill="white" font-size="11" font-weight="600" text-anchor="middle">Fleet Maintenance &amp; Leasing</text>
+      <text x="520" y="503" fill="#94a3b8" font-size="8" text-anchor="middle">Service your own fleet at cost · Mobile repair units</text>
+      <text x="520" y="520" fill="#fbbf24" font-size="7" text-anchor="middle">Parts markup · External fleet service · Reduced downtime = more loads</text>
 
-      <!-- ARROWS: 3PL → Transport -->
-      <line x1="430" y1="145" x2="212" y2="157" stroke="#34d399" stroke-width="2.5" marker-end="url(#d2)"/>
-      <text x="320" y="138" fill="#34d399" font-size="7">outbound freight</text>
-      <line x1="670" y1="145" x2="738" y2="157" stroke="#34d399" stroke-width="2.5" marker-end="url(#d2)"/>
-      <text x="710" y="138" fill="#34d399" font-size="7">last-mile dispatch</text>
+      <!-- ARROWS: 3PL → Transport (Row 1 horizontal) -->
+      <line x1="200" y1="160" x2="428" y2="160" stroke="#34d399" stroke-width="2.5" marker-end="url(#d2)"/>
+      <text x="310" y="151" fill="#34d399" font-size="7">outbound freight</text>
+      <line x1="680" y1="160" x2="738" y2="160" stroke="#34d399" stroke-width="2.5" marker-end="url(#d2)"/>
+      <text x="709" y="151" fill="#34d399" font-size="7">last-mile</text>
 
-      <!-- Trucking → Brokerage (overflow) -->
-      <line x1="180" y1="195" x2="1070" y2="157" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#d3)"/>
-      <text x="900" y="172" fill="#fbbf24" font-size="7">overflow freight → broker</text>
+      <!-- ARROWS: Trucking → Brokerage (overflow, clean path through gap) -->
+      <path d="M 200 200 Q 200 300 980 160" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#d3)"/>
+      <text x="580" y="280" fill="#fbbf24" font-size="7">overflow freight → broker</text>
 
-      <!-- Brokerage → Trucking (your trucks first) -->
-      <path d="M 1070 195 Q 1070 240 600 240 Q 210 240 120 197" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#d3)"/>
-      <text x="600" y="255" fill="#fbbf24" font-size="7">brokered loads → your fleet first</text>
+      <!-- ARROWS: Brokerage → Trucking (your trucks first, clean curve) -->
+      <path d="M 1075 200 Q 1075 310 600 310 Q 110 310 110 202" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#d3)"/>
+      <text x="590" y="322" fill="#fbbf24" font-size="7" text-anchor="middle">brokered loads → your fleet first</text>
 
-      <!-- 3PL → Value-Add -->
-      <line x1="430" y1="180" x2="222" y2="310" stroke="#fb923c" stroke-width="2" marker-end="url(#d4)"/>
-      <text x="300" y="260" fill="#fb923c" font-size="7">kitting work</text>
-      <line x1="500" y1="205" x2="420" y2="310" stroke="#fb7185" stroke-width="2" marker-end="url(#d6)"/>
-      <text x="445" y="265" fill="#fb7185" font-size="7">returns processing</text>
+      <!-- ARROWS: 3PL → Value-Add (diagonal, clean) -->
+      <line x1="430" y1="190" x2="222" y2="332" stroke="#fb923c" stroke-width="2" marker-end="url(#d4)"/>
+      <text x="300" y="275" fill="#fb923c" font-size="7">kitting work</text>
+      <line x1="500" y1="210" x2="420" y2="330" stroke="#fb7185" stroke-width="2" marker-end="url(#d6)"/>
+      <text x="445" y="278" fill="#fb7185" font-size="7">returns</text>
 
-      <!-- Customs → 3PL + Trucking -->
-      <line x1="610" y1="270" x2="580" y2="207" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#d5)"/>
-      <text x="580" y="240" fill="#a78bfa" font-size="7">cleared goods</text>
-      <line x1="510" y1="300" x2="212" y2="185" stroke="#a78bfa" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#d5)"/>
-      <text x="320" y="235" fill="#a78bfa" font-size="7">port drayage</text>
+      <!-- ARROWS: Customs → 3PL (cleared goods) -->
+      <line x1="605" y1="290" x2="585" y2="212" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#d5)"/>
+      <text x="575" y="255" fill="#a78bfa" font-size="7">cleared goods</text>
 
-      <!-- Cold Chain ↔ 3PL + Trucking -->
-      <line x1="860" y1="270" x2="670" y2="200" stroke="#a78bfa" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#d5)"/>
-      <text x="780" y="235" fill="#a78bfa" font-size="7">cold storage</text>
+      <!-- ARROWS: Customs → Trucking (port drayage) -->
+      <path d="M 500 320 Q 300 340 160 280 Q 110 250 110 202" fill="none" stroke="#a78bfa" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#d5)"/>
+      <text x="270" y="290" fill="#a78bfa" font-size="7">port drayage</text>
 
-      <!-- Fleet Maintenance → Trucking + Last-Mile -->
-      <line x1="400" y1="467" x2="210" y2="195" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#d3)"/>
-      <text x="250" y="380" fill="#fbbf24" font-size="7">fleet service &amp; repairs</text>
-      <line x1="650" y1="430" x2="835" y2="197" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#d3)"/>
+      <!-- ARROWS: Cold Chain ↔ 3PL + Trucking -->
+      <line x1="750" y1="332" x2="680" y2="210" stroke="#a78bfa" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#d5)"/>
+      <text x="695" y="278" fill="#a78bfa" font-size="7">cold storage</text>
 
-      <!-- REVENUE PER SQ FT ANNOTATION -->
-      <rect x="970" y="260" width="200" height="100" rx="8" fill="rgba(34,211,238,0.08)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="6,3"/>
-      <text x="1070" y="282" fill="#22d3ee" font-size="10" font-weight="600" text-anchor="middle">REVENUE PER SQ FT</text>
-      <line x1="990" y1="292" x2="1150" y2="292" stroke="#1e293b" stroke-width="1"/>
-      <text x="1070" y="310" fill="white" font-size="9" text-anchor="middle">Basic 3PL:           $50-75</text>
-      <text x="1070" y="326" fill="white" font-size="9" text-anchor="middle">+ Kitting:            +$25-40</text>
-      <text x="1070" y="342" fill="white" font-size="9" text-anchor="middle">+ Returns:             +$20-35</text>
-      <text x="1070" y="358" fill="#22d3ee" font-size="9" font-weight="600" text-anchor="middle">Full Service:          $150+/sq ft</text>
+      <!-- ARROWS: Fleet Maintenance → Trucking + Last-Mile (upward) -->
+      <line x1="370" y1="460" x2="180" y2="200" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#d3)"/>
+      <text x="240" y="380" fill="#fbbf24" font-size="7">fleet service</text>
+      <line x1="650" y1="460" x2="840" y2="200" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#d3)"/>
+      <text x="770" y="380" fill="#fbbf24" font-size="7">repairs</text>
+
+      <!-- REVENUE PER SQ FT ANNOTATION (bottom-right, clear zone) -->
+      <rect x="930" y="370" width="240" height="130" rx="8" fill="rgba(34,211,238,0.08)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1050" y="393" fill="#22d3ee" font-size="10" font-weight="600" text-anchor="middle">REVENUE PER SQ FT</text>
+      <line x1="950" y1="404" x2="1150" y2="404" stroke="#1e293b" stroke-width="1"/>
+      <text x="1050" y="423" fill="white" font-size="9" text-anchor="middle">Basic 3PL              $50–75</text>
+      <text x="1050" y="441" fill="white" font-size="9" text-anchor="middle">+ Kitting              +$25–40</text>
+      <text x="1050" y="459" fill="white" font-size="9" text-anchor="middle">+ Returns             +$20–35</text>
+      <line x1="950" y1="470" x2="1150" y2="470" stroke="#1e293b" stroke-width="1"/>
+      <text x="1050" y="488" fill="#22d3ee" font-size="9" font-weight="600" text-anchor="middle">Full Service          $150+/sq ft</text>
 
       <!-- LEGEND -->
-      <text x="30" y="550" fill="white" font-size="10" font-weight="600">Legend</text>
-      <rect x="30" y="562" width="14" height="9" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="50" y="570" fill="#94a3b8" font-size="7">Platform / 3PL Core</text>
-      <rect x="30" y="576" width="14" height="9" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="50" y="584" fill="#94a3b8" font-size="7">Transport / Movement</text>
-      <rect x="30" y="590" width="14" height="9" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="50" y="598" fill="#94a3b8" font-size="7">Value-Add Services</text>
-      <rect x="30" y="604" width="14" height="9" rx="2" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1"/><text x="50" y="612" fill="#94a3b8" font-size="7">Specialized / Premium</text>
-      <rect x="30" y="618" width="14" height="9" rx="2" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1"/><text x="50" y="626" fill="#94a3b8" font-size="7">Reverse / Returns</text>
+      <text x="30" y="590" fill="white" font-size="10" font-weight="600">Legend</text>
+      <rect x="30" y="602" width="14" height="9" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="50" y="610" fill="#94a3b8" font-size="7">Platform / 3PL Core</text>
+      <rect x="30" y="616" width="14" height="9" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="50" y="624" fill="#94a3b8" font-size="7">Transport / Movement</text>
+      <rect x="280" y="602" width="14" height="9" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="300" y="610" fill="#94a3b8" font-size="7">Value-Add Services</text>
+      <rect x="280" y="616" width="14" height="9" rx="2" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1"/><text x="300" y="624" fill="#94a3b8" font-size="7">Specialized / Premium</text>
+      <rect x="530" y="602" width="14" height="9" rx="2" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1"/><text x="550" y="610" fill="#94a3b8" font-size="7">Reverse / Returns</text>
     </svg>
   </div>
 
@@ -794,22 +749,22 @@
       <div class="card-header"><div class="card-dot cyan"></div><h3>How the Flywheel Spins</h3></div>
       <ul>
         <li>• E-comm brand signs 3PL contract: 50K sq ft, 5K orders/day = $350K/mo base</li>
-        <li>• Your Trucking Co moves all inbound containers (port → warehouse) = $2,800/load x 20/mo = $56K</li>
+        <li>• Your Trucking Co moves all inbound containers (port → warehouse) = $2,800/load × 20/mo</li>
         <li>• Packaging Co does custom kitting for subscription boxes = +$40K/mo value-add</li>
-        <li>• Returns Co processes 1,500 returns/day (30% rate) = grading fees + liquidation rev share</li>
-        <li>• Last-Mile delivers big items = $85/delivery x 200/mo = $17K</li>
-        <li>• Fleet Maintenance services all trucks at cost — saves 30% vs dealer rates, reduces downtime</li>
+        <li>• Returns Co processes 1,500 returns/day (30% rate) = grading + liquidation rev share</li>
+        <li>• Last-Mile delivers big items = $85/delivery × 200/mo = $17K</li>
+        <li>• Fleet Maintenance services all trucks at cost — saves 30% vs dealer, cuts downtime</li>
       </ul>
     </div>
     <div class="card">
       <div class="card-header"><div class="card-dot emerald"></div><h3>Key Margins</h3></div>
       <ul>
-        <li>• 3PL Warehousing: 20-30% EBITDA (labor + real estate intensive)</li>
-        <li>• Trucking: 12-18% (fuel, driver pay, insurance — thin but essential link)</li>
-        <li>• Freight Brokerage: 15-20% gross (asset-light, tech-enabled — higher multiple)</li>
-        <li>• Packaging/Kitting: 25-40% (labor as primary cost, high value-add premium)</li>
-        <li>• Returns/Reverse Logistics: 30-45% (grading/refurb creates margin from "waste")</li>
-        <li>• Cold Chain: 25-35% (premium pricing, infrastructure barrier to entry)</li>
+        <li>• 3PL Warehousing: 20–30% EBITDA (labor + real estate intensive)</li>
+        <li>• Trucking: 12–18% (fuel, driver pay, insurance — thin but essential link)</li>
+        <li>• Freight Brokerage: 15–20% gross (asset-light, tech-enabled — higher multiple)</li>
+        <li>• Packaging/Kitting: 25–40% (labor as primary cost, high value-add premium)</li>
+        <li>• Returns/Reverse Logistics: 30–45% (grading/refurb creates margin from "waste")</li>
+        <li>• Cold Chain: 25–35% (premium pricing, infrastructure barrier to entry)</li>
       </ul>
     </div>
     <div class="card">
@@ -818,8 +773,8 @@
         <li>• E-commerce will hit $8T by 2027 — every dollar needs warehousing, transport, and returns</li>
         <li>• Reshoring/nearshoring = more domestic freight — Mexico → U.S. corridors exploding</li>
         <li>• 3PL is highly fragmented — 20,000+ operators, most single-facility. Clean roll-up math.</li>
-        <li>• Returns is the hidden gold mine — 20-30% of e-comm gets returned, growing 10%+ YoY</li>
-        <li>• Cold chain has natural moats (cap-ex, certifications) and 5-10 year contracts</li>
+        <li>• Returns is the hidden gold mine — 20–30% of e-comm gets returned, growing 10%+ YoY</li>
+        <li>• Cold chain has natural moats (cap-ex, certifications) and 5–10 year contracts</li>
       </ul>
     </div>
   </div>
@@ -827,11 +782,11 @@
   <div class="pe-box">
     <h3>PE Platform Playbook: Logistics &amp; Supply Chain Roll-Up</h3>
     <div class="metric-row">
-      <span class="metric"><span>Platform:</span> Acquire regional 3PL ($10-20M rev, 200K+ sq ft) at 6-8x EBITDA</span>
-      <span class="metric"><span>Add-Ons:</span> Trucking company (4-6x), last-mile provider, packaging/returns co (5-7x), cold storage facility</span>
+      <span class="metric"><span>Platform:</span> Acquire regional 3PL ($10–20M rev, 200K+ sq ft) at 6–8x EBITDA</span>
+      <span class="metric"><span>Add-Ons:</span> Trucking company (4–6x), last-mile provider, packaging/returns co (5–7x), cold storage facility</span>
       <span class="metric"><span>Synergy:</span> Internal freight keeps trucks 85%+ utilized · Returns is natural add-on to existing fulfillment clients</span>
-      <span class="metric"><span>Exit:</span> Year 5-7 at 10-14x EBITDA to strategics (XPO, Ryder, DSV, Maersk) or infrastructure funds</span>
-      <span class="metric"><span>Target IRR:</span> 20-30% · <span>Equity Multiple:</span> 2.5-3.5x</span>
+      <span class="metric"><span>Exit:</span> Year 5–7 at 10–14x EBITDA to strategics (XPO, Ryder, DSV, Maersk) or infrastructure funds</span>
+      <span class="metric"><span>Target IRR:</span> 20–30% · <span>Equity Multiple:</span> 2.5–3.5x</span>
     </div>
   </div>
 </div></body></html>
