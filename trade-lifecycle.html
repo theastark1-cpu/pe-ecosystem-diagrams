@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade Lifecycle Ecosystems</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: #020617;
+      min-height: 100vh;
+      padding: 2rem;
+      color: white;
+    }
+    .container { max-width: 1300px; margin: 0 auto; }
+    .section-divider {
+      border: none;
+      border-top: 2px solid #1e293b;
+      margin: 3rem 0 2rem 0;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f8fafc;
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 0.25rem;
+    }
+    .section-num {
+      background: #1e293b;
+      color: #94a3b8;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.5rem;
+    }
+    .section-sub {
+      color: #64748b;
+      font-size: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .diagram-container {
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 1rem;
+      border: 1px solid #1e293b;
+      padding: 1.25rem;
+      overflow-x: auto;
+      margin-bottom: 0.75rem;
+    }
+    svg { width: 100%; min-width: 950px; display: block; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .card {
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 0.75rem;
+      border: 1px solid #1e293b;
+      padding: 1rem;
+    }
+    .card-header {
+      display: flex; align-items: center; gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+    .card-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .card-dot.cyan { background: #22d3ee; }
+    .card-dot.emerald { background: #34d399; }
+    .card-dot.amber { background: #fbbf24; }
+    .card-dot.rose { background: #fb7185; }
+    .card-dot.violet { background: #a78bfa; }
+    .card-dot.orange { background: #fb923c; }
+    .card h3 { font-size: 0.8rem; font-weight: 600; }
+    .card li { color: #94a3b8; font-size: 0.7rem; line-height: 1.5; }
+    .card ul { list-style: none; }
+    .card li { margin-bottom: 0.15rem; }
+    .flywheel-box {
+      background: rgba(34, 211, 238, 0.06);
+      border: 1px solid rgba(34, 211, 238, 0.25);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      margin-top: 0.75rem;
+    }
+    .flywheel-box h3 {
+      font-size: 0.8rem; font-weight: 600;
+      color: #22d3ee;
+      margin-bottom: 0.5rem;
+    }
+    .flywheel-box p {
+      color: #94a3b8; font-size: 0.75rem; line-height: 1.6;
+    }
+    .flywheel-box p span { color: #f8fafc; font-weight: 600; }
+    .pulse-dot {
+      width: 10px; height: 10px;
+      background: #22d3ee;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+      display: inline-block;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .toc {
+      display: flex; gap: 0.5rem; flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .toc a {
+      color: #94a3b8; text-decoration: none;
+      font-size: 0.75rem; padding: 0.3rem 0.6rem;
+      border: 1px solid #1e293b; border-radius: 0.4rem;
+      transition: all 0.2s;
+    }
+    .toc a:hover { color: #fb923c; border-color: #fb923c; }
+    .nav-back {
+      margin-bottom: 1rem;
+    }
+    .nav-back a {
+      color: #64748b; text-decoration: none;
+      font-size: 0.75rem;
+      transition: color 0.2s;
+    }
+    .nav-back a:hover { color: #22d3ee; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="nav-back">
+    <a href=".">← Back to PE Ecosystems</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;">
+    <span class="pulse-dot"></span>
+    <h1 style="font-size:1.5rem;font-weight:700;">Trade Lifecycle Ecosystems</h1>
+  </div>
+  <p style="color:#64748b;font-size:0.8rem;margin-bottom:1.5rem;">10 trade ecosystems where the school manufactures the workforce, the service company deploys it, and the supply chain captures every dollar of materials.</p>
+
+  <div class="toc">
+    <a href="#t1">01 · Electrical</a>
+    <a href="#t2">02 · HVAC</a>
+    <a href="#t3">03 · Plumbing</a>
+    <a href="#t4">04 · Welding</a>
+    <a href="#t5">05 · Auto/Diesel</a>
+    <a href="#t6">06 · Carpentry</a>
+    <a href="#t7">07 · Heavy Equip</a>
+    <a href="#t8">08 · Culinary</a>
+    <a href="#t9">09 · Aviation</a>
+    <a href="#t10">10 · CDL / Trucking</a>
+  </div>
+
+  <hr class="section-divider" id="t1">
+  <div class="section-title"><span class="section-num">🔌 01</span> Electrical Trades Ecosystem</div>
+  <p class="section-sub">The school produces electricians. The supply house captures every panel, breaker, and foot of wire.</p>
+
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 600">
+      <defs>
+        <marker id="t1a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="t1b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="t1c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="t1d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <marker id="t1e" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gt1" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gt1)"/>
+
+      <!-- TRADE SCHOOL — The Origin Node -->
+      <rect x="400" y="25" width="400" height="65" rx="8" fill="rgba(251,146,60,0.15)" stroke="#fb923c" stroke-width="2.5"/>
+      <text x="600" y="50" fill="#fb923c" font-size="13" font-weight="700" text-anchor="middle">Electrical Trade School</text>
+      <text x="600" y="68" fill="#94a3b8" font-size="9" text-anchor="middle">Apprentice → Journeyman → Master · State-licensed program · NCCER curriculum</text>
+      <text x="600" y="82" fill="#fb923c" font-size="7" text-anchor="middle">TALENT FACTORY — every student pays tuition to get first access to hire them</text>
+
+      <!-- Render company boxes -->
+      <rect x="80" y="155" width="200" height="70" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="180" y="177" fill="white" font-size="11" font-weight="600" text-anchor="middle">Electrical Contracting</text>
+      <text x="180" y="193" fill="#94a3b8" font-size="7.5" text-anchor="middle">Resi · Commercial · Industrial</text>
+      <text x="180" y="215" fill="#22d3ee" font-size="7" text-anchor="middle">Core revenue engine · $80-150/hr</text>
+      <rect x="400" y="255" width="230" height="70" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="515" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Electrical Supply House</text>
+      <text x="515" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Breakers · Panels · Wire · Conduit</text>
+      <text x="515" y="315" fill="#fbbf24" font-size="7" text-anchor="middle">Sell to yourself at cost · Retail +30%</text>
+      <rect x="40" y="320" width="200" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="140" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Solar & Battery Install</text>
+      <text x="140" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Residential + Commercial PV</text>
+      <text x="140" y="380" fill="#34d399" font-size="7" text-anchor="middle">High-growth adjacency · $3-5/watt</text>
+      <rect x="280" y="320" width="200" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="380" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">EV Charger Installation</text>
+      <text x="380" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Level 2 + DC Fast Charge</text>
+      <text x="380" y="380" fill="#34d399" font-size="7" text-anchor="middle">Every lot needs one · recurring maint</text>
+      <rect x="700" y="255" width="230" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="815" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Electrical Inspections</text>
+      <text x="815" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Municipal 3rd-party insp</text>
+      <text x="815" y="315" fill="#a78bfa" font-size="7" text-anchor="middle">Retired electricians → inspectors</text>
+
+      <!-- ARROWS -->
+      <line x1="450" y1="90" x2="180" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t1a)"/>
+      <text x="270" y="128" fill="#22d3ee" font-size="7">graduates hired →</text>
+      <line x1="750" y1="90" x2="940" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t1a)"/>
+      <text x="850" y="128" fill="#22d3ee" font-size="7">→ graduates hired</text>
+      <line x1="580" y1="90" x2="580" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t1a)"/>
+
+      <!-- Service → Supply flow -->
+      <line x1="290" y1="190" x2="500" y2="255" stroke="#fb923c" stroke-width="2" marker-end="url(#t1b)"/>
+      <text x="410" y="230" fill="#fb923c" font-size="7" text-anchor="middle">buys materials</text>
+
+      <!-- Service → Adjacent flows -->
+      <line x1="160" y1="230" x2="160" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#t1c)"/>
+      <text x="175" y="280" fill="#34d399" font-size="7">upskills</text>
+      <line x1="680" y1="190" x2="780" y2="255" stroke="#34d399" stroke-width="1.5" marker-end="url(#t1c)"/>
+
+      <!-- Supply → School (equipment/training partnership, goes back up) -->
+      <path d="M 700 255 Q 900 210 900 100 Q 900 60 800 60" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#t1e)"/>
+      <text x="920" y="170" fill="#fbbf24" font-size="7" text-anchor="middle">equipment</text>
+      <text x="920" y="182" fill="#fbbf24" font-size="7" text-anchor="middle">partnership</text>
+
+      <!-- Student journey annotation (right side) -->
+      <rect x="980" y="120" width="195" height="155" rx="8" fill="rgba(251,146,60,0.06)" stroke="#fb923c" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1077" y="145" fill="#fb923c" font-size="10" font-weight="600" text-anchor="middle">STUDENT JOURNEY</text>
+      <line x1="995" y1="156" x2="1160" y2="156" stroke="#1e293b" stroke-width="1"/>
+      <text x="1077" y="175" fill="white" font-size="8.5" text-anchor="middle">1. Pay tuition</text>
+      <text x="1077" y="193" fill="white" font-size="8.5" text-anchor="middle">2. Apprentice wage</text>
+      <text x="1077" y="211" fill="white" font-size="8.5" text-anchor="middle">3. Journeyman pay</text>
+      <text x="1077" y="229" fill="white" font-size="8.5" text-anchor="middle">4. Buy supplies from you</text>
+      <text x="1077" y="247" fill="white" font-size="8.5" text-anchor="middle">5. Upskill at your school</text>
+      <text x="1077" y="265" fill="#fb923c" font-size="8.5" font-weight="600" text-anchor="middle">Lifetime ecosystem value</text>
+
+      <!-- Legend -->
+      <text x="30" y="420" fill="white" font-size="9" font-weight="600">Legend</text>
+      <rect x="30" y="432" width="12" height="8" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="48" y="440" fill="#94a3b8" font-size="7">School / Origin</text>
+      <rect x="30" y="446" width="12" height="8" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="48" y="454" fill="#94a3b8" font-size="7">Service Companies</text>
+      <rect x="200" y="432" width="12" height="8" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="218" y="440" fill="#94a3b8" font-size="7">Adjacent Services</text>
+      <rect x="200" y="446" width="12" height="8" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="218" y="454" fill="#94a3b8" font-size="7">Supply Chain</text>
+    </svg>
+  </div>
+
+  <div class="flywheel-box">
+    <h3>How The Flywheel Spins</h3>
+    <p><span>Student</span> pays tuition → graduates into <span>Electrical Contracting Co</span> at apprentice wage → journeyman buys materials from your <span>Supply House</span> at employee discount (still 20% margin to you) → upskills at your school into <span>Solar/EV</span> specialties at higher bill rates → retiree becomes <span>Inspector</span> signing off your own jobs. Lifetime revenue per electrician: <span>$2-4M</span> in wages + materials + tuition cycles.</p>
+  </div>
+
+  <hr class="section-divider" id="t2">
+  <div class="section-title"><span class="section-num">🔥 02</span> HVAC & Climate Control Ecosystem</div>
+  <p class="section-sub">EPA-certified techs are the bottleneck. Own the certification pipeline. Own the equipment they install.</p>
+
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 600">
+      <defs>
+        <marker id="t2a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="t2b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="t2c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="t2d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <marker id="t2e" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gt2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gt2)"/>
+
+      <!-- TRADE SCHOOL — The Origin Node -->
+      <rect x="400" y="25" width="400" height="65" rx="8" fill="rgba(251,146,60,0.15)" stroke="#fb923c" stroke-width="2.5"/>
+      <text x="600" y="50" fill="#fb923c" font-size="13" font-weight="700" text-anchor="middle">HVAC Trade School</text>
+      <text x="600" y="68" fill="#94a3b8" font-size="9" text-anchor="middle">EPA 608 · NATE certs · Heat pumps · Refrigeration · Sheet metal</text>
+      <text x="600" y="82" fill="#fb923c" font-size="7" text-anchor="middle">TALENT FACTORY — every student pays tuition to get first access to hire them</text>
+
+      <!-- Render company boxes -->
+      <rect x="80" y="155" width="205" height="70" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="182" y="177" fill="white" font-size="11" font-weight="600" text-anchor="middle">HVAC Service & Install</text>
+      <text x="182" y="193" fill="#94a3b8" font-size="7.5" text-anchor="middle">Residential + Commercial</text>
+      <text x="182" y="215" fill="#22d3ee" font-size="7" text-anchor="middle">Service contracts = recurring gold</text>
+      <rect x="400" y="255" width="235" height="70" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="517" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Equipment Distribution</text>
+      <text x="517" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Carrier · Trane · Daikin dealer</text>
+      <text x="517" y="315" fill="#fbbf24" font-size="7" text-anchor="middle">Sell at cost to self · +25% to others</text>
+      <rect x="40" y="320" width="200" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="140" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Ductwork Fabrication</text>
+      <text x="140" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Custom sheet metal shop</text>
+      <text x="140" y="380" fill="#34d399" font-size="7" text-anchor="middle">Supply your installs · sell to others</text>
+      <rect x="280" y="320" width="210" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="385" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Energy Audit / Home Perf</text>
+      <text x="385" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Blower door · Insulation · Efficiency</text>
+      <text x="385" y="380" fill="#34d399" font-size="7" text-anchor="middle">Drives replacement sales pipeline</text>
+      <rect x="700" y="255" width="230" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="815" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Building Automation</text>
+      <text x="815" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Smart thermostats · BAS controls</text>
+      <text x="815" y="315" fill="#a78bfa" font-size="7" text-anchor="middle">Upsell to every commercial client</text>
+
+      <!-- ARROWS -->
+      <line x1="450" y1="90" x2="180" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t2a)"/>
+      <text x="270" y="128" fill="#22d3ee" font-size="7">graduates hired →</text>
+      <line x1="750" y1="90" x2="940" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t2a)"/>
+      <text x="850" y="128" fill="#22d3ee" font-size="7">→ graduates hired</text>
+      <line x1="580" y1="90" x2="580" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t2a)"/>
+
+      <!-- Service → Supply flow -->
+      <line x1="290" y1="190" x2="500" y2="255" stroke="#fb923c" stroke-width="2" marker-end="url(#t2b)"/>
+      <text x="410" y="230" fill="#fb923c" font-size="7" text-anchor="middle">buys materials</text>
+
+      <!-- Service → Adjacent flows -->
+      <line x1="160" y1="230" x2="160" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#t2c)"/>
+      <text x="175" y="280" fill="#34d399" font-size="7">upskills</text>
+      <line x1="680" y1="190" x2="780" y2="255" stroke="#34d399" stroke-width="1.5" marker-end="url(#t2c)"/>
+
+      <!-- Supply → School (equipment/training partnership, goes back up) -->
+      <path d="M 700 255 Q 900 210 900 100 Q 900 60 800 60" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#t2e)"/>
+      <text x="920" y="170" fill="#fbbf24" font-size="7" text-anchor="middle">equipment</text>
+      <text x="920" y="182" fill="#fbbf24" font-size="7" text-anchor="middle">partnership</text>
+
+      <!-- Student journey annotation (right side) -->
+      <rect x="980" y="120" width="195" height="155" rx="8" fill="rgba(251,146,60,0.06)" stroke="#fb923c" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1077" y="145" fill="#fb923c" font-size="10" font-weight="600" text-anchor="middle">STUDENT JOURNEY</text>
+      <line x1="995" y1="156" x2="1160" y2="156" stroke="#1e293b" stroke-width="1"/>
+      <text x="1077" y="175" fill="white" font-size="8.5" text-anchor="middle">1. Pay tuition</text>
+      <text x="1077" y="193" fill="white" font-size="8.5" text-anchor="middle">2. Apprentice wage</text>
+      <text x="1077" y="211" fill="white" font-size="8.5" text-anchor="middle">3. Journeyman pay</text>
+      <text x="1077" y="229" fill="white" font-size="8.5" text-anchor="middle">4. Buy supplies from you</text>
+      <text x="1077" y="247" fill="white" font-size="8.5" text-anchor="middle">5. Upskill at your school</text>
+      <text x="1077" y="265" fill="#fb923c" font-size="8.5" font-weight="600" text-anchor="middle">Lifetime ecosystem value</text>
+
+      <!-- Legend -->
+      <text x="30" y="420" fill="white" font-size="9" font-weight="600">Legend</text>
+      <rect x="30" y="432" width="12" height="8" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="48" y="440" fill="#94a3b8" font-size="7">School / Origin</text>
+      <rect x="30" y="446" width="12" height="8" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="48" y="454" fill="#94a3b8" font-size="7">Service Companies</text>
+      <rect x="200" y="432" width="12" height="8" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="218" y="440" fill="#94a3b8" font-size="7">Adjacent Services</text>
+      <rect x="200" y="446" width="12" height="8" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="218" y="454" fill="#94a3b8" font-size="7">Supply Chain</text>
+    </svg>
+  </div>
+
+  <div class="flywheel-box">
+    <h3>How The Flywheel Spins</h3>
+    <p><span>Student</span> earns EPA 608 at your school → hired by your <span>HVAC Service Co</span> → every install pulls equipment from your <span>Distribution</span> warehouse at wholesale → <span>Ductwork Fab Shop</span> supplies custom sheet metal → <span>Energy Audit</span> drives system replacement leads → <span>Building Automation</span> upsells smart controls to every commercial account. A single HVAC tech generates <span>$500K+/yr</span> in install revenue — you capture the labor margin, the equipment margin, and the ductwork margin.</p>
+  </div>
+
+  <hr class="section-divider" id="t3">
+  <div class="section-title"><span class="section-num">🪠 03</span> Plumbing & Pipefitting Ecosystem</div>
+  <p class="section-sub">Every building needs water in and waste out. The school feeds the labor. The supply house captures every fixture.</p>
+
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 600">
+      <defs>
+        <marker id="t3a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="t3b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="t3c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="t3d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <marker id="t3e" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gt3" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gt3)"/>
+
+      <!-- TRADE SCHOOL — The Origin Node -->
+      <rect x="400" y="25" width="400" height="65" rx="8" fill="rgba(251,146,60,0.15)" stroke="#fb923c" stroke-width="2.5"/>
+      <text x="600" y="50" fill="#fb923c" font-size="13" font-weight="700" text-anchor="middle">Plumbing Trade School</text>
+      <text x="600" y="68" fill="#94a3b8" font-size="9" text-anchor="middle">Apprentice → Journeyman → Master · IPC/UPC code · Backflow · Med gas</text>
+      <text x="600" y="82" fill="#fb923c" font-size="7" text-anchor="middle">TALENT FACTORY — every student pays tuition to get first access to hire them</text>
+
+      <!-- Render company boxes -->
+      <rect x="80" y="155" width="205" height="70" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="182" y="177" fill="white" font-size="11" font-weight="600" text-anchor="middle">Plumbing Contracting</text>
+      <text x="182" y="193" fill="#94a3b8" font-size="7.5" text-anchor="middle">New construction + Service</text>
+      <text x="182" y="215" fill="#22d3ee" font-size="7" text-anchor="middle">Emergency calls = premium rates</text>
+      <rect x="400" y="255" width="235" height="70" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="517" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Plumbing Supply Wholesale</text>
+      <text x="517" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Pipe · Fittings · Fixtures · WH</text>
+      <text x="517" y="315" fill="#fbbf24" font-size="7" text-anchor="middle">Sell to self at cost · 25-35% retail</text>
+      <rect x="40" y="320" width="200" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="140" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Water Treatment / Filtration</text>
+      <text x="140" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Whole-house RO · Softeners</text>
+      <text x="140" y="380" fill="#34d399" font-size="7" text-anchor="middle">High-margin add-on to every call</text>
+      <rect x="280" y="320" width="210" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="385" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Drain Cleaning / Sewer</text>
+      <text x="385" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Hydro-jet · Camera · Trenchless</text>
+      <text x="385" y="380" fill="#34d399" font-size="7" text-anchor="middle">Emergency premium · feeds plumbing leads</text>
+      <rect x="700" y="255" width="230" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="815" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Gas Fitting & Lines</text>
+      <text x="815" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Natural gas · Propane systems</text>
+      <text x="815" y="315" fill="#a78bfa" font-size="7" text-anchor="middle">Cross-cert at your school · high bill rate</text>
+
+      <!-- ARROWS -->
+      <line x1="450" y1="90" x2="180" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t3a)"/>
+      <text x="270" y="128" fill="#22d3ee" font-size="7">graduates hired →</text>
+      <line x1="750" y1="90" x2="940" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t3a)"/>
+      <text x="850" y="128" fill="#22d3ee" font-size="7">→ graduates hired</text>
+      <line x1="580" y1="90" x2="580" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t3a)"/>
+
+      <!-- Service → Supply flow -->
+      <line x1="290" y1="190" x2="500" y2="255" stroke="#fb923c" stroke-width="2" marker-end="url(#t3b)"/>
+      <text x="410" y="230" fill="#fb923c" font-size="7" text-anchor="middle">buys materials</text>
+
+      <!-- Service → Adjacent flows -->
+      <line x1="160" y1="230" x2="160" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#t3c)"/>
+      <text x="175" y="280" fill="#34d399" font-size="7">upskills</text>
+      <line x1="680" y1="190" x2="780" y2="255" stroke="#34d399" stroke-width="1.5" marker-end="url(#t3c)"/>
+
+      <!-- Supply → School (equipment/training partnership, goes back up) -->
+      <path d="M 700 255 Q 900 210 900 100 Q 900 60 800 60" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#t3e)"/>
+      <text x="920" y="170" fill="#fbbf24" font-size="7" text-anchor="middle">equipment</text>
+      <text x="920" y="182" fill="#fbbf24" font-size="7" text-anchor="middle">partnership</text>
+
+      <!-- Student journey annotation (right side) -->
+      <rect x="980" y="120" width="195" height="155" rx="8" fill="rgba(251,146,60,0.06)" stroke="#fb923c" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1077" y="145" fill="#fb923c" font-size="10" font-weight="600" text-anchor="middle">STUDENT JOURNEY</text>
+      <line x1="995" y1="156" x2="1160" y2="156" stroke="#1e293b" stroke-width="1"/>
+      <text x="1077" y="175" fill="white" font-size="8.5" text-anchor="middle">1. Pay tuition</text>
+      <text x="1077" y="193" fill="white" font-size="8.5" text-anchor="middle">2. Apprentice wage</text>
+      <text x="1077" y="211" fill="white" font-size="8.5" text-anchor="middle">3. Journeyman pay</text>
+      <text x="1077" y="229" fill="white" font-size="8.5" text-anchor="middle">4. Buy supplies from you</text>
+      <text x="1077" y="247" fill="white" font-size="8.5" text-anchor="middle">5. Upskill at your school</text>
+      <text x="1077" y="265" fill="#fb923c" font-size="8.5" font-weight="600" text-anchor="middle">Lifetime ecosystem value</text>
+
+      <!-- Legend -->
+      <text x="30" y="420" fill="white" font-size="9" font-weight="600">Legend</text>
+      <rect x="30" y="432" width="12" height="8" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="48" y="440" fill="#94a3b8" font-size="7">School / Origin</text>
+      <rect x="30" y="446" width="12" height="8" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="48" y="454" fill="#94a3b8" font-size="7">Service Companies</text>
+      <rect x="200" y="432" width="12" height="8" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="218" y="440" fill="#94a3b8" font-size="7">Adjacent Services</text>
+      <rect x="200" y="446" width="12" height="8" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="218" y="454" fill="#94a3b8" font-size="7">Supply Chain</text>
+    </svg>
+  </div>
+
+  <div class="flywheel-box">
+    <h3>How The Flywheel Spins</h3>
+    <p><span>Student</span> enters apprenticeship through your school → hired by <span>Plumbing Contracting</span> → every fitting and water heater comes from your <span>Supply Wholesale</span> → <span>Water Treatment</span> adds $3-8K to every service call → <span>Drain Cleaning</span> emergency calls feed plumbing repair leads → cross-cert in <span>Gas Fitting</span> at your school opens $120/hr+ commercial work. A plumbing company with captive supply chain runs <span>35-40% margin</span> vs 20-25% standalone.</p>
+  </div>
+
+  <hr class="section-divider" id="t4">
+  <div class="section-title"><span class="section-num">🛠️ 04</span> Welding & Metal Fabrication Ecosystem</div>
+  <p class="section-sub">AWS-certified welders are in permanent shortage. The school certifies them. The fab shop deploys them. The steel yard supplies them.</p>
+
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 600">
+      <defs>
+        <marker id="t4a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="t4b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="t4c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="t4d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <marker id="t4e" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gt4" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gt4)"/>
+
+      <!-- TRADE SCHOOL — The Origin Node -->
+      <rect x="400" y="25" width="400" height="65" rx="8" fill="rgba(251,146,60,0.15)" stroke="#fb923c" stroke-width="2.5"/>
+      <text x="600" y="50" fill="#fb923c" font-size="13" font-weight="700" text-anchor="middle">Welding Trade School</text>
+      <text x="600" y="68" fill="#94a3b8" font-size="9" text-anchor="middle">SMAW · GTAW · GMAW · FCAW · AWS D1.1 · ASME Section IX</text>
+      <text x="600" y="82" fill="#fb923c" font-size="7" text-anchor="middle">TALENT FACTORY — every student pays tuition to get first access to hire them</text>
+
+      <!-- Render company boxes -->
+      <rect x="80" y="155" width="205" height="70" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="182" y="177" fill="white" font-size="11" font-weight="600" text-anchor="middle">Fabrication Shop</text>
+      <text x="182" y="193" fill="#94a3b8" font-size="7.5" text-anchor="middle">Custom steel fab · AWS certified</text>
+      <text x="182" y="215" fill="#22d3ee" font-size="7" text-anchor="middle">Your students apprentice here</text>
+      <rect x="400" y="255" width="235" height="70" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="517" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Steel & Metal Supply Yard</text>
+      <text x="517" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Structural · Pipe · Plate · Sheet</text>
+      <text x="517" y="315" fill="#fbbf24" font-size="7" text-anchor="middle">Wholesale for your shop · retail +30%</text>
+      <rect x="40" y="320" width="200" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="140" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Structural Steel Erection</text>
+      <text x="140" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Beam setting · Steel buildings</text>
+      <text x="140" y="380" fill="#34d399" font-size="7" text-anchor="middle">High-dollar commercial contracts</text>
+      <rect x="280" y="320" width="210" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="385" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Pipeline Welding Services</text>
+      <text x="385" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Oil & gas · Water main</text>
+      <text x="385" y="380" fill="#34d399" font-size="7" text-anchor="middle">Specialized · $150K+/yr welders</text>
+      <rect x="700" y="255" width="230" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="815" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Custom Architectural Metal</text>
+      <text x="815" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Railings · Gates · Sculptures</text>
+      <text x="815" y="315" fill="#a78bfa" font-size="7" text-anchor="middle">High-margin client-facing · stays busy</text>
+
+      <!-- ARROWS -->
+      <line x1="450" y1="90" x2="180" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t4a)"/>
+      <text x="270" y="128" fill="#22d3ee" font-size="7">graduates hired →</text>
+      <line x1="750" y1="90" x2="940" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t4a)"/>
+      <text x="850" y="128" fill="#22d3ee" font-size="7">→ graduates hired</text>
+      <line x1="580" y1="90" x2="580" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t4a)"/>
+
+      <!-- Service → Supply flow -->
+      <line x1="290" y1="190" x2="500" y2="255" stroke="#fb923c" stroke-width="2" marker-end="url(#t4b)"/>
+      <text x="410" y="230" fill="#fb923c" font-size="7" text-anchor="middle">buys materials</text>
+
+      <!-- Service → Adjacent flows -->
+      <line x1="160" y1="230" x2="160" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#t4c)"/>
+      <text x="175" y="280" fill="#34d399" font-size="7">upskills</text>
+      <line x1="680" y1="190" x2="780" y2="255" stroke="#34d399" stroke-width="1.5" marker-end="url(#t4c)"/>
+
+      <!-- Supply → School (equipment/training partnership, goes back up) -->
+      <path d="M 700 255 Q 900 210 900 100 Q 900 60 800 60" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#t4e)"/>
+      <text x="920" y="170" fill="#fbbf24" font-size="7" text-anchor="middle">equipment</text>
+      <text x="920" y="182" fill="#fbbf24" font-size="7" text-anchor="middle">partnership</text>
+
+      <!-- Student journey annotation (right side) -->
+      <rect x="980" y="120" width="195" height="155" rx="8" fill="rgba(251,146,60,0.06)" stroke="#fb923c" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1077" y="145" fill="#fb923c" font-size="10" font-weight="600" text-anchor="middle">STUDENT JOURNEY</text>
+      <line x1="995" y1="156" x2="1160" y2="156" stroke="#1e293b" stroke-width="1"/>
+      <text x="1077" y="175" fill="white" font-size="8.5" text-anchor="middle">1. Pay tuition</text>
+      <text x="1077" y="193" fill="white" font-size="8.5" text-anchor="middle">2. Apprentice wage</text>
+      <text x="1077" y="211" fill="white" font-size="8.5" text-anchor="middle">3. Journeyman pay</text>
+      <text x="1077" y="229" fill="white" font-size="8.5" text-anchor="middle">4. Buy supplies from you</text>
+      <text x="1077" y="247" fill="white" font-size="8.5" text-anchor="middle">5. Upskill at your school</text>
+      <text x="1077" y="265" fill="#fb923c" font-size="8.5" font-weight="600" text-anchor="middle">Lifetime ecosystem value</text>
+
+      <!-- Legend -->
+      <text x="30" y="420" fill="white" font-size="9" font-weight="600">Legend</text>
+      <rect x="30" y="432" width="12" height="8" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="48" y="440" fill="#94a3b8" font-size="7">School / Origin</text>
+      <rect x="30" y="446" width="12" height="8" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="48" y="454" fill="#94a3b8" font-size="7">Service Companies</text>
+      <rect x="200" y="432" width="12" height="8" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="218" y="440" fill="#94a3b8" font-size="7">Adjacent Services</text>
+      <rect x="200" y="446" width="12" height="8" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="218" y="454" fill="#94a3b8" font-size="7">Supply Chain</text>
+    </svg>
+  </div>
+
+  <div class="flywheel-box">
+    <h3>How The Flywheel Spins</h3>
+    <p><span>Student</span> earns AWS certs at your school → apprentices at your <span>Fabrication Shop</span> on real jobs → every stick of steel comes from your <span>Metal Supply Yard</span> at cost → top welders graduate into <span>Pipeline Welding</span> ($150K+/yr) or <span>Structural Steel</span> → <span>Architectural Metal</span> keeps the shop busy during slow industrial cycles with high-margin custom work. Steel at wholesale vs retail is a <span>30% margin spread</span> on every job.</p>
+  </div>
+
+  <hr class="section-divider" id="t5">
+  <div class="section-title"><span class="section-num">🚗 05</span> Automotive & Diesel Mechanic Ecosystem</div>
+  <p class="section-sub">Diesel techs start at $70K+. The school produces them. The parts store supplies every repair. The tow truck feeds the pipeline.</p>
+
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 600">
+      <defs>
+        <marker id="t5a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="t5b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="t5c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="t5d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <marker id="t5e" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gt5" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gt5)"/>
+
+      <!-- TRADE SCHOOL — The Origin Node -->
+      <rect x="400" y="25" width="400" height="65" rx="8" fill="rgba(251,146,60,0.15)" stroke="#fb923c" stroke-width="2.5"/>
+      <text x="600" y="50" fill="#fb923c" font-size="13" font-weight="700" text-anchor="middle">Auto / Diesel Mechanic School</text>
+      <text x="600" y="68" fill="#94a3b8" font-size="9" text-anchor="middle">ASE cert pipeline · Diesel specialty · EV/hybrid · Heavy truck</text>
+      <text x="600" y="82" fill="#fb923c" font-size="7" text-anchor="middle">TALENT FACTORY — every student pays tuition to get first access to hire them</text>
+
+      <!-- Render company boxes -->
+      <rect x="80" y="155" width="205" height="70" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="182" y="177" fill="white" font-size="11" font-weight="600" text-anchor="middle">Auto Repair Chain</text>
+      <text x="182" y="193" fill="#94a3b8" font-size="7.5" text-anchor="middle">3-5 bay shops · ASE-certified</text>
+      <text x="182" y="215" fill="#22d3ee" font-size="7" text-anchor="middle">Grads work here at apprentice wage</text>
+      <rect x="400" y="255" width="235" height="70" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="517" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Auto Parts Distribution</text>
+      <text x="517" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">NAPA-style wholesale · retail</text>
+      <text x="517" y="315" fill="#fbbf24" font-size="7" text-anchor="middle">Supply your shops at cost</text>
+      <rect x="40" y="320" width="200" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="140" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Towing & Recovery</text>
+      <text x="140" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Light + Heavy duty towing</text>
+      <text x="140" y="380" fill="#34d399" font-size="7" text-anchor="middle">Feeds broken vehicles to your shops</text>
+      <rect x="280" y="320" width="210" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="385" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Used Car Dealership</text>
+      <text x="385" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Buy-fix-sell model</text>
+      <text x="385" y="380" fill="#34d399" font-size="7" text-anchor="middle">Students fix · your lot sells</text>
+      <rect x="700" y="255" width="230" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="815" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Fleet Maintenance Contracts</text>
+      <text x="815" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Municipal · School bus · Delivery</text>
+      <text x="815" y="315" fill="#a78bfa" font-size="7" text-anchor="middle">Recurring B2B revenue · sticky</text>
+
+      <!-- ARROWS -->
+      <line x1="450" y1="90" x2="180" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t5a)"/>
+      <text x="270" y="128" fill="#22d3ee" font-size="7">graduates hired →</text>
+      <line x1="750" y1="90" x2="940" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t5a)"/>
+      <text x="850" y="128" fill="#22d3ee" font-size="7">→ graduates hired</text>
+      <line x1="580" y1="90" x2="580" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t5a)"/>
+
+      <!-- Service → Supply flow -->
+      <line x1="290" y1="190" x2="500" y2="255" stroke="#fb923c" stroke-width="2" marker-end="url(#t5b)"/>
+      <text x="410" y="230" fill="#fb923c" font-size="7" text-anchor="middle">buys materials</text>
+
+      <!-- Service → Adjacent flows -->
+      <line x1="160" y1="230" x2="160" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#t5c)"/>
+      <text x="175" y="280" fill="#34d399" font-size="7">upskills</text>
+      <line x1="680" y1="190" x2="780" y2="255" stroke="#34d399" stroke-width="1.5" marker-end="url(#t5c)"/>
+
+      <!-- Supply → School (equipment/training partnership, goes back up) -->
+      <path d="M 700 255 Q 900 210 900 100 Q 900 60 800 60" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#t5e)"/>
+      <text x="920" y="170" fill="#fbbf24" font-size="7" text-anchor="middle">equipment</text>
+      <text x="920" y="182" fill="#fbbf24" font-size="7" text-anchor="middle">partnership</text>
+
+      <!-- Student journey annotation (right side) -->
+      <rect x="980" y="120" width="195" height="155" rx="8" fill="rgba(251,146,60,0.06)" stroke="#fb923c" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1077" y="145" fill="#fb923c" font-size="10" font-weight="600" text-anchor="middle">STUDENT JOURNEY</text>
+      <line x1="995" y1="156" x2="1160" y2="156" stroke="#1e293b" stroke-width="1"/>
+      <text x="1077" y="175" fill="white" font-size="8.5" text-anchor="middle">1. Pay tuition</text>
+      <text x="1077" y="193" fill="white" font-size="8.5" text-anchor="middle">2. Apprentice wage</text>
+      <text x="1077" y="211" fill="white" font-size="8.5" text-anchor="middle">3. Journeyman pay</text>
+      <text x="1077" y="229" fill="white" font-size="8.5" text-anchor="middle">4. Buy supplies from you</text>
+      <text x="1077" y="247" fill="white" font-size="8.5" text-anchor="middle">5. Upskill at your school</text>
+      <text x="1077" y="265" fill="#fb923c" font-size="8.5" font-weight="600" text-anchor="middle">Lifetime ecosystem value</text>
+
+      <!-- Legend -->
+      <text x="30" y="420" fill="white" font-size="9" font-weight="600">Legend</text>
+      <rect x="30" y="432" width="12" height="8" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="48" y="440" fill="#94a3b8" font-size="7">School / Origin</text>
+      <rect x="30" y="446" width="12" height="8" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="48" y="454" fill="#94a3b8" font-size="7">Service Companies</text>
+      <rect x="200" y="432" width="12" height="8" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="218" y="440" fill="#94a3b8" font-size="7">Adjacent Services</text>
+      <rect x="200" y="446" width="12" height="8" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="218" y="454" fill="#94a3b8" font-size="7">Supply Chain</text>
+    </svg>
+  </div>
+
+  <div class="flywheel-box">
+    <h3>How The Flywheel Spins</h3>
+    <p><span>Towing Co</span> brings in broken vehicle → <span>students</span> diagnose/repair at school for real-world practice → your <span>Parts Distribution</span> supplies components at wholesale → car goes to your <span>Used Car Lot</span> → sold at retail margin. Meanwhile, your <span>Fleet Maintenance</span> contracts generate recurring B2B revenue with 90%+ retention. Every student who buys a tool or part from you stays in the ecosystem for <span>20+ years</span>.</p>
+  </div>
+
+  <hr class="section-divider" id="t6">
+  <div class="section-title"><span class="section-num">🪚 06</span> Carpentry & Millwork Ecosystem</div>
+  <p class="section-sub">Wood doesn't install itself. The school trains hands. The lumber yard supplies the material. The shop adds the margin.</p>
+
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 600">
+      <defs>
+        <marker id="t6a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="t6b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="t6c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="t6d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <marker id="t6e" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gt6" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gt6)"/>
+
+      <rect x="400" y="25" width="400" height="65" rx="8" fill="rgba(251,146,60,0.15)" stroke="#fb923c" stroke-width="2.5"/>
+      <text x="600" y="50" fill="#fb923c" font-size="13" font-weight="700" text-anchor="middle">Carpentry Trade School</text>
+      <text x="600" y="68" fill="#94a3b8" font-size="9" text-anchor="middle">Rough + Finish carpentry · Cabinetmaking · Blueprint reading · OSHA</text>
+      <text x="600" y="82" fill="#fb923c" font-size="7" text-anchor="middle">TALENT FACTORY — every student pays tuition to get first access to hire them</text>
+      <rect x="80" y="155" width="200" height="70" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="180" y="177" fill="white" font-size="11" font-weight="600" text-anchor="middle">Finish Carpentry Co</text>
+      <text x="180" y="193" fill="#94a3b8" font-size="7.5" text-anchor="middle">Trim · Crown · Wainscoting</text>
+      <text x="180" y="215" fill="#22d3ee" font-size="7" text-anchor="middle">Premium service for builders</text>
+      <rect x="400" y="255" width="235" height="70" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="517" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Lumber & Materials Yard</text>
+      <text x="517" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Dimensional · Sheet goods · Hardwoods</text>
+      <text x="517" y="315" fill="#fbbf24" font-size="7" text-anchor="middle">Supply your shops at cost · retail +25%</text>
+      <rect x="40" y="320" width="200" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="140" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Cabinet & Millwork Shop</text>
+      <text x="140" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Kitchens · Built-ins · Custom</text>
+      <text x="140" y="380" fill="#34d399" font-size="7" text-anchor="middle">High-margin · DTC + builder sales</text>
+      <rect x="280" y="320" width="210" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="385" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Furniture Manufacturing</text>
+      <text x="385" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Custom tables · Beds · Desks</text>
+      <text x="385" y="380" fill="#34d399" font-size="7" text-anchor="middle">Sell DTC or through designers</text>
+      <rect x="700" y="255" width="230" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="815" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Historic Restoration</text>
+      <text x="815" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Period-accurate millwork · repair</text>
+      <text x="815" y="315" fill="#a78bfa" font-size="7" text-anchor="middle">Specialized · $100-200/hr bill rate</text>
+
+      <line x1="450" y1="90" x2="180" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t6a)"/>
+      <text x="270" y="128" fill="#22d3ee" font-size="7">graduates hired →</text>
+      <line x1="750" y1="90" x2="940" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t6a)"/>
+      <text x="850" y="128" fill="#22d3ee" font-size="7">→ graduates hired</text>
+      <line x1="580" y1="90" x2="580" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t6a)"/>
+      <line x1="290" y1="190" x2="500" y2="255" stroke="#fb923c" stroke-width="2" marker-end="url(#t6b)"/>
+      <text x="410" y="230" fill="#fb923c" font-size="7">buys materials</text>
+      <line x1="160" y1="230" x2="160" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#t6c)"/>
+      <text x="175" y="280" fill="#34d399" font-size="7">upskills</text>
+      <line x1="680" y1="190" x2="780" y2="255" stroke="#34d399" stroke-width="1.5" marker-end="url(#t6c)"/>
+      <path d="M 700 255 Q 900 210 900 100 Q 900 60 800 60" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#t6e)"/>
+      <text x="920" y="170" fill="#fbbf24" font-size="7" text-anchor="middle">equipment partnership</text>
+      <rect x="980" y="120" width="195" height="155" rx="8" fill="rgba(251,146,60,0.06)" stroke="#fb923c" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1077" y="145" fill="#fb923c" font-size="10" font-weight="600" text-anchor="middle">STUDENT JOURNEY</text>
+      <line x1="995" y1="156" x2="1160" y2="156" stroke="#1e293b" stroke-width="1"/>
+      <text x="1077" y="175" fill="white" font-size="8.5" text-anchor="middle">1. Pay tuition</text>
+      <text x="1077" y="193" fill="white" font-size="8.5" text-anchor="middle">2. Apprentice wage</text>
+      <text x="1077" y="211" fill="white" font-size="8.5" text-anchor="middle">3. Journeyman pay</text>
+      <text x="1077" y="229" fill="white" font-size="8.5" text-anchor="middle">4. Buy supplies from you</text>
+      <text x="1077" y="247" fill="white" font-size="8.5" text-anchor="middle">5. Upskill at your school</text>
+      <text x="1077" y="265" fill="#fb923c" font-size="8.5" font-weight="600" text-anchor="middle">Lifetime ecosystem value</text>
+      <text x="30" y="420" fill="white" font-size="9" font-weight="600">Legend</text>
+      <rect x="30" y="432" width="12" height="8" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="48" y="440" fill="#94a3b8" font-size="7">School / Origin</text>
+      <rect x="30" y="446" width="12" height="8" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="48" y="454" fill="#94a3b8" font-size="7">Service Companies</text>
+      <rect x="200" y="432" width="12" height="8" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="218" y="440" fill="#94a3b8" font-size="7">Adjacent Services</text>
+      <rect x="200" y="446" width="12" height="8" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="218" y="454" fill="#94a3b8" font-size="7">Supply Chain</text>
+    </svg>
+  </div>
+
+  <div class="flywheel-box">
+    <h3>How The Flywheel Spins</h3>
+    <p><span>Student</span> learns joinery at your school → hired by your <span>Finish Carpentry Co</span> → every board-foot of hardwood comes from your <span>Lumber Yard</span> at wholesale → top finishers graduate to <span>Cabinet Shop</span> ($50-100K kitchens) → <span>Furniture Mfg</span> turns shop offcuts into DTC products → <span>Historic Restoration</span> commands $150/hr+ with year-round backlog. Lumber at wholesale vs retail is a <span>25-35% margin spread</span> on every job.</p>
+  </div>
+
+  <hr class="section-divider" id="t7">
+  <div class="section-title"><span class="section-num">🏗️ 07</span> Heavy Equipment Operation Ecosystem</div>
+  <p class="section-sub">The machines cost $500K each. The operators cost $30/hr — unless you trained them yourself at $8K tuition.</p>
+
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 600">
+      <defs>
+        <marker id="t7a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="t7b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="t7c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="t7d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <marker id="t7e" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gt7" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gt7)"/>
+
+      <rect x="400" y="25" width="400" height="65" rx="8" fill="rgba(251,146,60,0.15)" stroke="#fb923c" stroke-width="2.5"/>
+      <text x="600" y="50" fill="#fb923c" font-size="13" font-weight="700" text-anchor="middle">Heavy Equipment Operator School</text>
+      <text x="600" y="68" fill="#94a3b8" font-size="9" text-anchor="middle">Excavator · Dozer · Grader · Crane · NCCCO certified · CDL prep</text>
+      <text x="600" y="82" fill="#fb923c" font-size="7" text-anchor="middle">TALENT FACTORY — every student pays tuition to get first access to hire them</text>
+      <rect x="80" y="155" width="205" height="70" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="182" y="177" fill="white" font-size="11" font-weight="600" text-anchor="middle">Excavation & Earthwork</text>
+      <text x="182" y="193" fill="#94a3b8" font-size="7.5" text-anchor="middle">Site prep · Grading · Trenching</text>
+      <text x="182" y="215" fill="#22d3ee" font-size="7" text-anchor="middle">Your grads operate your machines</text>
+      <rect x="400" y="255" width="235" height="70" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="517" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Equipment Rental / Leasing</text>
+      <text x="517" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Excavators · Dozers · Graders</text>
+      <text x="517" y="315" fill="#fbbf24" font-size="7" text-anchor="middle">Own the fleet · rent to self at cost</text>
+      <rect x="40" y="320" width="200" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="140" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Demolition Services</text>
+      <text x="140" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Commercial + Residential demo</text>
+      <text x="140" y="380" fill="#34d399" font-size="7" text-anchor="middle">Feeds debris into your hauling co</text>
+      <rect x="280" y="320" width="210" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="385" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Trucking & Hauling</text>
+      <text x="385" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Dump trucks · Lowboys · Debris</text>
+      <text x="385" y="380" fill="#34d399" font-size="7" text-anchor="middle">Move your own equipment + 3rd party</text>
+      <rect x="700" y="255" width="230" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="815" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Land Clearing / Site Prep</text>
+      <text x="815" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Forestry mulching · Drainage</text>
+      <text x="815" y="315" fill="#a78bfa" font-size="7" text-anchor="middle">Front-end of every construction job</text>
+
+      <line x1="450" y1="90" x2="180" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t7a)"/>
+      <text x="270" y="128" fill="#22d3ee" font-size="7">graduates hired →</text>
+      <line x1="750" y1="90" x2="940" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t7a)"/>
+      <text x="850" y="128" fill="#22d3ee" font-size="7">→ graduates hired</text>
+      <line x1="580" y1="90" x2="580" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t7a)"/>
+      <line x1="290" y1="190" x2="500" y2="255" stroke="#fb923c" stroke-width="2" marker-end="url(#t7b)"/>
+      <text x="410" y="230" fill="#fb923c" font-size="7">buys materials</text>
+      <line x1="160" y1="230" x2="160" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#t7c)"/>
+      <text x="175" y="280" fill="#34d399" font-size="7">upskills</text>
+      <line x1="680" y1="190" x2="780" y2="255" stroke="#34d399" stroke-width="1.5" marker-end="url(#t7c)"/>
+      <path d="M 700 255 Q 900 210 900 100 Q 900 60 800 60" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#t7e)"/>
+      <text x="920" y="170" fill="#fbbf24" font-size="7" text-anchor="middle">equipment partnership</text>
+      <rect x="980" y="120" width="195" height="155" rx="8" fill="rgba(251,146,60,0.06)" stroke="#fb923c" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1077" y="145" fill="#fb923c" font-size="10" font-weight="600" text-anchor="middle">STUDENT JOURNEY</text>
+      <line x1="995" y1="156" x2="1160" y2="156" stroke="#1e293b" stroke-width="1"/>
+      <text x="1077" y="175" fill="white" font-size="8.5" text-anchor="middle">1. Pay tuition</text>
+      <text x="1077" y="193" fill="white" font-size="8.5" text-anchor="middle">2. Apprentice wage</text>
+      <text x="1077" y="211" fill="white" font-size="8.5" text-anchor="middle">3. Journeyman pay</text>
+      <text x="1077" y="229" fill="white" font-size="8.5" text-anchor="middle">4. Buy supplies from you</text>
+      <text x="1077" y="247" fill="white" font-size="8.5" text-anchor="middle">5. Upskill at your school</text>
+      <text x="1077" y="265" fill="#fb923c" font-size="8.5" font-weight="600" text-anchor="middle">Lifetime ecosystem value</text>
+      <text x="30" y="420" fill="white" font-size="9" font-weight="600">Legend</text>
+      <rect x="30" y="432" width="12" height="8" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="48" y="440" fill="#94a3b8" font-size="7">School / Origin</text>
+      <rect x="30" y="446" width="12" height="8" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="48" y="454" fill="#94a3b8" font-size="7">Service Companies</text>
+      <rect x="200" y="432" width="12" height="8" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="218" y="440" fill="#94a3b8" font-size="7">Adjacent Services</text>
+      <rect x="200" y="446" width="12" height="8" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="218" y="454" fill="#94a3b8" font-size="7">Supply Chain</text>
+    </svg>
+  </div>
+
+  <div class="flywheel-box">
+    <h3>How The Flywheel Spins</h3>
+    <p><span>Student</span> trains on your fleet at school → hired by your <span>Excavation Co</span> at apprentice rate → every machine comes from your <span>Equipment Rental</span> fleet — the same machines they trained on → <span>Demolition</span> feeds debris to your <span>Trucking/Hauling</span> → <span>Land Clearing</span> is the front-end for every construction project. The operator who learned on your machine buys fuel, maintenance, and eventually leases their own rig from you. <span>Lifetime equipment revenue per operator: $200-500K.</span></p>
+  </div>
+
+  <hr class="section-divider" id="t8">
+  <div class="section-title"><span class="section-num">🍳 08</span> Culinary & Hospitality Trades Ecosystem</div>
+  <p class="section-sub">Restaurants fail at 60% in year one. Your school feeds the kitchen. Your supply chain feeds the food cost. Your commissary de-risks the concept.</p>
+
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 600">
+      <defs>
+        <marker id="t8a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="t8b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="t8c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="t8d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <marker id="t8e" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gt8" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gt8)"/>
+
+      <rect x="400" y="25" width="400" height="65" rx="8" fill="rgba(251,146,60,0.15)" stroke="#fb923c" stroke-width="2.5"/>
+      <text x="600" y="50" fill="#fb923c" font-size="13" font-weight="700" text-anchor="middle">Culinary Arts School</text>
+      <text x="600" y="68" fill="#94a3b8" font-size="9" text-anchor="middle">Professional cooking · Baking · ServSafe · Menu costing · Restaurant mgmt</text>
+      <text x="600" y="82" fill="#fb923c" font-size="7" text-anchor="middle">TALENT FACTORY — every student pays tuition to get first access to hire them</text>
+      <rect x="80" y="155" width="205" height="70" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="182" y="177" fill="white" font-size="11" font-weight="600" text-anchor="middle">Restaurant Group</text>
+      <text x="182" y="193" fill="#94a3b8" font-size="7.5" text-anchor="middle">Multiple concepts across price pts</text>
+      <text x="182" y="215" fill="#22d3ee" font-size="7" text-anchor="middle">Students stage · grads get hired</text>
+      <rect x="400" y="255" width="235" height="70" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="517" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Food Service Supply/Distrib</text>
+      <text x="517" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Wholesale ingredients · Equipment</text>
+      <text x="517" y="315" fill="#fbbf24" font-size="7" text-anchor="middle">Supply your own restaurants + 3rd</text>
+      <rect x="40" y="320" width="200" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="140" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Catering & Events Co</text>
+      <text x="140" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Off-premise · Weddings · Corporate</text>
+      <text x="140" y="380" fill="#34d399" font-size="7" text-anchor="middle">School kitchen = commissary at night</text>
+      <rect x="280" y="320" width="210" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="385" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Food Truck Commissary</text>
+      <text x="385" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Shared kitchen · Parking · Permits</text>
+      <text x="385" y="380" fill="#34d399" font-size="7" text-anchor="middle">Low-cap-ex restaurant test kitchen</text>
+      <rect x="700" y="255" width="230" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="815" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Kitchen Equip Sales/Service</text>
+      <text x="815" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Ovens · Fridges · Hoods · Repair</text>
+      <text x="815" y="315" fill="#a78bfa" font-size="7" text-anchor="middle">Sell + service your own + 3rd party</text>
+
+      <line x1="450" y1="90" x2="180" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t8a)"/>
+      <text x="270" y="128" fill="#22d3ee" font-size="7">graduates hired →</text>
+      <line x1="750" y1="90" x2="940" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t8a)"/>
+      <text x="850" y="128" fill="#22d3ee" font-size="7">→ graduates hired</text>
+      <line x1="580" y1="90" x2="580" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t8a)"/>
+      <line x1="290" y1="190" x2="500" y2="255" stroke="#fb923c" stroke-width="2" marker-end="url(#t8b)"/>
+      <text x="410" y="230" fill="#fb923c" font-size="7">buys materials</text>
+      <line x1="160" y1="230" x2="160" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#t8c)"/>
+      <text x="175" y="280" fill="#34d399" font-size="7">upskills</text>
+      <line x1="680" y1="190" x2="780" y2="255" stroke="#34d399" stroke-width="1.5" marker-end="url(#t8c)"/>
+      <path d="M 700 255 Q 900 210 900 100 Q 900 60 800 60" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#t8e)"/>
+      <text x="920" y="170" fill="#fbbf24" font-size="7" text-anchor="middle">equipment partnership</text>
+      <rect x="980" y="120" width="195" height="155" rx="8" fill="rgba(251,146,60,0.06)" stroke="#fb923c" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1077" y="145" fill="#fb923c" font-size="10" font-weight="600" text-anchor="middle">STUDENT JOURNEY</text>
+      <line x1="995" y1="156" x2="1160" y2="156" stroke="#1e293b" stroke-width="1"/>
+      <text x="1077" y="175" fill="white" font-size="8.5" text-anchor="middle">1. Pay tuition</text>
+      <text x="1077" y="193" fill="white" font-size="8.5" text-anchor="middle">2. Apprentice wage</text>
+      <text x="1077" y="211" fill="white" font-size="8.5" text-anchor="middle">3. Journeyman pay</text>
+      <text x="1077" y="229" fill="white" font-size="8.5" text-anchor="middle">4. Buy supplies from you</text>
+      <text x="1077" y="247" fill="white" font-size="8.5" text-anchor="middle">5. Upskill at your school</text>
+      <text x="1077" y="265" fill="#fb923c" font-size="8.5" font-weight="600" text-anchor="middle">Lifetime ecosystem value</text>
+      <text x="30" y="420" fill="white" font-size="9" font-weight="600">Legend</text>
+      <rect x="30" y="432" width="12" height="8" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="48" y="440" fill="#94a3b8" font-size="7">School / Origin</text>
+      <rect x="30" y="446" width="12" height="8" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="48" y="454" fill="#94a3b8" font-size="7">Service Companies</text>
+      <rect x="200" y="432" width="12" height="8" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="218" y="440" fill="#94a3b8" font-size="7">Adjacent Services</text>
+      <rect x="200" y="446" width="12" height="8" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="218" y="454" fill="#94a3b8" font-size="7">Supply Chain</text>
+    </svg>
+  </div>
+
+  <div class="flywheel-box">
+    <h3>How The Flywheel Spins</h3>
+    <p><span>Student</span> trains in your school kitchen → stages at your <span>Restaurant Group</span> → every ingredient comes from your <span>Food Supply/Distribution</span> at 5-10% below market → school kitchen doubles as <span>Catering Co</span> commissary at night with student labor → <span>Food Truck Commissary</span> tests new concepts at low cap-ex before scaling to brick-and-mortar → <span>Kitchen Equipment</span> sells and services every oven and hood. A culinary student who stays in your ecosystem for 10 years generates <span>$500K+ in combined food cost, equipment, and labor value.</span></p>
+  </div>
+
+  <hr class="section-divider" id="t9">
+  <div class="section-title"><span class="section-num">🛩️ 09</span> Aviation Maintenance Ecosystem</div>
+  <p class="section-sub">50,000+ A&P mechanic shortage by 2030. The school certifies them. The MRO deploys them. The parts shelf stocks every repair.</p>
+
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 600">
+      <defs>
+        <marker id="t9a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="t9b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="t9c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="t9d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <marker id="t9e" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gt9" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gt9)"/>
+
+      <rect x="400" y="25" width="400" height="65" rx="8" fill="rgba(251,146,60,0.15)" stroke="#fb923c" stroke-width="2.5"/>
+      <text x="600" y="50" fill="#fb923c" font-size="13" font-weight="700" text-anchor="middle">A&P Mechanic School</text>
+      <text x="600" y="68" fill="#94a3b8" font-size="9" text-anchor="middle">FAA Part 147 · Airframe & Powerplant · 2-year program · FAR curriculum</text>
+      <text x="600" y="82" fill="#fb923c" font-size="7" text-anchor="middle">TALENT FACTORY — every student pays tuition to get first access to hire them</text>
+      <rect x="80" y="155" width="205" height="70" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="182" y="177" fill="white" font-size="11" font-weight="600" text-anchor="middle">Aircraft Maintenance / MRO</text>
+      <text x="182" y="193" fill="#94a3b8" font-size="7.5" text-anchor="middle">FAA Part 145 Repair Station</text>
+      <text x="182" y="215" fill="#22d3ee" font-size="7" text-anchor="middle">Your A&Ps work here after school</text>
+      <rect x="400" y="255" width="235" height="70" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="517" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Aviation Parts Distribution</text>
+      <text x="517" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">PMA parts · Avionics · Hardware</text>
+      <text x="517" y="315" fill="#fbbf24" font-size="7" text-anchor="middle">Supply your MRO · sell to 3rd party</text>
+      <rect x="40" y="320" width="200" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="140" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Avionics Install / Repair</text>
+      <text x="140" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Garmin · Honeywell · ADS-B</text>
+      <text x="140" y="380" fill="#34d399" font-size="7" text-anchor="middle">High-margin specialty upgrade work</text>
+      <rect x="280" y="320" width="210" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="385" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Aircraft Detailing / Appear</text>
+      <text x="385" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Interior · Exterior · Ceramic coat</text>
+      <text x="385" y="380" fill="#34d399" font-size="7" text-anchor="middle">Lower barrier · feeds MRO upsells</text>
+      <rect x="700" y="255" width="230" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="815" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Aircraft Sales / Brokerage</text>
+      <text x="815" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Buy-fix-sell GA aircraft</text>
+      <text x="815" y="315" fill="#a78bfa" font-size="7" text-anchor="middle">Your MRO does pre-buys at cost</text>
+
+      <line x1="450" y1="90" x2="180" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t9a)"/>
+      <text x="270" y="128" fill="#22d3ee" font-size="7">graduates hired →</text>
+      <line x1="750" y1="90" x2="940" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t9a)"/>
+      <text x="850" y="128" fill="#22d3ee" font-size="7">→ graduates hired</text>
+      <line x1="580" y1="90" x2="580" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t9a)"/>
+      <line x1="290" y1="190" x2="500" y2="255" stroke="#fb923c" stroke-width="2" marker-end="url(#t9b)"/>
+      <text x="410" y="230" fill="#fb923c" font-size="7">buys materials</text>
+      <line x1="160" y1="230" x2="160" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#t9c)"/>
+      <text x="175" y="280" fill="#34d399" font-size="7">upskills</text>
+      <line x1="680" y1="190" x2="780" y2="255" stroke="#34d399" stroke-width="1.5" marker-end="url(#t9c)"/>
+      <path d="M 700 255 Q 900 210 900 100 Q 900 60 800 60" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#t9e)"/>
+      <text x="920" y="170" fill="#fbbf24" font-size="7" text-anchor="middle">equipment partnership</text>
+      <rect x="980" y="120" width="195" height="155" rx="8" fill="rgba(251,146,60,0.06)" stroke="#fb923c" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1077" y="145" fill="#fb923c" font-size="10" font-weight="600" text-anchor="middle">STUDENT JOURNEY</text>
+      <line x1="995" y1="156" x2="1160" y2="156" stroke="#1e293b" stroke-width="1"/>
+      <text x="1077" y="175" fill="white" font-size="8.5" text-anchor="middle">1. Pay tuition</text>
+      <text x="1077" y="193" fill="white" font-size="8.5" text-anchor="middle">2. Apprentice wage</text>
+      <text x="1077" y="211" fill="white" font-size="8.5" text-anchor="middle">3. Journeyman pay</text>
+      <text x="1077" y="229" fill="white" font-size="8.5" text-anchor="middle">4. Buy supplies from you</text>
+      <text x="1077" y="247" fill="white" font-size="8.5" text-anchor="middle">5. Upskill at your school</text>
+      <text x="1077" y="265" fill="#fb923c" font-size="8.5" font-weight="600" text-anchor="middle">Lifetime ecosystem value</text>
+      <text x="30" y="420" fill="white" font-size="9" font-weight="600">Legend</text>
+      <rect x="30" y="432" width="12" height="8" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="48" y="440" fill="#94a3b8" font-size="7">School / Origin</text>
+      <rect x="30" y="446" width="12" height="8" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="48" y="454" fill="#94a3b8" font-size="7">Service Companies</text>
+      <rect x="200" y="432" width="12" height="8" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="218" y="440" fill="#94a3b8" font-size="7">Adjacent Services</text>
+      <rect x="200" y="446" width="12" height="8" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="218" y="454" fill="#94a3b8" font-size="7">Supply Chain</text>
+    </svg>
+  </div>
+
+  <div class="flywheel-box">
+    <h3>How The Flywheel Spins</h3>
+    <p><span>Student</span> earns A&P at your Part 147 school → hired by your <span>MRO / Repair Station</span> → every part comes from your <span>Aviation Parts Distribution</span> at wholesale → top techs specialize in <span>Avionics</span> ($100-150/hr shop rate) → <span>Detailing</span> feeds pre-buy inspections into your MRO → your <span>Aircraft Brokerage</span> buys planes, your MRO does the pre-buy and repairs at cost, then sells at retail. An A&P generates <span>$250-400K/yr</span> in billable shop hours — you capture the labor, the parts margin, and the aircraft flip.</p>
+  </div>
+
+  <hr class="section-divider" id="t10">
+  <div class="section-title"><span class="section-num">🚛 10</span> CDL / Commercial Driving Ecosystem</div>
+  <p class="section-sub">4 weeks from enrollment to licensed. The fastest talent pipeline in any trade. The truck sells the freight. The freight buys the fuel. The fuel runs through your card.</p>
+
+  <div class="diagram-container">
+    <svg viewBox="0 0 1200 600">
+      <defs>
+        <marker id="t10a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/></marker>
+        <marker id="t10b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/></marker>
+        <marker id="t10c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/></marker>
+        <marker id="t10d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/></marker>
+        <marker id="t10e" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+        <pattern id="gt10" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gt10)"/>
+
+      <rect x="400" y="25" width="400" height="65" rx="8" fill="rgba(251,146,60,0.15)" stroke="#fb923c" stroke-width="2.5"/>
+      <text x="600" y="50" fill="#fb923c" font-size="13" font-weight="700" text-anchor="middle">CDL Training School</text>
+      <text x="600" y="68" fill="#94a3b8" font-size="9" text-anchor="middle">Class A & B · 4-week program · ELDT compliant · Hazmat · Tanker</text>
+      <text x="600" y="82" fill="#fb923c" font-size="7" text-anchor="middle">TALENT FACTORY — every student pays tuition to get first access to hire them</text>
+      <rect x="80" y="155" width="205" height="70" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="182" y="177" fill="white" font-size="11" font-weight="600" text-anchor="middle">Trucking Company</text>
+      <text x="182" y="193" fill="#94a3b8" font-size="7.5" text-anchor="middle">Dry van · Reefer · Flatbed</text>
+      <text x="182" y="215" fill="#22d3ee" font-size="7" text-anchor="middle">Your CDL grads get first hire</text>
+      <rect x="400" y="255" width="235" height="70" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="517" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Freight Brokerage</text>
+      <text x="517" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Match shippers → carriers</text>
+      <text x="517" y="315" fill="#fbbf24" font-size="7" text-anchor="middle">Your trucks get first dibs on lanes</text>
+      <rect x="40" y="320" width="200" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="140" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Truck Dealership (Used)</text>
+      <text x="140" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">Buy-fix-sell Class 8 trucks</text>
+      <text x="140" y="380" fill="#34d399" font-size="7" text-anchor="middle">Students service · your lot sells</text>
+      <rect x="280" y="320" width="210" height="70" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="385" y="342" fill="white" font-size="11" font-weight="600" text-anchor="middle">Truck Maintenance / Repair</text>
+      <text x="385" y="358" fill="#94a3b8" font-size="7.5" text-anchor="middle">PM · DOT inspection · Major repair</text>
+      <text x="385" y="380" fill="#34d399" font-size="7" text-anchor="middle">Service your fleet at cost · bill 3rd</text>
+      <rect x="700" y="255" width="230" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="815" y="277" fill="white" font-size="11" font-weight="600" text-anchor="middle">Driver Staffing / Leasing</text>
+      <text x="815" y="293" fill="#94a3b8" font-size="7.5" text-anchor="middle">Lease drivers to other companies</text>
+      <text x="815" y="315" fill="#a78bfa" font-size="7" text-anchor="middle">Capture placement fee on every grad</text>
+
+      <line x1="450" y1="90" x2="180" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t10a)"/>
+      <text x="270" y="128" fill="#22d3ee" font-size="7">graduates hired →</text>
+      <line x1="750" y1="90" x2="940" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t10a)"/>
+      <text x="850" y="128" fill="#22d3ee" font-size="7">→ graduates hired</text>
+      <line x1="580" y1="90" x2="580" y2="155" stroke="#22d3ee" stroke-width="2" marker-end="url(#t10a)"/>
+      <line x1="290" y1="190" x2="500" y2="255" stroke="#fb923c" stroke-width="2" marker-end="url(#t10b)"/>
+      <text x="410" y="230" fill="#fb923c" font-size="7">buys materials</text>
+      <line x1="160" y1="230" x2="160" y2="320" stroke="#34d399" stroke-width="1.5" marker-end="url(#t10c)"/>
+      <text x="175" y="280" fill="#34d399" font-size="7">upskills</text>
+      <line x1="680" y1="190" x2="780" y2="255" stroke="#34d399" stroke-width="1.5" marker-end="url(#t10c)"/>
+      <path d="M 700 255 Q 900 210 900 100 Q 900 60 800 60" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#t10e)"/>
+      <text x="920" y="170" fill="#fbbf24" font-size="7" text-anchor="middle">equipment partnership</text>
+      <rect x="980" y="120" width="195" height="155" rx="8" fill="rgba(251,146,60,0.06)" stroke="#fb923c" stroke-width="1" stroke-dasharray="6,3"/>
+      <text x="1077" y="145" fill="#fb923c" font-size="10" font-weight="600" text-anchor="middle">STUDENT JOURNEY</text>
+      <line x1="995" y1="156" x2="1160" y2="156" stroke="#1e293b" stroke-width="1"/>
+      <text x="1077" y="175" fill="white" font-size="8.5" text-anchor="middle">1. Pay tuition</text>
+      <text x="1077" y="193" fill="white" font-size="8.5" text-anchor="middle">2. Apprentice wage</text>
+      <text x="1077" y="211" fill="white" font-size="8.5" text-anchor="middle">3. Journeyman pay</text>
+      <text x="1077" y="229" fill="white" font-size="8.5" text-anchor="middle">4. Buy supplies from you</text>
+      <text x="1077" y="247" fill="white" font-size="8.5" text-anchor="middle">5. Upskill at your school</text>
+      <text x="1077" y="265" fill="#fb923c" font-size="8.5" font-weight="600" text-anchor="middle">Lifetime ecosystem value</text>
+      <text x="30" y="420" fill="white" font-size="9" font-weight="600">Legend</text>
+      <rect x="30" y="432" width="12" height="8" rx="2" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/><text x="48" y="440" fill="#94a3b8" font-size="7">School / Origin</text>
+      <rect x="30" y="446" width="12" height="8" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/><text x="48" y="454" fill="#94a3b8" font-size="7">Service Companies</text>
+      <rect x="200" y="432" width="12" height="8" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/><text x="218" y="440" fill="#94a3b8" font-size="7">Adjacent Services</text>
+      <rect x="200" y="446" width="12" height="8" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="218" y="454" fill="#94a3b8" font-size="7">Supply Chain</text>
+    </svg>
+  </div>
+
+  <div class="flywheel-box">
+    <h3>How The Flywheel Spins</h3>
+    <p><span>Student</span> pays $5-8K tuition → hired by your <span>Trucking Co</span> at training wage → your <span>Freight Brokerage</span> routes them premium lanes → your <span>Repair Shop</span> keeps the truck rolling → your <span>Used Truck Dealership</span> sells them a rig when they go owner-operator → your <span>Driver Staffing</span> places any overflow grads at a placement fee → they stay in your ecosystem buying fuel, brokered loads, and maintenance from you for <span>20+ years</span>. A single CDL driver generates <span>$250K+/yr</span> in freight revenue. You capture the tuition, the freight margin, the fuel margin, and the truck sale.</p>
+  </div>
+</div></body></html>
