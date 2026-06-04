@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecosystem Rankings — Profit Margin & Acquisition Multiple</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'JetBrains Mono', monospace; background: #020617; min-height: 100vh; padding: 2rem; color: white; }
+    .container { max-width: 1400px; margin: 0 auto; }
+    h1 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .subtitle { color: #64748b; font-size: 0.8rem; margin-bottom: 1.5rem; line-height: 1.5; }
+    .subtitle span { color: #f8fafc; font-weight: 600; }
+    
+    .section-title {
+      font-size: 1.1rem; font-weight: 700; color: #f8fafc;
+      margin: 2.5rem 0 0.75rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #1e293b;
+    }
+    
+    table {
+      width: 100%; border-collapse: collapse; font-size: 0.78rem;
+    }
+    th {
+      text-align: left; padding: 0.6rem 0.75rem; color: #64748b;
+      font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.05em; border-bottom: 1px solid #1e293b;
+    }
+    td {
+      padding: 0.55rem 0.75rem; border-bottom: 1px solid rgba(30,41,59,0.5);
+      vertical-align: top;
+    }
+    td a {
+      color: #f8fafc; text-decoration: none;
+      transition: color 0.2s;
+    }
+    td a:hover { color: #22d3ee; }
+    
+    .pulse-dot {
+      width: 8px; height: 8px; background: #22d3ee; border-radius: 50%;
+      animation: pulse 2s infinite; display: inline-block; margin-right: 0.5rem;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    
+    .nav-back { margin-bottom: 1rem; }
+    .nav-back a { color: #64748b; text-decoration: none; font-size: 0.7rem; }
+    .nav-back a:hover { color: #22d3ee; }
+    
+    .legend { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1rem 0 1.5rem 0; font-size: 0.7rem; color: #94a3b8; }
+    .legend-item { display: flex; align-items: center; gap: 0.35rem; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+    
+    .insight-box {
+      background: rgba(34,211,238,0.05);
+      border: 1px solid rgba(34,211,238,0.2);
+      border-radius: 0.75rem; padding: 1rem; margin-top: 2rem;
+    }
+    .insight-box h3 { font-size: 0.8rem; font-weight: 600; color: #22d3ee; margin-bottom: 0.5rem; }
+    .insight-box p { color: #94a3b8; font-size: 0.72rem; line-height: 1.6; }
+    .insight-box p span { color: #f8fafc; font-weight: 600; }
+    
+    th:nth-child(1) { width: 3%; }
+    th:nth-child(2) { width: 25%; }
+    th:nth-child(3) { width: 12%; }
+    th:nth-child(4) { width: 16%; }
+    th:nth-child(5) { width: 44%; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="nav-back"><a href=".">← Back to PE Ecosystems</a></div>
+  <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem;">
+    <span class="pulse-dot"></span>
+    <h1>Ecosystem Rankings</h1>
+  </div>
+  <p class="subtitle">
+    34 business ecosystems ranked by <span>EBITDA profit margin</span> and <span>acquisition valuation multiple</span>.<br>
+    Data blends the composite margins of each company in the ecosystem. The AI-Enhanced category dominates because SaaS margins (60-80%) pull up the blended average when paired with traditional service businesses.
+  </p>
+  
+  <div class="legend">
+    <div class="legend-item"><span class="legend-dot" style="background:#22d3ee"></span> AI-Enhanced</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#fbbf24"></span> PE Roll-Up</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#fb923c"></span> Trade Lifecycle</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#fb7185"></span> AI-Immune</div>
+  </div>
+
+  <div class="section-title">📊 Ranked by EBITDA Profit Margin</div>
+  <table>
+<thead>
+<tr>
+<th>#</th>
+<th>Ecosystem</th>
+<th>Category</th>
+<th>EBITDA Margin</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">1</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">⚖️ Legal AI Services</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">48% <span style="font-size:0.65rem;color:#64748b">(40–55%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Law firm 35-50% + AI SaaS 60-80% blended. Legal tech gets SaaS multiples (15-20x). Fixed-fee model expands TAM beyond BigLaw.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">2</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">📊 Accounting AI Platform</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">48% <span style="font-size:0.65rem;color:#64748b">(40–55%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">CPA firm 30-45% + AI platform 60-80%. Virtual CFO at $2K/mo scales infinitely. SaaS component pulls up blended multiple.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">3</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">🩺 Healthcare AI & Admin</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">48% <span style="font-size:0.65rem;color:#64748b">(40–55%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">AI diagnostics 50-70%, clinical platform 60-80%. Healthcare SaaS trades at premium. Regulatory moat once FDA-cleared.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">4</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">📢 Marketing & AdTech AI</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">45% <span style="font-size:0.65rem;color:#64748b">(35–55%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">AI platform 60-80%, analytics 40-60%, personalization 40-60%. AdTech exits to Google/Meta/Adobe at premium multiples.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">5</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">🤖 Supply Chain AI</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">45% <span style="font-size:0.65rem;color:#64748b">(35–55%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">AI platform 60-80% SaaS, autonomous warehouse 30-45%. Supply chain tech exits to SAP/Oracle/Blue Yonder.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">6</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">🎓 Education AI / EdTech</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">45% <span style="font-size:0.65rem;color:#64748b">(35–55%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">AI platform 60-80%, credentialing 40-60%. EdTech SaaS trades at premium. Chegg/Coursera comps at 8-12x revenue.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">7</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">👥 Recruiting AI / HR Tech</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">45% <span style="font-size:0.65rem;color:#64748b">(35–55%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">AI platform 60-80%, marketplace 50-70%. HR tech exits to LinkedIn/Indeed/ADP. Network effects = higher multiples.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">8</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">💬 Customer Service AI</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">45% <span style="font-size:0.65rem;color:#64748b">(35–55%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">AI platform 60-80%, contact center 15-25%. Blended margin rises as AI resolution rate increases. Zendesk/Intercom comps.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">9</td>
+<td style="font-weight:600"><a href=".">🏥 Health & Longevity</a></td>
+<td><span style="color:#fbbf24;font-size:0.7rem">PE Roll-Up</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">40% <span style="font-size:0.65rem;color:#64748b">(35–45%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Med spa 40-60%, hormone clinic 50-65% subscription, lab 35-45%, pharmacy 40-55%. Cash-pay healthcare = highest margins in the set.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">10</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">🛡️ Insurance AI Platform</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">40% <span style="font-size:0.65rem;color:#64748b">(30–50%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Agency 20-30% + AI underwriting 50-70%. InsurTech gets 10-15x. Lower than pure SaaS due to regulated balance sheet needs.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">11</td>
+<td style="font-weight:600"><a href=".">💻 MSP & Cybersecurity</a></td>
+<td><span style="color:#fbbf24;font-size:0.7rem">PE Roll-Up</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">38% <span style="font-size:0.65rem;color:#64748b">(30–45%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">MSP 35-45% recurring, cybersecurity 40-55%, VoIP 30-50%, cloud hosting 40-60%. Thoma Bravo/Vista pay premium multiples for MSP platforms.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">12</td>
+<td style="font-weight:600"><a href="ai-immune.html">💪 Fitness & Personal Training</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">38% <span style="font-size:0.65rem;color:#64748b">(30–45%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Training 30-45%, gym 25-35%, PT/recovery 25-40%. High margins but fragmented. Hard to scale — each trainer is a unit of capacity.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">13</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">🏠 Real Estate Tech AI</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">35% <span style="font-size:0.65rem;color:#64748b">(25–45%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Brokerage 15-25% + AI platform 60-80%. iBuying is low-margin (8-15%). Blended depressed by capital-intensive iBuying arm.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">14</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🔌 Electrical Trades</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">30% <span style="font-size:0.65rem;color:#64748b">(25–35%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Contracting 25-35%, supply house 20-30% wholesale margin, solar install 20-30%. School is high-margin (60%+ on tuition) but smaller revenue share.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">15</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🔥 HVAC & Climate Control</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">30% <span style="font-size:0.65rem;color:#64748b">(25–35%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Service contracts = recurring revenue at 25-35%, equipment distribution 20-30%, duct fab 25-35%. Service Titans pay 8-12x for HVAC platforms.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">16</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🪠 Plumbing & Pipefitting</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">30% <span style="font-size:0.65rem;color:#64748b">(25–35%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Emergency calls = premium pricing at 25-35%, supply wholesale 20-30%, water treatment 35-45%. Slightly lower exit multiples than HVAC.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">17</td>
+<td style="font-weight:600"><a href="ai-immune.html">🔧 Skilled Trades / Emergency Repair</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">30% <span style="font-size:0.65rem;color:#64748b">(25–35%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Repair 25-35%, dispatch SaaS 60-80%, maintenance contracts 25-35%. Recession-proof — things break regardless of economy.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">18</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🛩️ Aviation Maintenance</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">28% <span style="font-size:0.65rem;color:#64748b">(22–35%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">MRO 25-40%, avionics 30-45%, detailing 35-50%. A&P shortage = pricing power. FAA certification barrier is a moat.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">19</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🪚 Carpentry & Millwork</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">28% <span style="font-size:0.65rem;color:#64748b">(22–35%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Cabinet shop 25-40%, historic restoration 35-50%, lumber yard 15-25%. Fragmented — hard to scale, lower multiples.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">20</td>
+<td style="font-weight:600"><a href="ai-immune.html">🛡️ Security & Protection</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">28% <span style="font-size:0.65rem;color:#64748b">(22–35%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Alarm monitoring 30-45% RMR, guard services 15-25%, armored transport 20-30%. Labor-intensive guard services drag blended margin.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">21</td>
+<td style="font-weight:600"><a href="ai-immune.html">⚰️ Funeral & Death Care</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">28% <span style="font-size:0.65rem;color:#64748b">(22–33%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Funeral home 25-35%, cemetery 20-30%, grief counseling 30-45%. Non-discretionary, recession-proof. SCI trades at 10-12x.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">22</td>
+<td style="font-weight:600"><a href="ai-immune.html">🚨 Emergency & Disaster Services</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">28% <span style="font-size:0.65rem;color:#64748b">(20–35%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Restoration 25-40%, emergency power 20-30%, training 30-50%. Restoration is high-margin but episodic. Fire/EMS is public/low margin.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">23</td>
+<td style="font-weight:600"><a href="ai-immune.html">👴 Senior Care & Aging</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">27% <span style="font-size:0.65rem;color:#64748b">(22–32%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Home care 20-30%, senior housing 25-35%, home modification 25-35%. Demographic tailwind = premium. 10,000 turn 65/day.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">24</td>
+<td style="font-weight:600"><a href="ai-immune.html">🧠 Mental Health & Therapy</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">26% <span style="font-size:0.65rem;color:#64748b">(20–32%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Practices 25-40%, treatment centers 20-35%. Insurance-dependent reimbursement limits margin. Therapist shortage = pricing power.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">25</td>
+<td style="font-weight:600"><a href=".">🏗️ Construction & Real Estate</a></td>
+<td><span style="color:#fbbf24;font-size:0.7rem">PE Roll-Up</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">25% <span style="font-size:0.65rem;color:#64748b">(20–30%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">GC 15-30% (vertically integrated), equipment leasing 15-25% ROI, home services 20-35%. Hard asset collateral supports debt financing.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">26</td>
+<td style="font-weight:600"><a href=".">📦 Logistics & Supply Chain</a></td>
+<td><span style="color:#fbbf24;font-size:0.7rem">PE Roll-Up</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">25% <span style="font-size:0.65rem;color:#64748b">(20–30%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">3PL 20-30%, returns/reverse logistics 30-45% (hidden gold mine), trucking 12-18%. Asset-heavy but infrastructure moat attracts infrastructure funds.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">27</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🛠️ Welding & Metal Fab</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">25% <span style="font-size:0.65rem;color:#64748b">(20–30%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Fab shop 20-30%, steel yard 15-25%, pipeline welding 25-35%, architectural metal 30-45%. Cyclical — tied to construction and energy.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">28</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🚜 Heavy Equipment Operation</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">25% <span style="font-size:0.65rem;color:#64748b">(20–30%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Excavation 20-30%, equipment rental 25-40% ROI, demolition 20-30%. Capital-intensive fleet depresses margin but equipment is collateral.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">29</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🚗 Auto/Diesel Mechanic</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">23% <span style="font-size:0.65rem;color:#64748b">(18–28%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Repair chain 20-30%, parts distribution 20-25%, towing 25-35%, used cars 10-20%. Competitive, lower barriers to entry.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">30</td>
+<td style="font-weight:600"><a href="ai-immune.html">🧸 Childcare & Early Education</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">23% <span style="font-size:0.65rem;color:#64748b">(18–28%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Daycare 20-30%, special needs 25-40%. Labor-intensive + strict ratios. Real estate ownership improves margin significantly.</td>
+</tr>
+<tr style="background:rgba(251,113,133,0.06)">
+<td style="color:#64748b">31</td>
+<td style="font-weight:600"><a href="ai-immune.html">🎭 Live Entertainment</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fb7185;font-weight:700;font-size:0.95rem">22% <span style="font-size:0.65rem;color:#64748b">(15–28%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Performances 10-25%, venues 20-35%, ticketing 30-50%. Hit-driven — Adele tour = 40% margin, flop = negative. Portfolio approach needed.</td>
+</tr>
+<tr style="background:rgba(251,113,133,0.06)">
+<td style="color:#64748b">32</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🚛 CDL / Trucking</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fb7185;font-weight:700;font-size:0.95rem">17% <span style="font-size:0.65rem;color:#64748b">(12–22%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Trucking 15-20%, brokerage 15-20% gross, truck dealership 8-15%. Thin margins, high fuel/labor costs. Volume play.</td>
+</tr>
+<tr style="background:rgba(251,113,133,0.06)">
+<td style="color:#64748b">33</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🍳 Culinary & Hospitality Trades</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fb7185;font-weight:700;font-size:0.95rem">17% <span style="font-size:0.65rem;color:#64748b">(12–22%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Restaurants 10-20%, food distribution 8-15%, catering 20-35%. Lowest margins in skilled trades — labor + food cost squeeze.</td>
+</tr>
+<tr style="background:rgba(251,113,133,0.06)">
+<td style="color:#64748b">34</td>
+<td style="font-weight:600"><a href="ai-immune.html">🍽️ High-Touch Hospitality</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fb7185;font-weight:700;font-size:0.95rem">17% <span style="font-size:0.65rem;color:#64748b">(12–22%)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Fine dining 10-20%, events 20-35%. Labor + food cost squeeze. Real estate can be owned but operations are thin-margin.</td>
+</tr>
+</tbody>
+</table>
+
+
+  <div class="section-title">💰 Ranked by Acquisition Multiple (EV/EBITDA)</div>
+  <table>
+<thead>
+<tr>
+<th>#</th>
+<th>Ecosystem</th>
+<th>Category</th>
+<th>EV/EBITDA Multiple</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">1</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">⚖️ Legal AI Services</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">16.0x <span style="font-size:0.65rem;color:#64748b">(12–20x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Law firm 35-50% + AI SaaS 60-80% blended. Legal tech gets SaaS multiples (15-20x). Fixed-fee model expands TAM beyond BigLaw.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">2</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">📊 Accounting AI Platform</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">16.0x <span style="font-size:0.65rem;color:#64748b">(12–20x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">CPA firm 30-45% + AI platform 60-80%. Virtual CFO at $2K/mo scales infinitely. SaaS component pulls up blended multiple.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">3</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">🩺 Healthcare AI & Admin</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">15.0x <span style="font-size:0.65rem;color:#64748b">(12–18x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">AI diagnostics 50-70%, clinical platform 60-80%. Healthcare SaaS trades at premium. Regulatory moat once FDA-cleared.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">4</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">🤖 Supply Chain AI</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">15.0x <span style="font-size:0.65rem;color:#64748b">(12–18x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">AI platform 60-80% SaaS, autonomous warehouse 30-45%. Supply chain tech exits to SAP/Oracle/Blue Yonder.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">5</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">📢 Marketing & AdTech AI</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">14.0x <span style="font-size:0.65rem;color:#64748b">(10–18x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">AI platform 60-80%, analytics 40-60%, personalization 40-60%. AdTech exits to Google/Meta/Adobe at premium multiples.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">6</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">🎓 Education AI / EdTech</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">14.0x <span style="font-size:0.65rem;color:#64748b">(10–18x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">AI platform 60-80%, credentialing 40-60%. EdTech SaaS trades at premium. Chegg/Coursera comps at 8-12x revenue.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">7</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">👥 Recruiting AI / HR Tech</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">14.0x <span style="font-size:0.65rem;color:#64748b">(10–18x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">AI platform 60-80%, marketplace 50-70%. HR tech exits to LinkedIn/Indeed/ADP. Network effects = higher multiples.</td>
+</tr>
+<tr style="background:rgba(52,211,153,0.08)">
+<td style="color:#64748b">8</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">💬 Customer Service AI</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#34d399;font-weight:700;font-size:0.95rem">14.0x <span style="font-size:0.65rem;color:#64748b">(10–18x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">AI platform 60-80%, contact center 15-25%. Blended margin rises as AI resolution rate increases. Zendesk/Intercom comps.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">9</td>
+<td style="font-weight:600"><a href=".">🏥 Health & Longevity</a></td>
+<td><span style="color:#fbbf24;font-size:0.7rem">PE Roll-Up</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">13.5x <span style="font-size:0.65rem;color:#64748b">(12–15x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Med spa 40-60%, hormone clinic 50-65% subscription, lab 35-45%, pharmacy 40-55%. Cash-pay healthcare = highest margins in the set.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">10</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">🛡️ Insurance AI Platform</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">12.5x <span style="font-size:0.65rem;color:#64748b">(10–15x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Agency 20-30% + AI underwriting 50-70%. InsurTech gets 10-15x. Lower than pure SaaS due to regulated balance sheet needs.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">11</td>
+<td style="font-weight:600"><a href=".">💻 MSP & Cybersecurity</a></td>
+<td><span style="color:#fbbf24;font-size:0.7rem">PE Roll-Up</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">12.0x <span style="font-size:0.65rem;color:#64748b">(10–14x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">MSP 35-45% recurring, cybersecurity 40-55%, VoIP 30-50%, cloud hosting 40-60%. Thoma Bravo/Vista pay premium multiples for MSP platforms.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">12</td>
+<td style="font-weight:600"><a href="ai-enhanced.html">🏠 Real Estate Tech AI</a></td>
+<td><span style="color:#22d3ee;font-size:0.7rem">AI-Enhanced</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">11.5x <span style="font-size:0.65rem;color:#64748b">(8–15x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Brokerage 15-25% + AI platform 60-80%. iBuying is low-margin (8-15%). Blended depressed by capital-intensive iBuying arm.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">13</td>
+<td style="font-weight:600"><a href=".">🏗️ Construction & Real Estate</a></td>
+<td><span style="color:#fbbf24;font-size:0.7rem">PE Roll-Up</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">10.0x <span style="font-size:0.65rem;color:#64748b">(8–12x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">GC 15-30% (vertically integrated), equipment leasing 15-25% ROI, home services 20-35%. Hard asset collateral supports debt financing.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">14</td>
+<td style="font-weight:600"><a href=".">📦 Logistics & Supply Chain</a></td>
+<td><span style="color:#fbbf24;font-size:0.7rem">PE Roll-Up</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">10.0x <span style="font-size:0.65rem;color:#64748b">(8–12x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">3PL 20-30%, returns/reverse logistics 30-45% (hidden gold mine), trucking 12-18%. Asset-heavy but infrastructure moat attracts infrastructure funds.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">15</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🔌 Electrical Trades</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">10.0x <span style="font-size:0.65rem;color:#64748b">(8–12x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Contracting 25-35%, supply house 20-30% wholesale margin, solar install 20-30%. School is high-margin (60%+ on tuition) but smaller revenue share.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">16</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🔥 HVAC & Climate Control</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">10.0x <span style="font-size:0.65rem;color:#64748b">(8–12x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Service contracts = recurring revenue at 25-35%, equipment distribution 20-30%, duct fab 25-35%. Service Titans pay 8-12x for HVAC platforms.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">17</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🛩️ Aviation Maintenance</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">10.0x <span style="font-size:0.65rem;color:#64748b">(8–12x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">MRO 25-40%, avionics 30-45%, detailing 35-50%. A&P shortage = pricing power. FAA certification barrier is a moat.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">18</td>
+<td style="font-weight:600"><a href="ai-immune.html">👴 Senior Care & Aging</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">10.0x <span style="font-size:0.65rem;color:#64748b">(8–12x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Home care 20-30%, senior housing 25-35%, home modification 25-35%. Demographic tailwind = premium. 10,000 turn 65/day.</td>
+</tr>
+<tr style="background:rgba(34,211,238,0.06)">
+<td style="color:#64748b">19</td>
+<td style="font-weight:600"><a href="ai-immune.html">⚰️ Funeral & Death Care</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#22d3ee;font-weight:700;font-size:0.95rem">10.0x <span style="font-size:0.65rem;color:#64748b">(8–12x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Funeral home 25-35%, cemetery 20-30%, grief counseling 30-45%. Non-discretionary, recession-proof. SCI trades at 10-12x.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">20</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🪠 Plumbing & Pipefitting</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">9.0x <span style="font-size:0.65rem;color:#64748b">(7–11x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Emergency calls = premium pricing at 25-35%, supply wholesale 20-30%, water treatment 35-45%. Slightly lower exit multiples than HVAC.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">21</td>
+<td style="font-weight:600"><a href="ai-immune.html">🧠 Mental Health & Therapy</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">9.0x <span style="font-size:0.65rem;color:#64748b">(7–11x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Practices 25-40%, treatment centers 20-35%. Insurance-dependent reimbursement limits margin. Therapist shortage = pricing power.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">22</td>
+<td style="font-weight:600"><a href="ai-immune.html">🔧 Skilled Trades / Emergency Repair</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">8.5x <span style="font-size:0.65rem;color:#64748b">(7–10x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Repair 25-35%, dispatch SaaS 60-80%, maintenance contracts 25-35%. Recession-proof — things break regardless of economy.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">23</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🛠️ Welding & Metal Fab</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">8.0x <span style="font-size:0.65rem;color:#64748b">(6–10x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Fab shop 20-30%, steel yard 15-25%, pipeline welding 25-35%, architectural metal 30-45%. Cyclical — tied to construction and energy.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">24</td>
+<td style="font-weight:600"><a href="ai-immune.html">💪 Fitness & Personal Training</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">8.0x <span style="font-size:0.65rem;color:#64748b">(6–10x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Training 30-45%, gym 25-35%, PT/recovery 25-40%. High margins but fragmented. Hard to scale — each trainer is a unit of capacity.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">25</td>
+<td style="font-weight:600"><a href="ai-immune.html">🧸 Childcare & Early Education</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">8.0x <span style="font-size:0.65rem;color:#64748b">(6–10x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Daycare 20-30%, special needs 25-40%. Labor-intensive + strict ratios. Real estate ownership improves margin significantly.</td>
+</tr>
+<tr style="background:rgba(251,191,36,0.06)">
+<td style="color:#64748b">26</td>
+<td style="font-weight:600"><a href="ai-immune.html">🎭 Live Entertainment</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fbbf24;font-weight:700;font-size:0.95rem">8.0x <span style="font-size:0.65rem;color:#64748b">(6–10x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Performances 10-25%, venues 20-35%, ticketing 30-50%. Hit-driven — Adele tour = 40% margin, flop = negative. Portfolio approach needed.</td>
+</tr>
+<tr style="background:rgba(251,113,133,0.06)">
+<td style="color:#64748b">27</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🪚 Carpentry & Millwork</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fb7185;font-weight:700;font-size:0.95rem">7.5x <span style="font-size:0.65rem;color:#64748b">(6–9x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Cabinet shop 25-40%, historic restoration 35-50%, lumber yard 15-25%. Fragmented — hard to scale, lower multiples.</td>
+</tr>
+<tr style="background:rgba(251,113,133,0.06)">
+<td style="color:#64748b">28</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🚜 Heavy Equipment Operation</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fb7185;font-weight:700;font-size:0.95rem">7.5x <span style="font-size:0.65rem;color:#64748b">(6–9x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Excavation 20-30%, equipment rental 25-40% ROI, demolition 20-30%. Capital-intensive fleet depresses margin but equipment is collateral.</td>
+</tr>
+<tr style="background:rgba(251,113,133,0.06)">
+<td style="color:#64748b">29</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🚗 Auto/Diesel Mechanic</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fb7185;font-weight:700;font-size:0.95rem">7.5x <span style="font-size:0.65rem;color:#64748b">(6–9x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Repair chain 20-30%, parts distribution 20-25%, towing 25-35%, used cars 10-20%. Competitive, lower barriers to entry.</td>
+</tr>
+<tr style="background:rgba(251,113,133,0.06)">
+<td style="color:#64748b">30</td>
+<td style="font-weight:600"><a href="ai-immune.html">🛡️ Security & Protection</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fb7185;font-weight:700;font-size:0.95rem">7.5x <span style="font-size:0.65rem;color:#64748b">(6–9x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Alarm monitoring 30-45% RMR, guard services 15-25%, armored transport 20-30%. Labor-intensive guard services drag blended margin.</td>
+</tr>
+<tr style="background:rgba(251,113,133,0.06)">
+<td style="color:#64748b">31</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🚛 CDL / Trucking</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fb7185;font-weight:700;font-size:0.95rem">6.5x <span style="font-size:0.65rem;color:#64748b">(5–8x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Trucking 15-20%, brokerage 15-20% gross, truck dealership 8-15%. Thin margins, high fuel/labor costs. Volume play.</td>
+</tr>
+<tr style="background:rgba(251,113,133,0.06)">
+<td style="color:#64748b">32</td>
+<td style="font-weight:600"><a href="trade-lifecycle.html">🍳 Culinary & Hospitality Trades</a></td>
+<td><span style="color:#fb923c;font-size:0.7rem">Trade Lifecycle</span></td>
+<td style="color:#fb7185;font-weight:700;font-size:0.95rem">6.5x <span style="font-size:0.65rem;color:#64748b">(5–8x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Restaurants 10-20%, food distribution 8-15%, catering 20-35%. Lowest margins in skilled trades — labor + food cost squeeze.</td>
+</tr>
+<tr style="background:rgba(251,113,133,0.06)">
+<td style="color:#64748b">33</td>
+<td style="font-weight:600"><a href="ai-immune.html">🚨 Emergency & Disaster Services</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fb7185;font-weight:700;font-size:0.95rem">6.5x <span style="font-size:0.65rem;color:#64748b">(5–8x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Restoration 25-40%, emergency power 20-30%, training 30-50%. Restoration is high-margin but episodic. Fire/EMS is public/low margin.</td>
+</tr>
+<tr style="background:rgba(251,113,133,0.06)">
+<td style="color:#64748b">34</td>
+<td style="font-weight:600"><a href="ai-immune.html">🍽️ High-Touch Hospitality</a></td>
+<td><span style="color:#fb7185;font-size:0.7rem">AI-Immune</span></td>
+<td style="color:#fb7185;font-weight:700;font-size:0.95rem">6.5x <span style="font-size:0.65rem;color:#64748b">(5–8x)</span></td>
+<td style="color:#94a3b8;font-size:0.7rem;line-height:1.4">Fine dining 10-20%, events 20-35%. Labor + food cost squeeze. Real estate can be owned but operations are thin-margin.</td>
+</tr>
+</tbody>
+</table>
+
+  
+  <div class="insight-box">
+    <h3>Key Takeaways</h3>
+    <p>
+      <span>AI-Enhanced dominates both lists.</span> The top 8 margin spots and top 8 multiple spots all belong to AI-augmented ecosystems. The reason is structural: SaaS software margins (60-80%) blend upward when paired with traditional service businesses (20-40%). A law firm alone might run 40% margin — but when its AI platform does 80% of the document review, the blended margin pushes past 50%.<br><br>
+      <span>Health & Longevity is the best non-AI play.</span> At 40% blended margin and 13.5x exit multiple, the med spa/hormone clinic/lab/pharmacy circle is the highest-performing traditional roll-up. Cash-pay healthcare sidesteps insurance reimbursement headaches.<br><br>
+      <span>The bottom is hospitality and trucking.</span> Restaurants, culinary trades, CDL/trucking, and high-touch hospitality all cluster at 12-22% margins and 5-8x multiples. These are volume plays, not margin plays. You need scale to make real money.<br><br>
+      <span>The sweet spot for starting:</span> If you want high margins AND high exit multiples, pick any AI-Enhanced ecosystem (Legal AI, Accounting AI, Healthcare AI). If you want high margins but don't want to build tech, pick Health & Longevity or MSP/Cybersecurity. If you want recession-proof with decent margins and a talent moat, pick Electrical, HVAC, or Plumbing trades — 25-35% margins, 8-12x exits, and a school that prints your own workforce.
+    </p>
+  </div>
+</div>
+</body>
+</html>
