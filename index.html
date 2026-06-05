@@ -123,28 +123,10 @@
 
 <!-- Password Gate -->
 <style>
-#gate { display:flex; align-items:center; justify-content:center; min-height:100vh; flex-direction:column; gap:1rem; background:#020617; font-family:'JetBrains Mono',monospace; }
-#gate h1 { font-size:1.8rem; color:#22d3ee; font-weight:700; }
-#gate .sub { color:#64748b; font-size:0.85rem; margin-bottom:0.5rem; }
-#gate input { background:rgba(15,23,42,0.8); border:1px solid #1e293b; color:#f8fafc; padding:0.75rem 1.5rem; border-radius:8px; font-size:1rem; width:280px; text-align:center; font-family:'JetBrains Mono',monospace; }
-#gate input:focus { outline:none; border-color:#22d3ee; }
-#gate button { background:#22d3ee; color:#020617; border:none; padding:0.75rem 2rem; border-radius:8px; font-size:1rem; cursor:pointer; font-weight:600; font-family:'JetBrains Mono',monospace; }
-#gate button:hover { opacity:0.9; }
-#gate .error { color:#fb7185; font-size:0.8rem; display:none; margin-top:0.25rem; }
-#app { display:none; }
 </style>
 
 </head>
 <body>
-<!-- Password Gate -->
-<div id="gate">
-  <h1>🔐 PE Ecosystem Diagrams</h1>
-  <div class="sub">Business Life Cycle Circles</div>
-  <input type="password" id="pw" placeholder="Enter password" onkeydown="if(event.key==='Enter')unlock()">
-  <button onclick="unlock()">Unlock</button>
-  <div class="error" id="err">Wrong password</div>
-</div>
-
 <div id="app">
 <div class="container">
   <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;">
@@ -876,26 +858,5 @@
 </div>
 </div><!-- /#app -->
 
-<!-- Password Gate Script -->
-<script>
-const PASSWORD='pe2026diagrams';
-function unlock() {
-  const pw = document.getElementById('pw').value;
-  if (pw === PASSWORD) {
-    sessionStorage.setItem('peauth','1');
-    document.getElementById('gate').style.display = 'none';
-    document.getElementById('app').style.display = 'block';
-  } else {
-    document.getElementById('err').style.display = 'block';
-    setTimeout(function(){ document.getElementById('err').style.display = 'none'; }, 2000);
-  }
-}
-(function() {
-  if (sessionStorage.getItem('peauth') === '1') {
-    document.getElementById('gate').style.display = 'none';
-    document.getElementById('app').style.display = 'block';
-  }
-})();
-</script>
 
 </body></html>
